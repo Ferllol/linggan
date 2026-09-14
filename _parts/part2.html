@@ -1,0 +1,188 @@
+<body class="side-expanded">
+<div class="bg-layer" aria-hidden="true">
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <div class="blob blob-c"></div>
+  <canvas id="bg-canvas"></canvas>
+</div>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ===== 左侧侧边栏（纯导航） ===== -->
+<aside id="sidebar">
+  <div class="side-scroll">
+    <div class="side-head">
+      <button id="side-toggle" type="button" aria-label="折叠或展开侧边栏">
+        <svg viewBox="0 0 24 24"><path d="M11 17l-5-5 5-5M18 17l-5-5 5-5"/></svg>
+      </button>
+      <div class="side-brand">棂感<small>LINGGAN</small></div>
+    </div>
+
+    <nav class="side-nav" aria-label="主导航">
+      <button class="rail-item" data-route="#/" type="button">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+        <span class="rb">风格一览</span>
+      </button>
+      <button class="rail-item" data-route="#/match" type="button">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7"/><circle cx="19" cy="12" r="2.2"/><circle cx="16" cy="18" r="2.2"/></svg>
+        <span class="rb">搭配台</span>
+        <span class="side-count" id="side-count">0</span>
+      </button>
+      <button class="rail-item" data-route="#/radar" type="button">
+        <svg viewBox="0 0 24 24"><polygon points="12,3 21,20 3,20"/><circle cx="12" cy="14" r="2.2"/></svg>
+        <span class="rb">对比雷达</span>
+      </button>
+    </nav>
+
+    <div class="rail-divider" aria-hidden="true"></div>
+    <div class="side-sec-head">探索</div>
+
+    <button class="rail-item" data-route="#/test" type="button">
+      <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.5-9A5.4 5.4 0 0 1 12 6.3 5.4 5.4 0 0 1 21.5 12c-2 4.4-9.5 9-9.5 9z"/></svg>
+      <span class="rb">风格体质测试</span>
+    </button>
+    <button class="rail-item" data-route="#/timeline" type="button">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+      <span class="rb">风格时间轴</span>
+    </button>
+    <button class="rail-item" data-route="#/favorites" type="button">
+      <svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 3.1 1-5.8L3.5 9.7l5.9-.9z"/></svg>
+      <span class="rb">我的收藏</span>
+    </button>
+  </div>
+</aside>
+<div id="side-scrim"></div>
+
+<!-- ===== 移动端顶栏 ===== -->
+<header class="mobilebar">
+  <button id="menu-btn" type="button" aria-label="打开菜单">
+    <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+  </button>
+  <span class="mb-brand">棂感</span>
+</header>
+
+<div class="main">
+<div class="main-inner">
+
+  <!-- ===== 视图：首页一览 ===== -->
+  <section class="view" id="view-home">
+    <div class="hero">
+      <div class="hero-eyebrow">美学风格科普 · 风格搭配实验室</div>
+      <h1 class="hero-title">
+        <span class="hero-ch" style="animation-delay:.05s">棂</span><span class="hero-ch glow" style="animation-delay:.2s">感</span>
+      </h1>
+      <p class="hero-sub">以格物之棂，感知万种风格</p>
+      <p class="hero-desc">79 种美学风格，8 大风格家族，382 组关联关系。从装饰艺术的几何光芒到核类的生活方式哲学，探索每一套审美语言的气质、材料与意象，再亲手搭配属于你的风格组合。</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>79</b><span>风格</span></div>
+        <div class="hero-stat"><b>8</b><span>家族</span></div>
+        <div class="hero-stat"><b id="stat-c">—</b><span>关联关系</span></div>
+      </div>
+      <div class="scroll-hint">向下探索</div>
+    </div>
+
+    <!-- 每日风格 / 漂流瓶 -->
+    <div id="daily-root"></div>
+
+    <!-- 跑马灯 -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="marquee-track"></div>
+    </div>
+
+    <div class="filterbar">
+      <div class="fam-row" id="fam-row"></div>
+      <div class="search-row">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input id="search" type="text" placeholder="搜索风格：名称 / 关键词 / 元素 / 材质…" autocomplete="off">
+        </div>
+        <span class="result-count" id="result-count"></span>
+        <button class="clear-btn" id="clear-search" type="button">清空</button>
+      </div>
+    </div>
+
+    <div class="grid" id="grid">
+<!--__CARDS__-->
+    </div>
+    <div class="empty" id="empty">
+      <b>未找到匹配的风格</b>
+      试试其他关键词，或清空筛选条件。
+    </div>
+
+    <!-- 参考资料 -->
+    <section id="refs" class="refs">
+      <div class="refs-head reveal">
+        <h2>参考资料</h2>
+        <p>风格定义、起源与关联数据的参考来源</p>
+      </div>
+      <div class="ref-grid">
+        <a class="ref-card" href="https://aesthetics.fandom.com/zh/wiki/Aesthetics_Wiki" target="_blank" rel="noopener">
+          <span class="no">01</span><b>美学中文维基百科</b><span class="host">Aesthetics Wiki · 中文站</span>
+        </a>
+        <a class="ref-card" href="https://aesthetics.fandom.com/zh/wiki/List_of_Aesthetics" target="_blank" rel="noopener">
+          <span class="no">02</span><b>美学维基列表</b><span class="host">List of Aesthetics · 风格全目录</span>
+        </a>
+        <a class="ref-card" href="https://styleatlas.art/" target="_blank" rel="noopener">
+          <span class="no">03</span><b>StyleAtlas 风格谱</b><span class="host">风格谱艺术画廊 · 视觉索引</span>
+        </a>
+        <a class="ref-card" href="https://www.zhihu.com/ring/host/1938913447627700081?tab=hot&tab_id=1" target="_blank" rel="noopener">
+          <span class="no">04</span><b>知乎艺术美学圈子</b><span class="host">艺术美学 · 讨论与科普</span>
+        </a>
+        <a class="ref-card" href="https://space.bilibili.com/13897629/lists/399475?type=season" target="_blank" rel="noopener">
+          <span class="no">05</span><b>史蒂芬杂谈</b><span class="host">B站 UP 主「史蒂芬怪」视频合集</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer reveal">
+      <div class="f-brand">棂感</div>
+      <div class="f-line">美学科普与风格搭配平台<span class="sep">·</span>棂感 © 2026</div>
+      <div class="f-creator">创作者：<b>汐棂月</b></div>
+    </footer>
+  </section>
+
+  <!-- ===== 视图：搭配台 ===== -->
+  <section class="view" id="view-match">
+    <div class="view-head">
+      <h2>搭配台</h2>
+      <p>选择 2–6 个风格，棂感会计算两两适配度、生成搭配报告与关系网络，并写下一段属于你的混搭灵感。</p>
+    </div>
+    <div id="match-root"></div>
+  </section>
+
+  <!-- ===== 视图：对比雷达 ===== -->
+  <section class="view" id="view-radar">
+    <div class="view-head">
+      <h2>对比雷达</h2>
+      <p>选择 2–3 个风格，从色彩浓度、科技感、自然感、暗黑度、复古度、精致度六个维度横向对比。</p>
+    </div>
+    <div id="radar-root"></div>
+  </section>
+
+  <!-- ===== 视图：占位（体质测试/时间轴/收藏） ===== -->
+  <section class="view" id="view-soon">
+    <div class="soon-view">
+      <span class="soon-tag">即将上线</span>
+      <div class="soon-icon" id="soon-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.01"/></svg>
+      </div>
+      <h2 id="soon-title">敬请期待</h2>
+      <p id="soon-desc">这个功能正在构思中。</p>
+      <button class="btn-primary" id="soon-back" type="button">返回风格一览</button>
+    </div>
+  </section>
+
+</div>
+</div>
+
+<!-- ===== 详情模态 ===== -->
+<div class="modal" id="detail-modal" aria-hidden="true">
+  <div class="modal-card" id="detail-root" role="dialog" aria-modal="true"></div>
+</div>
+
+<!-- ===== 悬浮指示器 ===== -->
+<button class="fab" id="fab" type="button">已选 <b id="fab-num">0</b> 个</button>
+
+<div class="toast" id="toast" role="status"></div>

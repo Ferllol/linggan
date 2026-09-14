@@ -1,0 +1,1610 @@
+{
+  "spacecore": {
+    "id": "spacecore",
+    "name_cn": "太空核",
+    "name_en": "Spacecore",
+    "family": "core",
+    "definition": "以风格化的星系、行星与星云为装饰元素，强调逃离现实、惊奇与梦幻的宇宙浪漫美学。",
+    "origin": "2020年代兴起于互联网（Tumblr/TikTok）。",
+    "colors": [
+      "#4B0082",
+      "#6A0DAD",
+      "#00008B",
+      "#FF00FF",
+      "#111111"
+    ],
+    "elements": [
+      "星系",
+      "星云",
+      "彩虹行星",
+      "流星",
+      "发光星球"
+    ],
+    "materials": [
+      "织物印花",
+      "荧光涂料",
+      "珠光材料"
+    ],
+    "iconography": [
+      "星云壁纸",
+      "太空主题房间",
+      "“我们孤独吗”标语"
+    ],
+    "image": "assets/aesthetic-spacecore.jpg",
+    "sources": [
+      "https://aesthetics.fandom.com/wiki/Spacecore"
+    ],
+    "related": [
+      {
+        "id": "crystalcore",
+        "score": 60,
+        "reason": "太空核的星光与水晶核的晶光同属梦幻发光体。"
+      },
+      {
+        "id": "dreamcore",
+        "score": 60,
+        "reason": "太空核的星云梦幻与梦核的漂浮感同源。"
+      },
+      {
+        "id": "retrofuturism",
+        "score": 60,
+        "reason": "太空主题是复古未来主义的经典分支。"
+      },
+      {
+        "id": "atompunk",
+        "score": 55,
+        "reason": "都涉及太空，一个浪漫梦幻一个冷战科幻。"
+      }
+    ]
+  },
+  "traphouse": {
+    "id": "traphouse",
+    "name_cn": "陷阱屋",
+    "name_en": "Traphouse",
+    "family": "core",
+    "definition": "源于Trap说唱文化场景的街头奢华美学，以暗色调、金色配饰与“trap house”（废弃据点）意象为特征，具体定义待核实。",
+    "origin": "起源时间与确切来源待核实，与2010年代Trap音乐文化及Y2K奢华风相关。",
+    "colors": [
+      "#111111",
+      "#D4AF37",
+      "#8B0000",
+      "#2F2F2F"
+    ],
+    "elements": [
+      "金色链条",
+      "墨镜",
+      "暗色皮草",
+      "大logo",
+      "霓虹灯光"
+    ],
+    "materials": [
+      "皮革",
+      "金属",
+      "丝绸"
+    ],
+    "iconography": [
+      "trap house（废弃据点）",
+      "说唱MV场景",
+      "金牙（grillz）"
+    ],
+    "image": "assets/aesthetic-traphouse.jpg",
+    "sources": [
+      "https://www.pinterest.com/search/pins/?q=traphouse%20aesthetic"
+    ],
+    "related": [
+      {
+        "id": "90s",
+        "score": 60,
+        "reason": "90年代嘻哈的黄金链与宽松着装是陷阱屋的前身。"
+      },
+      {
+        "id": "y2k",
+        "score": 60,
+        "reason": "都带2000s街头奢华与金属光泽气质。"
+      },
+      {
+        "id": "punk",
+        "score": 50,
+        "reason": "同为反主流的音乐场景美学，但风格取向差异大。"
+      }
+    ]
+  },
+  "weirdcore": {
+    "id": "weirdcore",
+    "name_cn": "怪核",
+    "name_en": "Weirdcore",
+    "family": "core",
+    "definition": "以低清、业余级数字图像为核心的超现实网络美学，通过压缩画质、错位字幕与阈限空间制造困惑、疏离与不安。",
+    "origin": "2010年代在Tumblr等平台成形，2020年代初流行；视觉语言源于1990年代末至2000年代中期早期互联网图像。",
+    "colors": [
+      "#3C3C3C",
+      "#F5F5DC",
+      "#C0C0C0",
+      "#800000"
+    ],
+    "elements": [
+      "低清照片",
+      "图像压缩伪影",
+      "错位字幕",
+      "怪异边框",
+      "阈限空间"
+    ],
+    "materials": [
+      "数码照片",
+      "早期互联网图像"
+    ],
+    "iconography": [
+      "《梦日记》",
+      "LSD Dream Emulator",
+      "Backrooms 都市传说"
+    ],
+    "image": "assets/aesthetic-weirdcore.jpg",
+    "sources": [
+      "https://aesthetics.fandom.com/wiki/Weirdcore"
+    ],
+    "related": [
+      {
+        "id": "dreamcore",
+        "score": 90,
+        "reason": "怪核与梦核共享梦境般的视觉语法，只是情绪底色相反。"
+      },
+      {
+        "id": "liminal-space",
+        "score": 85,
+        "reason": "阈限空间是怪核最常用的场景素材。"
+      },
+      {
+        "id": "webcore",
+        "score": 80,
+        "reason": "都取材早期互联网图像并做超现实重组。"
+      },
+      {
+        "id": "surrealism",
+        "score": 75,
+        "reason": "超现实主义在意象并置上的自由被怪核数字化。"
+      },
+      {
+        "id": "deep-web",
+        "score": 70,
+        "reason": "都呈现令人不安的暗色数字氛围。"
+      },
+      {
+        "id": "kidcore",
+        "score": 65,
+        "reason": "怪核常混入童年图像制造诡异怀旧。"
+      },
+      {
+        "id": "vaporwave",
+        "score": 65,
+        "reason": "都带有早期互联网的怀旧与超现实感。"
+      },
+      {
+        "id": "digitalcore",
+        "score": 60,
+        "reason": "怪核的低清伪影与数码核的故障感同源。"
+      }
+    ]
+  },
+  "citypop": {
+    "id": "citypop",
+    "name_cn": "城市波",
+    "name_en": "City Pop",
+    "family": "wave",
+    "definition": "1970年代中期起源的日本流行音乐流派及其美学，以都市夜景、现代主义建筑与海滨度假意象描绘80年代日本的富裕与松弛。",
+    "origin": "1970年代中期于日本起源，1970年代末-1980年代达峰，2020年代经网络复古潮流复兴。",
+    "colors": [
+      "#FF69B4",
+      "#00CED1",
+      "#FFD700",
+      "#DC143C",
+      "#4B0082"
+    ],
+    "elements": [
+      "城市天际线",
+      "复古汽车",
+      "海滩棕榈",
+      "现代主义建筑",
+      "随机英文词"
+    ],
+    "materials": [
+      "磁带",
+      "黑胶",
+      "塑料"
+    ],
+    "iconography": [
+      "竹内玛利亚《Plastic Love》",
+      "山下达郎",
+      "《美少女战士》穿搭"
+    ],
+    "image": "assets/aesthetic-citypop.jpg",
+    "sources": [
+      "https://aesthetics.fandom.com/wiki/City_Pop"
+    ],
+    "related": [
+      {
+        "id": "80s",
+        "score": 75,
+        "reason": "八十年代日本泡沫期的富裕是城市流行的背景。"
+      },
+      {
+        "id": "vaporwave",
+        "score": 70,
+        "reason": "城市流行是蒸汽波最常采样的声音来源之一。"
+      },
+      {
+        "id": "synthwave",
+        "score": 60,
+        "reason": "城市流行的都市浪漫在合成器波中西方化。"
+      }
+    ]
+  },
+  "cyberwave": {
+    "id": "cyberwave",
+    "name_cn": "赛博波",
+    "name_en": "Cyberwave",
+    "family": "wave",
+    "definition": "以赛博朋克视觉语言结合波类电子音乐氛围的数字美学，具体定义待核实。",
+    "origin": "起源时间与确切来源待核实。",
+    "colors": [
+      "#00FFFF",
+      "#FF00FF",
+      "#00FF7F",
+      "#000000"
+    ],
+    "elements": [
+      "霓虹",
+      "数字故障",
+      "城市夜景",
+      "全息影像"
+    ],
+    "materials": [
+      "霓虹灯",
+      "屏幕",
+      "塑料"
+    ],
+    "iconography": [
+      "全息广告牌",
+      "数字雨",
+      "霓虹街巷"
+    ],
+    "image": "assets/aesthetic-cyberwave.jpg",
+    "sources": [
+      "https://www.pinterest.com/search/pins/?q=cyberwave%20aesthetic"
+    ],
+    "related": [
+      {
+        "id": "cyberpunk",
+        "score": 70,
+        "reason": "赛博波以赛博朋克的视觉语言为基底。"
+      },
+      {
+        "id": "synthwave",
+        "score": 65,
+        "reason": "都融合电子乐与未来感视觉。"
+      },
+      {
+        "id": "cybergoth",
+        "score": 60,
+        "reason": "都带俱乐部文化与赛博科技感。"
+      }
+    ]
+  },
+  "darkwave": {
+    "id": "darkwave",
+    "name_cn": "暗波",
+    "name_en": "Darkwave",
+    "family": "wave",
+    "definition": "1980年代兴起的后朋克/新浪潮分支音乐流派及其美学，以阴暗合成器音色、忧郁旋律与哥特气质为特征。",
+    "origin": "1970年代末-1980年代初在英德等地从后朋克场景发展而来。",
+    "colors": [
+      "#1A1A1A",
+      "#2F2F2F",
+      "#8B0000",
+      "#C0C0C0"
+    ],
+    "elements": [
+      "黑白摄影",
+      "暗调灯光",
+      "教堂意象",
+      "合成器音色"
+    ],
+    "materials": [
+      "皮革",
+      "蕾丝",
+      "胶片"
+    ],
+    "iconography": [
+      "Bauhaus乐队",
+      "Cocteau Twins",
+      "黑白肖像"
+    ],
+    "image": "assets/aesthetic-darkwave.jpg",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Dark_wave"
+    ],
+    "related": [
+      {
+        "id": "gothic",
+        "score": 75,
+        "reason": "暗波的音乐与视觉直接承自哥特场景。"
+      },
+      {
+        "id": "cybergoth",
+        "score": 65,
+        "reason": "都是电子化、俱乐部化的暗色亚文化。"
+      },
+      {
+        "id": "synthwave",
+        "score": 65,
+        "reason": "暗波的冷峻合成器音色与合成器波的暗面相通。"
+      }
+    ]
+  },
+  "foamcore": {
+    "id": "foamcore",
+    "name_cn": "泡沫波",
+    "name_en": "Foamcore",
+    "family": "wave",
+    "definition": "以泡沫、气泡与蓬松柔软质感为核心意象的波类美学，具体定义待核实。",
+    "origin": "起源时间与确切来源待核实。",
+    "colors": [
+      "#E0F7FA",
+      "#FFB6C1",
+      "#FFFACD",
+      "#B2EBF2"
+    ],
+    "elements": [
+      "气泡",
+      "泡沫",
+      "珠光",
+      "柔和高光"
+    ],
+    "materials": [
+      "泡沫塑料",
+      "玻璃",
+      "珠光涂料"
+    ],
+    "iconography": [
+      "泡泡云",
+      "泡沫浴",
+      "珠光气球"
+    ],
+    "image": "assets/aesthetic-foamcore.jpg",
+    "sources": [
+      "https://www.pinterest.com/search/pins/?q=foamcore%20aesthetic"
+    ],
+    "related": [
+      {
+        "id": "frutiger-aero",
+        "score": 70,
+        "reason": "都充满气泡、珠光与高光洁净感。"
+      },
+      {
+        "id": "seapunk",
+        "score": 60,
+        "reason": "都带海洋泡沫与水感元素。"
+      },
+      {
+        "id": "y2k",
+        "score": 60,
+        "reason": "都带果冻、珠光与透明材质的千禧质感。"
+      }
+    ]
+  },
+  "retrowave": {
+    "id": "retrowave",
+    "name_cn": "复古波",
+    "name_en": "Retrowave",
+    "family": "wave",
+    "definition": "合成器波中更乐观、偏人声与流行导向的子风格，专注于80年代复古未来的阳光与活力情绪。",
+    "origin": "作为Synthwave子风格于2010年代发展，与Outrun、Darksynth并列（辨析见Aesthetics Wiki Synthwave条目）。",
+    "colors": [
+      "#FF4500",
+      "#FF69B4",
+      "#00BFFF",
+      "#8A2BE2"
+    ],
+    "elements": [
+      "条纹渐变日落",
+      "跑车",
+      "棕榈树",
+      "霓虹字体"
+    ],
+    "materials": [
+      "霓虹灯",
+      "胶片颗粒"
+    ],
+    "iconography": [
+      "复古跑车海报",
+      "80年代广告字体",
+      "老式游戏卡带封面"
+    ],
+    "image": "assets/aesthetic-retrowave.jpg",
+    "sources": [
+      "https://aesthetics.fandom.com/wiki/Synthwave"
+    ],
+    "related": [
+      {
+        "id": "80s",
+        "score": 80,
+        "reason": "复古波几乎就是80年代流行文化的复古滤镜。"
+      },
+      {
+        "id": "synthwave",
+        "score": 80,
+        "reason": "复古波与合成器波常被混用，视觉几乎同构。"
+      },
+      {
+        "id": "cassette-futurism",
+        "score": 70,
+        "reason": "都取材80年代磁带与旧科技。"
+      }
+    ]
+  },
+  "synthwave": {
+    "id": "synthwave",
+    "name_cn": "合成器波",
+    "name_en": "Synthwave",
+    "family": "wave",
+    "definition": "2000年代中期从法国电子音乐场景诞生的音乐与视觉美学，以模拟合成器复刻80年代电影/游戏配乐，配霓虹网格与线框视觉。",
+    "origin": "2000年代中期法国（Kavinsky、College等），2011年电影《亡命驾驶》后进入主流。",
+    "colors": [
+      "#FF00FF",
+      "#00FFFF",
+      "#8A2BE2",
+      "#0000CD",
+      "#000000"
+    ],
+    "elements": [
+      "霓虹网格",
+      "线框地形",
+      "条纹日落",
+      "80年代跑车",
+      "镀铬字体"
+    ],
+    "materials": [
+      "模拟合成器",
+      "霓虹灯",
+      "CRT"
+    ],
+    "iconography": [
+      "《亡命驾驶》海报",
+      "迈阿密日落",
+      "法拉利Testarossa"
+    ],
+    "image": "assets/aesthetic-synthwave.jpg",
+    "sources": [
+      "https://aesthetics.fandom.com/wiki/Synthwave"
+    ],
+    "related": [
+      {
+        "id": "80s",
+        "score": 85,
+        "reason": "合成器波是对80年代音像文化的整体复刻。"
+      },
+      {
+        "id": "cyberpunk",
+        "score": 80,
+        "reason": "合成器波常被称为赛博朋克的声音，视觉同样霓虹。"
+      },
+      {
+        "id": "retrowave",
+        "score": 80,
+        "reason": "复古波是合成器波旗下更乐观流行的一支。"
+      },
+      {
+        "id": "vaporwave",
+        "score": 75,
+        "reason": "合成器波与蒸汽波共享复古未来底色，风格一热一冷。"
+      },
+      {
+        "id": "cassette-futurism",
+        "score": 70,
+        "reason": "都扎根80年代模拟合成器与旧电子设备。"
+      },
+      {
+        "id": "cyberwave",
+        "score": 65,
+        "reason": "合成器波的霓虹网格在赛博波中更赛博化。"
+      },
+      {
+        "id": "darkwave",
+        "score": 65,
+        "reason": "都使用合成器营造暗色氛围，暗波更阴郁哥特。"
+      },
+      {
+        "id": "citypop",
+        "score": 60,
+        "reason": "都是80年代都市流行气质的电子化表达。"
+      }
+    ]
+  },
+  "vaporwave": {
+    "id": "vaporwave",
+    "name_cn": "蒸汽波",
+    "name_en": "Vaporwave",
+    "family": "wave",
+    "definition": "2010年代初兴起的互联网音乐微流派与美学，以切割慢放的80-90年代采样、粉青配色与怀旧消费文化意象著称。",
+    "origin": "2010年代初在Tumblr/SoundCloud/4chan成形，代表作Macintosh Plus《Floral Shoppe》（2011）。",
+    "colors": [
+      "#FF69B4",
+      "#00FFFF",
+      "#800080",
+      "#FFD700",
+      "#C0C0C0"
+    ],
+    "elements": [
+      "希腊雕像",
+      "90年代网页设计",
+      "日文假名",
+      "棕榈树",
+      "老旧电脑"
+    ],
+    "materials": [
+      "CRT屏幕",
+      "塑料",
+      "早期CGI"
+    ],
+    "iconography": [
+      "《Floral Shoppe》封面",
+      "罗马柱",
+      "Windows 95界面"
+    ],
+    "image": "assets/aesthetic-vaporwave.jpg",
+    "sources": [
+      "https://aesthetics.fandom.com/wiki/Vaporwave"
+    ],
+    "related": [
+      {
+        "id": "synthwave",
+        "score": 75,
+        "reason": "同为80年代怀旧电子美学，但蒸汽波采样拼贴、合成器波原创作曲。"
+      },
+      {
+        "id": "cassette-futurism",
+        "score": 70,
+        "reason": "都取材80年代模拟技术与消费电子。"
+      },
+      {
+        "id": "citypop",
+        "score": 70,
+        "reason": "蒸汽波大量采样城市流行的日本80年代音乐。"
+      },
+      {
+        "id": "liminal-space",
+        "score": 70,
+        "reason": "蒸汽波为阈限空间提供了标志性的滤镜与色调。"
+      },
+      {
+        "id": "seapunk",
+        "score": 70,
+        "reason": "海朋克是蒸汽波的重要前身，共享早期网络3D美学。"
+      },
+      {
+        "id": "webcore",
+        "score": 65,
+        "reason": "都迷恋早期互联网的视觉与听觉怀旧。"
+      },
+      {
+        "id": "weirdcore",
+        "score": 65,
+        "reason": "蒸汽波与怪核共享对旧数字美学的迷恋。"
+      },
+      {
+        "id": "y2k",
+        "score": 65,
+        "reason": "都带着对千禧年前后消费科技的怀旧。"
+      }
+    ]
+  },
+  "biopunk": {
+    "id": "biopunk",
+    "name_cn": "生物朋克",
+    "name_en": "Biopunk",
+    "family": "digital",
+    "definition": "赛博朋克的子流派，聚焦基因工程、生物黑客与生物科技巨头，以有机体与机械融合为视觉语言。",
+    "origin": "作为赛博朋克分支于20世纪末科幻文学中发展，1990年代后随《生化危机》《寄生前夜》等作品普及，确切命名时间待核实。",
+    "colors": [
+      "#00FF7F",
+      "#006400",
+      "#1A1A1A",
+      "#00FFFF"
+    ],
+    "elements": [
+      "DNA螺旋",
+      "培养皿",
+      "生物机械融合",
+      "实验室器材"
+    ],
+    "materials": [
+      "玻璃",
+      "金属",
+      "有机组织"
+    ],
+    "iconography": [
+      "《生化危机》",
+      "《阿基拉》",
+      "《新世纪福音战士》"
+    ],
+    "image": "assets/aesthetic-biopunk.jpg",
+    "sources": [
+      "https://aesthetics.fandom.com/wiki/Biopunk"
+    ],
+    "related": [
+      {
+        "id": "cyberpunk",
+        "score": 85,
+        "reason": "赛博朋克的义体主题在生物朋克中转向基因层面。"
+      },
+      {
+        "id": "solarpunk",
+        "score": 60,
+        "reason": "生物朋克的基因科技在太阳朋克中被伦理化使用。"
+      },
+      {
+        "id": "gothic",
+        "score": 55,
+        "reason": "《弗兰肯斯坦》式的身体恐怖是二者的共同源头。"
+      },
+      {
+        "id": "seapunk",
+        "score": 55,
+        "reason": "生物朋克的海洋生物实验与海朋克的海洋幻想相邻。"
+      }
+    ]
+  },
+  "crybaby": {
+    "id": "crybaby",
+    "name_cn": "泪眼美学",
+    "name_en": "Crybaby / Tears",
+    "family": "digital",
+    "definition": "以泪眼妆、破碎感与脆弱少女气质为核心的美学，对应英文“crying/tears”妆容潮流，具体定义待核实。",
+    "origin": "2020年代中期在TikTok等平台兴起的“crying makeup”妆容潮流，具体时间待核实。",
+    "colors": [
+      "#FFC0CB",
+      "#F5F5F5",
+      "#87CEEB",
+      "#E6E6FA"
+    ],
+    "elements": [
+      "泪眼妆",
+      "珍珠泪滴",
+      "蝴蝶结",
+      "蕾丝手帕",
+      "忧郁眼神"
+    ],
+    "materials": [
+      "蕾丝",
+      "丝绸",
+      "玻璃珠"
+    ],
+    "iconography": [
+      "泪眼天使",
+      "珍珠泪滴",
+      "sad girl肖像"
+    ],
+    "image": "assets/aesthetic-crybaby.jpg",
+    "sources": [
+      "https://www.pinterest.com/search/pins/?q=crybaby%20aesthetic"
+    ],
+    "related": [
+      {
+        "id": "coquette",
+        "score": 75,
+        "reason": "泪眼感与俏丽少女风的脆弱少女气质高度重合。"
+      },
+      {
+        "id": "emo",
+        "score": 60,
+        "reason": "都强调情绪外露与伤感气质。"
+      },
+      {
+        "id": "shoujo",
+        "score": 60,
+        "reason": "少女系的纯真与恋爱伤感为泪眼提供了语境。"
+      },
+      {
+        "id": "yami-kawaii",
+        "score": 60,
+        "reason": "都以可爱外表承载悲伤与痛感。"
+      }
+    ]
+  },
+  "cyberpunk": {
+    "id": "cyberpunk",
+    "name_cn": "赛博朋克",
+    "name_en": "Cyberpunk",
+    "family": "digital",
+    "definition": "描绘“高科技、低生活”反乌托邦近未来的科幻美学，以霓虹都市、义体改造与巨型企业控制为特征。",
+    "origin": "1980年代由威廉·吉布森《神经漫游者》、电影《银翼杀手》与《阿基拉》奠定，术语由布鲁斯·贝斯克1983年创造。",
+    "colors": [
+      "#00FFFF",
+      "#FF00FF",
+      "#9400D3",
+      "#000000",
+      "#00FF7F"
+    ],
+    "elements": [
+      "霓虹雨夜街道",
+      "义体",
+      "全息广告",
+      "巨构建筑",
+      "黑客终端"
+    ],
+    "materials": [
+      "金属",
+      "玻璃",
+      "皮革",
+      "光纤"
+    ],
+    "iconography": [
+      "夜之城",
+      "草薙素子",
+      "复制人瑞克·德卡德"
+    ],
+    "image": "assets/aesthetic-cyberpunk.jpg",
+    "sources": [
+      "https://aesthetics.fandom.com/wiki/Cyberpunk"
+    ],
+    "related": [
+      {
+        "id": "biopunk",
+        "score": 85,
+        "reason": "生物朋克是赛博朋克聚焦生物技术的分支。"
+      },
+      {
+        "id": "synthwave",
+        "score": 80,
+        "reason": "赛博朋克的夜城景观是合成器波MV的标准场景。"
+      },
+      {
+        "id": "cybergoth",
+        "score": 75,
+        "reason": "赛博哥特大量借用赛博朋克的科技与夜店视觉。"
+      },
+      {
+        "id": "cassette-futurism",
+        "score": 70,
+        "reason": "赛博朋克的早期数字想象与磁带未来主义同代。"
+      },
+      {
+        "id": "cyberwave",
+        "score": 70,
+        "reason": "赛博朋克的霓虹都市是赛博波的核心场景。"
+      },
+      {
+        "id": "deep-web",
+        "score": 70,
+        "reason": "黑客、数据与匿名网络是赛博朋克的核心意象。"
+      },
+      {
+        "id": "dieselpunk",
+        "score": 70,
+        "reason": "同为朋克系科幻，柴油朋克是战间期的对应物。"
+      },
+      {
+        "id": "steampunk",
+        "score": 70,
+        "reason": "蒸汽朋克术语即源自对赛博朋克的戏仿，同为朋克科幻。"
+      }
+    ]
+  },
+  "deep-web": {
+    "id": "deep-web",
+    "name_cn": "深网美学",
+    "name_en": "Deep Web",
+    "family": "digital",
+    "definition": "以加密网络、匿名文化与幽暗数字界面为意象的暗色调网络美学，具体定义待核实。",
+    "origin": "起源时间与确切来源待核实，与2010年代暗网都市传说文化相关。",
+    "colors": [
+      "#0B0B0B",
+      "#1E3A5F",
+      "#00FF00",
+      "#4A4A4A"
+    ],
+    "elements": [
+      "终端界面",
+      "加密符号",
+      "绿色代码",
+      "模糊监控画面",
+      "暗色网页"
+    ],
+    "materials": [
+      "屏幕",
+      "线缆"
+    ],
+    "iconography": [
+      "洋葱浏览器界面",
+      "暗网市场传闻",
+      "矩阵代码雨"
+    ],
+    "image": "assets/aesthetic-deep-web.jpg",
+    "sources": [
+      "https://www.pinterest.com/search/pins/?q=deep%20web%20aesthetic"
+    ],
+    "related": [
+      {
+        "id": "cyberpunk",
+        "score": 70,
+        "reason": "深网美学的加密界面正是赛博朋克叙事的一部分。"
+      },
+      {
+        "id": "weirdcore",
+        "score": 70,
+        "reason": "深网美学的幽暗界面与怪核的诡异感相互呼应。"
+      },
+      {
+        "id": "digitalcore",
+        "score": 65,
+        "reason": "都呈现暗色、加密与故障的数字界面。"
+      }
+    ]
+  },
+  "digitalcore": {
+    "id": "digitalcore",
+    "name_cn": "数码核心",
+    "name_en": "Digitalcore",
+    "family": "digital",
+    "definition": "以像素化、故障艺术与早期数字界面为核心的网络美学，强调数字原生的粗糙质感，具体定义待核实。",
+    "origin": "2010年代末-2020年代初在互联网流行，具体来源待核实。",
+    "colors": [
+      "#00FF00",
+      "#FF00FF",
+      "#000000",
+      "#FFFFFF"
+    ],
+    "elements": [
+      "像素块",
+      "故障条纹",
+      "扫描线",
+      "错误色块",
+      "复古游戏界面"
+    ],
+    "materials": [
+      "屏幕",
+      "像素面板"
+    ],
+    "iconography": [
+      "8-bit角色",
+      "故障人像",
+      "复古游戏机"
+    ],
+    "image": "assets/aesthetic-digitalcore.jpg",
+    "sources": [
+      "https://www.pinterest.com/search/pins/?q=digitalcore%20aesthetic"
+    ],
+    "related": [
+      {
+        "id": "webcore",
+        "score": 75,
+        "reason": "数码核的像素与故障是网络核心视觉的底层语言。"
+      },
+      {
+        "id": "deep-web",
+        "score": 65,
+        "reason": "数码核的故障条纹与深网美学的暗界面气质契合。"
+      },
+      {
+        "id": "weirdcore",
+        "score": 60,
+        "reason": "都以故障与低清数字图像制造不安。"
+      },
+      {
+        "id": "cybergoth",
+        "score": 55,
+        "reason": "都带电子俱乐部与数码科技感。"
+      }
+    ]
+  },
+  "frutiger-aero": {
+    "id": "frutiger-aero",
+    "name_cn": "弗雷蒂格航空",
+    "name_en": "Frutiger Aero",
+    "family": "digital",
+    "definition": "2004-2013年间的设计美学，以拟物化、玻璃光泽、自然意象与蓝绿色调表现乐观的科技人文主义。",
+    "origin": "2000年代随Windows Vista/7与早期iOS拟物界面普及，2017年由CARI的Sofi Xian命名。",
+    "colors": [
+      "#00BFFF",
+      "#32CD32",
+      "#FFFFFF",
+      "#ADD8E6",
+      "#C0C0C0"
+    ],
+    "elements": [
+      "玻璃质感",
+      "气泡",
+      "热带鱼",
+      "极光",
+      "透镜光晕",
+      "拟物图标"
+    ],
+    "materials": [
+      "玻璃",
+      "高光塑料",
+      "金属"
+    ],
+    "iconography": [
+      "Windows Vista壁纸",
+      "鱼游出屏幕的广告图",
+      "iOS拟物图标"
+    ],
+    "image": "assets/aesthetic-frutiger-aero.jpg",
+    "sources": [
+      "https://aesthetics.fandom.com/wiki/Frutiger_Aero"
+    ],
+    "related": [
+      {
+        "id": "y2k",
+        "score": 80,
+        "reason": "Y2K的数码乐观在弗雷蒂格航空中转为环保玻璃质感。"
+      },
+      {
+        "id": "solarpunk",
+        "score": 75,
+        "reason": "都呈现绿色、乐观的科技与自然共存愿景。"
+      },
+      {
+        "id": "foamcore",
+        "score": 70,
+        "reason": "弗雷蒂格航空的泡泡元素是泡沫波的核心意象来源。"
+      },
+      {
+        "id": "webcore",
+        "score": 70,
+        "reason": "同属Web 2.0前后的数字视觉记忆。"
+      },
+      {
+        "id": "seapunk",
+        "score": 65,
+        "reason": "都大量使用水、气泡与蓝色海洋元素。"
+      },
+      {
+        "id": "oceancore",
+        "score": 60,
+        "reason": "弗雷蒂格航空的海洋元素与海洋核自然衔接。"
+      }
+    ]
+  },
+  "seapunk": {
+    "id": "seapunk",
+    "name_cn": "海朋克",
+    "name_en": "Seapunk",
+    "family": "digital",
+    "definition": "2011年起源于Tumblr/Twitter的互联网美学与电子音乐微流派，将海洋主题与90年代早期3D网络文化融合。",
+    "origin": "2011年6月由布鲁克林DJ Julian Foxworth（Lil Internet）创造词汇，2012年短暂进入主流。",
+    "colors": [
+      "#00FFFF",
+      "#7FFFD4",
+      "#AFEEEE",
+      "#DDA0DD",
+      "#FFB6C1"
+    ],
+    "elements": [
+      "海豚",
+      "美人鱼",
+      "金字塔",
+      "棕榈树",
+      "阴阳符号",
+      "早期CGI"
+    ],
+    "materials": [
+      "珠光面料",
+      "塑料",
+      "贝壳"
+    ],
+    "iconography": [
+      "Azealia Banks《Atlantis》",
+      "Grimes造型",
+      "海洋3D渲染"
+    ],
+    "image": "assets/aesthetic-seapunk.jpg",
+    "sources": [
+      "https://aesthetics.fandom.com/wiki/Seapunk"
+    ],
+    "related": [
+      {
+        "id": "oceancore",
+        "score": 75,
+        "reason": "海朋克把海洋核的海洋主题数字化、迷幻化。"
+      },
+      {
+        "id": "vaporwave",
+        "score": 70,
+        "reason": "蒸汽波在视觉上继承了海朋克的海洋赛博意象。"
+      },
+      {
+        "id": "frutiger-aero",
+        "score": 65,
+        "reason": "海朋克的海洋CGI与弗雷蒂格航空的水系意象相近。"
+      },
+      {
+        "id": "foamcore",
+        "score": 60,
+        "reason": "海朋克的浪花与泡沫为泡沫波提供海洋语境。"
+      },
+      {
+        "id": "biopunk",
+        "score": 55,
+        "reason": "都涉及海洋生物与生物技术想象。"
+      }
+    ]
+  },
+  "solarpunk": {
+    "id": "solarpunk",
+    "name_cn": "太阳朋克",
+    "name_en": "Solarpunk",
+    "family": "digital",
+    "definition": "围绕可再生能源、与自然和谐共生与社区自治的乐观思辨科幻美学。",
+    "origin": "约2000年代末起源于巴西（John Robert等），2010年代在互联网流行。",
+    "colors": [
+      "#32CD32",
+      "#FFD700",
+      "#87CEEB",
+      "#F5F5DC",
+      "#228B22"
+    ],
+    "elements": [
+      "太阳能板",
+      "攀爬植物",
+      "新艺术曲线",
+      "手工制品",
+      "社区花园"
+    ],
+    "materials": [
+      "竹",
+      "再生木材",
+      "玻璃",
+      "棉麻"
+    ],
+    "iconography": [
+      "垂直花园",
+      "太阳能建筑",
+      "复古未来温室"
+    ],
+    "image": "assets/aesthetic-solarpunk.jpg",
+    "sources": [
+      "https://aesthetics.fandom.com/wiki/Solarpunk"
+    ],
+    "related": [
+      {
+        "id": "frutiger-aero",
+        "score": 75,
+        "reason": "太阳朋克的生态未来与弗雷蒂格航空的绿色科技感相通。"
+      },
+      {
+        "id": "naturecore",
+        "score": 65,
+        "reason": "太阳朋克把自然核的生态理想推向未来科幻。"
+      },
+      {
+        "id": "biopunk",
+        "score": 60,
+        "reason": "都关注生物技术与生态，取向一善一疑。"
+      },
+      {
+        "id": "cottagecore",
+        "score": 60,
+        "reason": "太阳朋克的生态理想在乡村核的田园生活中有具象表达。"
+      },
+      {
+        "id": "steampunk",
+        "score": 55,
+        "reason": "同为朋克系未来想象，太阳朋克拒绝蒸汽朋克的怀旧倾向。"
+      }
+    ]
+  },
+  "webcore": {
+    "id": "webcore",
+    "name_cn": "网络核心",
+    "name_en": "Webcore",
+    "family": "digital",
+    "definition": "以1995-2005年早期互联网的像素图、低多边形3D、旧系统弹窗与拨号音为素材，进行超现实解构与怀旧重构的网络美学。",
+    "origin": "2010年代末-2020年代初兴起，2020年动画《ENA》播出后被广泛认知。",
+    "colors": [
+      "#FF4500",
+      "#FFD700",
+      "#00FF00",
+      "#0000FF",
+      "#FFFFFF"
+    ],
+    "elements": [
+      "GeoCities动图",
+      "像素画",
+      "浏览器窗口",
+      "错误弹窗",
+      "低多边形模型"
+    ],
+    "materials": [
+      "屏幕",
+      "早期CGI"
+    ],
+    "iconography": [
+      "《ENA》",
+      "Windows XP壁纸",
+      "拨号上网音"
+    ],
+    "image": "assets/aesthetic-webcore.jpg",
+    "sources": [
+      "https://aesthetics.fandom.com/wiki/Webcore"
+    ],
+    "related": [
+      {
+        "id": "weirdcore",
+        "score": 80,
+        "reason": "网络核心与怪核共享早期网页的粗糙视觉基因。"
+      },
+      {
+        "id": "digitalcore",
+        "score": 75,
+        "reason": "都取材早期数字界面，网络核偏网页、数码核偏像素。"
+      },
+      {
+        "id": "animecore",
+        "score": 70,
+        "reason": "二次元核的旧网络宅文化直接取材网络核心的网页美学。"
+      },
+      {
+        "id": "dreamcore",
+        "score": 70,
+        "reason": "网络核心的数字化梦境与梦核互相渗透。"
+      },
+      {
+        "id": "frutiger-aero",
+        "score": 70,
+        "reason": "网络核心的旧网页中常见弗雷蒂格航空的光泽元素。"
+      },
+      {
+        "id": "y2k",
+        "score": 70,
+        "reason": "网络核心的旧网页美学是Y2K网络侧的延伸。"
+      },
+      {
+        "id": "liminal-space",
+        "score": 65,
+        "reason": "网络核心的旧界面也常被置于阈限空间语境。"
+      },
+      {
+        "id": "vaporwave",
+        "score": 65,
+        "reason": "网络核心与蒸汽波同属数字怀旧美学阵营。"
+      }
+    ]
+  },
+  "y2k": {
+    "id": "y2k",
+    "name_cn": "Y2K",
+    "name_en": "Y2K",
+    "family": "digital",
+    "definition": "1990年代末至2000年代初的科技乌托邦美学，以镀铬、果冻透明材质、冰蓝配色与数码乐观主义为特征。",
+    "origin": "原指1997-2004年未来主义设计风格（2016年由CARI的Evan Collins系统命名），2020年代经TikTok怀旧复兴。",
+    "colors": [
+      "#C0C0C0",
+      "#AFEEEE",
+      "#FFFFFF",
+      "#FFA500",
+      "#FF69B4"
+    ],
+    "elements": [
+      "镀铬质感",
+      "果冻透明塑料",
+      "数码字体",
+      "太空元素",
+      "蝴蝶发夹"
+    ],
+    "materials": [
+      "金属镀铬",
+      "透明塑料",
+      "珠光面料"
+    ],
+    "iconography": [
+      "iMac G3",
+      "《黑客帝国》墨镜",
+      "Y2K未来主义海报"
+    ],
+    "image": "assets/aesthetic-y2k.jpg",
+    "sources": [
+      "https://aesthetics.fandom.com/wiki/Y2K"
+    ],
+    "related": [
+      {
+        "id": "90s",
+        "score": 80,
+        "reason": "Y2K诞生于90年代末，与90年代文化直接衔接。"
+      },
+      {
+        "id": "frutiger-aero",
+        "score": 80,
+        "reason": "弗雷蒂格航空是Y2K未来主义之后的接续风格。"
+      },
+      {
+        "id": "webcore",
+        "score": 70,
+        "reason": "都取材早期互联网与千禧数字视觉。"
+      },
+      {
+        "id": "animecore",
+        "score": 65,
+        "reason": "都怀旧2000s初的御宅与流行文化。"
+      },
+      {
+        "id": "vaporwave",
+        "score": 65,
+        "reason": "Y2K的镀铬未来感与蒸汽波的商场旧梦相互呼应。"
+      },
+      {
+        "id": "foamcore",
+        "score": 60,
+        "reason": "Y2K的果冻透明材质与泡沫波的泡泡质感同代。"
+      },
+      {
+        "id": "pop-art",
+        "score": 60,
+        "reason": "波普艺术的商业图像语言在Y2K设计中回响。"
+      },
+      {
+        "id": "traphouse",
+        "score": 60,
+        "reason": "Y2K的镀铬与果冻质感常出现在陷阱屋的视觉里。"
+      }
+    ]
+  },
+  "black-metal": {
+    "id": "black-metal",
+    "name_cn": "黑金属",
+    "name_en": "Black Metal",
+    "family": "dark",
+    "definition": "1980年代初北欧起源的重金属子流派及其视觉美学，以尸脸妆、黑白森林意象与黑暗神秘主义著称。",
+    "origin": "1980年代初英国（Venom、Bathory）第一波，1987-1997挪威第二波确立其视觉体系。",
+    "colors": [
+      "#000000",
+      "#FFFFFF",
+      "#4A4A4A",
+      "#8B0000"
+    ],
+    "elements": [
+      "尸脸妆",
+      "涂鸦乐队Logo",
+      "黑白摄影",
+      "森林",
+      "长袍"
+    ],
+    "materials": [
+      "皮革",
+      "金属",
+      "粗麻"
+    ],
+    "iconography": [
+      "Mayhem《Deathcrush》",
+      "Darkthrone专辑封面",
+      "挪威森林"
+    ],
+    "image": "assets/aesthetic-black-metal.jpg",
+    "sources": [
+      "https://aesthetics.fandom.com/wiki/Black_Metal"
+    ],
+    "related": [
+      {
+        "id": "devilcore",
+        "score": 75,
+        "reason": "黑金属的撒旦意象为恶魔核提供了符号弹药。"
+      },
+      {
+        "id": "gothic",
+        "score": 60,
+        "reason": "黑金属的黑暗美学与哥特的暗黑传统同源。"
+      },
+      {
+        "id": "punk",
+        "score": 55,
+        "reason": "黑金属的极端姿态与朋克的反叛同源。"
+      }
+    ]
+  },
+  "cybergoth": {
+    "id": "cybergoth",
+    "name_cn": "赛博哥特",
+    "name_en": "Cybergoth",
+    "family": "dark",
+    "definition": "1990年代末兴起的亚文化，融合锐舞、工业音乐与赛博朋克，以赛博锁、护目镜与霓虹撞色为标志。",
+    "origin": "1990年代末由德国/奥地利锐舞场景与工业音乐场景融合而成。",
+    "colors": [
+      "#000000",
+      "#39FF14",
+      "#FF69B4",
+      "#00BFFF"
+    ],
+    "elements": [
+      "赛博锁（合成发辫）",
+      "护目镜",
+      "防毒面具",
+      "电路纹样",
+      "厚底靴"
+    ],
+    "materials": [
+      "PVC",
+      "乙烯基",
+      "荧光塑料"
+    ],
+    "iconography": [
+      "Cyberdog品牌",
+      "工业舞池",
+      "荧光派对"
+    ],
+    "image": "assets/aesthetic-cybergoth.jpg",
+    "sources": [
+      "https://aesthetics.fandom.com/wiki/Cybergoth"
+    ],
+    "related": [
+      {
+        "id": "cyberpunk",
+        "score": 75,
+        "reason": "赛博朋克的机能装束在赛博哥特中被舞台化。"
+      },
+      {
+        "id": "darkwave",
+        "score": 65,
+        "reason": "赛博哥特的舞池音乐与暗波同属电子暗潮。"
+      },
+      {
+        "id": "cyberwave",
+        "score": 60,
+        "reason": "赛博哥特的霓虹机能穿搭与赛博波同频。"
+      },
+      {
+        "id": "digitalcore",
+        "score": 55,
+        "reason": "赛博哥特的霓虹电子氛围与数码核的屏幕美学相邻。"
+      }
+    ]
+  },
+  "dark-academia": {
+    "id": "dark-academia",
+    "name_cn": "暗黑学院",
+    "name_en": "Dark Academia",
+    "family": "dark",
+    "definition": "围绕古典文学、求知欲与自我探索的学院美学，将19世纪欧洲上流教育浪漫化为神秘、颓废的知识殿堂。",
+    "origin": "2010年代末-2020年代初在Tumblr/TikTok流行，灵感源自牛津/剑桥与常春藤意象。",
+    "colors": [
+      "#3E2723",
+      "#5D4037",
+      "#1B1B1B",
+      "#8B7355",
+      "#2F2F2F"
+    ],
+    "elements": [
+      "旧书",
+      "羊皮纸",
+      "学院建筑",
+      "壁炉",
+      "古典雕塑"
+    ],
+    "materials": [
+      "羊毛",
+      "粗花呢",
+      "皮革",
+      "黄铜"
+    ],
+    "iconography": [
+      "《秘密历史》",
+      "图书馆长廊",
+      "拉丁文碑铭"
+    ],
+    "image": "assets/aesthetic-dark-academia.jpg",
+    "sources": [
+      "https://aesthetics.fandom.com/wiki/Dark_Academia"
+    ],
+    "related": [
+      {
+        "id": "light-academia",
+        "score": 90,
+        "reason": "亮调学院是暗黑学院的明亮对应面，共享学院元素。"
+      },
+      {
+        "id": "old-money",
+        "score": 80,
+        "reason": "暗黑学院常以老钱风的精英背景为设定。"
+      },
+      {
+        "id": "dark-romanticism",
+        "score": 75,
+        "reason": "都崇尚古典、死亡与忧郁的浪漫。"
+      },
+      {
+        "id": "gothic",
+        "score": 70,
+        "reason": "哥特文学的阴郁传统滋养了暗黑学院的氛围。"
+      },
+      {
+        "id": "vampire",
+        "score": 60,
+        "reason": "学院吸血鬼题材（如《夜访吸血鬼》）连接二者。"
+      }
+    ]
+  },
+  "dark-romanticism": {
+    "id": "dark-romanticism",
+    "name_cn": "暗黑浪漫",
+    "name_en": "Dark Romanticism",
+    "family": "dark",
+    "definition": "浪漫主义中悲观的一支，相信人性本恶，以内心的罪恶、疯狂与自我毁灭为主题，多用哥特式场景承载心理恐怖。",
+    "origin": "19世纪美国文学兴起（霍桑、梅尔维尔、爱伦·坡），欧洲以霍夫曼与《弗兰肯斯坦》为代表。",
+    "colors": [
+      "#1A1A1A",
+      "#2F2F2F",
+      "#800000",
+      "#556B2F"
+    ],
+    "elements": [
+      "午夜森林",
+      "墓碑",
+      "雾",
+      "月光",
+      "疯癫"
+    ],
+    "materials": [
+      "石",
+      "铁",
+      "旧纸"
+    ],
+    "iconography": [
+      "《红字》",
+      "《白鲸》",
+      "《乌鸦》"
+    ],
+    "image": "assets/aesthetic-dark-romanticism.jpg",
+    "sources": [
+      "https://aesthetics.fandom.com/wiki/Dark_Romanticism"
+    ],
+    "related": [
+      {
+        "id": "gothic",
+        "score": 90,
+        "reason": "哥特的外在恐怖在暗黑浪漫中转向内心。"
+      },
+      {
+        "id": "vampire",
+        "score": 85,
+        "reason": "暗黑浪漫的人性之恶在吸血鬼身上得到具象。"
+      },
+      {
+        "id": "dark-academia",
+        "score": 75,
+        "reason": "暗黑浪漫的文学传统为暗黑学院提供文本。"
+      },
+      {
+        "id": "expressionism",
+        "score": 60,
+        "reason": "暗黑浪漫的心理恐怖在表现主义中得到视觉化。"
+      }
+    ]
+  },
+  "emo": {
+    "id": "emo",
+    "name_cn": "Emo",
+    "name_en": "Emo",
+    "family": "dark",
+    "definition": "源于1980年代中期硬核朋克场景的摇滚音乐流派与青年亚文化，以情感外露、黑色着装与斜刘海为标志。",
+    "origin": "1980年代中期美国华盛顿特区起源（Rites of Spring等），2000年代中期“第三波”进入主流。",
+    "colors": [
+      "#000000",
+      "#DC143C",
+      "#FFFFFF",
+      "#4B0082"
+    ],
+    "elements": [
+      "斜刘海",
+      "紧身牛仔裤",
+      "乐队T恤",
+      "眼线",
+      "铆钉腰带"
+    ],
+    "materials": [
+      "牛仔布",
+      "皮革",
+      "帆布"
+    ],
+    "iconography": [
+      "My Chemical Romance",
+      "MySpace页面",
+      "2000s乐队海报"
+    ],
+    "image": "assets/aesthetic-emo.jpg",
+    "sources": [
+      "https://aesthetics.fandom.com/wiki/Emo"
+    ],
+    "related": [
+      {
+        "id": "punk",
+        "score": 80,
+        "reason": "Emo直接诞生于硬核朋克场景。"
+      },
+      {
+        "id": "grungecore",
+        "score": 75,
+        "reason": "Emo的音乐与造型承接了垃圾摇滚的颓废衣钵。"
+      },
+      {
+        "id": "crybaby",
+        "score": 60,
+        "reason": "Emo的情感宣泄与泪眼美学的忧郁表达同向。"
+      }
+    ]
+  },
+  "gothic": {
+    "id": "gothic",
+    "name_cn": "哥特",
+    "name_en": "Gothic",
+    "family": "dark",
+    "definition": "18世纪末兴起于英国的文学艺术运动，以恐怖、神秘、超自然与衰败美学探索人性的阴暗面，浪漫主义的分支。",
+    "origin": "1764年霍勒斯·沃波尔《奥特朗托城堡》开创，英国起源。",
+    "colors": [
+      "#000000",
+      "#2F2F2F",
+      "#8B0000",
+      "#4B0082"
+    ],
+    "elements": [
+      "闹鬼城堡",
+      "废墟",
+      "墓地",
+      "吸血鬼",
+      "心理惊悚"
+    ],
+    "materials": [
+      "石",
+      "铁艺",
+      "天鹅绒"
+    ],
+    "iconography": [
+      "《弗兰肯斯坦》",
+      "爱伦·坡诗歌",
+      "《德古拉》"
+    ],
+    "image": "assets/aesthetic-gothic.jpg",
+    "sources": [
+      "https://aesthetics.fandom.com/wiki/Gothic"
+    ],
+    "related": [
+      {
+        "id": "dark-romanticism",
+        "score": 90,
+        "reason": "暗黑浪漫主义是哥特的美国精神分支，重心理恐怖。"
+      },
+      {
+        "id": "vampire",
+        "score": 90,
+        "reason": "吸血鬼是哥特文学最标志性的形象之一。"
+      },
+      {
+        "id": "darkwave",
+        "score": 75,
+        "reason": "哥特的暗黑气质在暗波中以合成器呈现。"
+      },
+      {
+        "id": "dark-academia",
+        "score": 70,
+        "reason": "暗黑学院大量借用哥特的小说与场景传统。"
+      },
+      {
+        "id": "devilcore",
+        "score": 65,
+        "reason": "哥特的暗黑传统是恶魔核的重要底色。"
+      },
+      {
+        "id": "black-metal",
+        "score": 60,
+        "reason": "都带中世纪、黑暗与神秘主义意象。"
+      },
+      {
+        "id": "lolita",
+        "score": 60,
+        "reason": "哥特洛丽塔是洛丽塔时尚的重要分支。"
+      },
+      {
+        "id": "biopunk",
+        "score": 55,
+        "reason": "哥特的身体恐怖传统在生物朋克中被科学化。"
+      }
+    ]
+  }
+}
