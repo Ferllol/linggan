@@ -2,8 +2,8 @@
  "meta": {
   "name": "棂感",
   "description": "美学科普与风格搭配数据库",
-  "count": 189,
-  "last_updated": "2026-09-11"
+  "count": 204,
+  "last_updated": "2026-09-14"
  },
  "categories": [
   {
@@ -90,6 +90,12 @@
    "name": "萌系日系",
    "color": "#FF8A65",
    "description": "日本萌系与街头时尚美学"
+  },
+  {
+   "id": "china",
+   "name": "国风",
+   "color": "#C62828",
+   "description": "以 Chinoiserie 为源、中国传统文化符号为核心的东方审美体系"
   }
  ],
  "aesthetics": [
@@ -20084,6 +20090,1521 @@
      "reason": "色彩、情绪与气质维度高度接近，可互为参考。"
     }
    ],
+   "year": 2010
+  },
+  {
+   "id": "chinoiserie",
+   "name_cn": "中国风",
+   "name_en": "Chinoiserie",
+   "family": "china",
+   "definition": "源自 17-18 世纪欧洲对中国艺术与东方想象的再演绎，以青花瓷、山水屏风、丝绸刺绣、亭台楼阁为标志意象，在当代演化为以中国传统文化符号为核心的东方审美体系，贯通服饰、绘画、建筑与生活方式。",
+   "origin": "17 世纪欧洲（法国、荷兰、英国）通过丝绸、瓷器、漆器等东方贸易品接触中国艺术，形成带有想象色彩的 Chinoiserie 装饰风潮；18 世纪洛可可时期达到顶峰，20 世纪以来在东西方设计界持续复兴。",
+   "colors": [
+    "#C3272B",
+    "#D6ECF0",
+    "#425066",
+    "#C9A86A",
+    "#2B2B2B"
+   ],
+   "elements": [
+    "青花瓷纹样",
+    "山水屏风",
+    "亭台楼阁剪影",
+    "云纹与回纹"
+   ],
+   "materials": [
+    "丝绸",
+    "瓷器",
+    "漆器",
+    "红木"
+   ],
+   "iconography": [
+    "青花缠枝莲",
+    "《千里江山图》式青绿山水",
+    "江南园林漏窗"
+   ],
+   "image": "assets/aesthetic-chinoiserie.jpg",
+   "sources": [
+    "https://baike.baidu.com/item/Chinoiserie%E7%BE%8E%E5%AD%A6/67702700",
+    "https://cncolor.art/",
+    "https://baike.baidu.com/"
+   ],
+   "related": [
+    {
+     "id": "qinhan",
+     "score": 82,
+     "reason": "同属国风家族，共享东方审美气质。"
+    },
+    {
+     "id": "shuimo",
+     "score": 88,
+     "reason": "水墨意境是中国风视觉的核心母题。"
+    },
+    {
+     "id": "new-chinese",
+     "score": 85,
+     "reason": "新中式是国风在现代日常中的延伸。"
+    },
+    {
+     "id": "dunhuang",
+     "score": 84,
+     "reason": "敦煌矿物色彩同为中国传统美学重要分支。"
+    },
+    {
+     "id": "weijin",
+     "score": 80,
+     "reason": "同属国风家族，共享东方审美母题。"
+    },
+    {
+     "id": "suitang",
+     "score": 80,
+     "reason": "同属国风家族，共享东方审美母题。"
+    },
+    {
+     "id": "songyun",
+     "score": 80,
+     "reason": "同属国风家族，共享东方审美母题。"
+    },
+    {
+     "id": "mingzhi",
+     "score": 80,
+     "reason": "同属国风家族，共享东方审美母题。"
+    },
+    {
+     "id": "wuxia",
+     "score": 80,
+     "reason": "同属国风家族，共享东方审美母题。"
+    },
+    {
+     "id": "gongting",
+     "score": 80,
+     "reason": "同属国风家族，共享东方审美母题。"
+    },
+    {
+     "id": "cyber-china",
+     "score": 80,
+     "reason": "同属国风家族，共享东方审美母题。"
+    },
+    {
+     "id": "dark-china",
+     "score": 80,
+     "reason": "同属国风家族，共享东方审美母题。"
+    },
+    {
+     "id": "guochao",
+     "score": 80,
+     "reason": "同属国风家族，共享东方审美母题。"
+    },
+    {
+     "id": "erciyuan-china",
+     "score": 80,
+     "reason": "同属国风家族，共享东方审美母题。"
+    }
+   ],
+   "history": "1650-1750 年欧洲兴起中国风装饰热潮；19 世纪被东方主义思潮重构；2010 年代以来，随国潮与新中式兴起，中国风成为全球设计语言中的东方代表。",
+   "definition_detail": "中国风不是单一历史风格，而是一套以符号、色彩与意境为锚点的东方审美系统：既有欧洲想象的浪漫化东方，也有本土正宗的文人意境与宫廷气象。",
+   "visual_features": {
+    "color_system": "朱红、月白、黛蓝、鎏金与墨黑构成经典中国色盘，青花蓝白与青绿山水为两大视觉母题。",
+    "elements": [
+     "青花瓷纹样",
+     "山水屏风",
+     "亭台楼阁剪影",
+     "云纹与回纹"
+    ],
+    "materials": [
+     "丝绸",
+     "瓷器",
+     "漆器",
+     "红木"
+    ]
+   },
+   "representatives": [
+    "康熙青花瓷",
+    "《红楼梦》大观园意象",
+    "贝聿铭苏州博物馆",
+    "乌镇水乡建筑群"
+   ],
+   "applications": [
+    "建筑：园林漏窗与飞檐轮廓",
+    "服饰：盘扣立领与现代廓形结合",
+    "器物：青花与漆器工艺",
+    "平面：印章、水墨与留白排版"
+   ],
+   "related_terms": [
+    "东方主义 Orientalism",
+    "新中式 New Chinese Style",
+    "国潮 Guochao",
+    "文人审美"
+   ],
+   "radar_scores": {
+    "color_intensity": 70,
+    "tech": 30,
+    "nature": 45,
+    "darkness": 35,
+    "retro": 85,
+    "refinement": 88
+   },
+   "category": "design",
+   "parent": null,
+   "year": 1650,
+   "children": [
+    "qinhan",
+    "weijin",
+    "suitang",
+    "songyun",
+    "mingzhi",
+    "shuimo",
+    "wuxia",
+    "dunhuang",
+    "gongting",
+    "cyber-china",
+    "dark-china",
+    "new-chinese",
+    "guochao",
+    "erciyuan-china"
+   ]
+  },
+  {
+   "id": "qinhan",
+   "name_cn": "秦汉古朴风",
+   "name_en": "Qin-Han Archaic",
+   "family": "china",
+   "definition": "以曲裾深衣、交领右衽为核心的秦汉服饰美学，配色沉稳厚重，线条硬朗质朴，呈现庄重古拙的历史感。",
+   "origin": "秦并六国统一服饰制度，汉代确立深衣制与袍服体系，出土陶俑与帛画为其主要视觉档案。",
+   "colors": [
+    "#C3272B",
+    "#2B2B2B",
+    "#425066",
+    "#F2ECDE",
+    "#955539"
+   ],
+   "elements": [
+    "曲裾深衣",
+    "交领右衽",
+    "宽袍大袖",
+    "腰封绶带"
+   ],
+   "materials": [
+    "麻布",
+    "绢帛",
+    "皮革",
+    "玉器"
+   ],
+   "iconography": [
+    "兵马俑铠甲",
+    "马王堆帛画",
+    "铜车马"
+   ],
+   "image": "assets/aesthetic-qinhan.jpg",
+   "sources": [
+    "https://cncolor.art/",
+    "https://baike.baidu.com/"
+   ],
+   "related": [
+    {
+     "id": "weijin",
+     "score": 85,
+     "reason": "同属历朝形制，秦汉为源、魏晋为流。"
+    },
+    {
+     "id": "gongting",
+     "score": 78,
+     "reason": "宫廷气象承袭先秦礼制。"
+    }
+   ],
+   "history": "公元前 3 世纪至公元 2 世纪，秦汉以法度化服饰建立华夏衣冠体系，深衣制度影响后世两千年。",
+   "definition_detail": "秦汉古朴风是华夏衣冠的源头范式：以直线条与深色系建立秩序感，曲裾绕襟的层叠结构兼具仪式感与行动力。",
+   "visual_features": {
+    "color_system": "以朱红、玄黑、黛蓝为骨，牙白与赭石作衬，整体低饱和、高秩序。",
+    "elements": [
+     "曲裾深衣",
+     "交领右衽",
+     "宽袍大袖",
+     "腰封绶带"
+    ],
+    "materials": [
+     "麻布",
+     "绢帛",
+     "皮革",
+     "玉器"
+    ]
+   },
+   "representatives": [
+    "兵马俑",
+    "马王堆汉墓出土服饰",
+    "汉代画像石"
+   ],
+   "applications": [
+    "服饰：曲裾深衣与素纱禅衣复原",
+    "设计：青铜纹样与篆刻排版",
+    "影视：古装剧秦汉造型"
+   ],
+   "related_terms": [
+    "华夏衣冠",
+    "深衣制度",
+    "汉代气象"
+   ],
+   "radar_scores": {
+    "color_intensity": 55,
+    "tech": 15,
+    "nature": 30,
+    "darkness": 60,
+    "retro": 95,
+    "refinement": 72
+   },
+   "category": "fashion",
+   "parent": "chinoiserie",
+   "year": -221
+  },
+  {
+   "id": "weijin",
+   "name_cn": "魏晋仙气风",
+   "name_en": "Wei-Jin Ethereal",
+   "family": "china",
+   "definition": "宽衣大袖、交领右衽的魏晋风度服饰美学，注重自然洒脱与竹林七贤式的飘逸仙气。",
+   "origin": "魏晋南北朝玄学盛行，士人追求越名教而任自然，褒衣博带成为时代服饰符号。",
+   "colors": [
+    "#F2ECDE",
+    "#D6ECF0",
+    "#425066",
+    "#E4C6D0",
+    "#75878A"
+   ],
+   "elements": [
+    "宽衣大袖",
+    "交领右衽",
+    "披帛飘带",
+    "高冠束发"
+   ],
+   "materials": [
+    "薄纱",
+    "素绢",
+    "葛麻",
+    "玉饰"
+   ],
+   "iconography": [
+    "竹林七贤画像砖",
+    "顾恺之《洛神赋图》",
+    "敦煌壁画供养人"
+   ],
+   "image": "assets/aesthetic-weijin.jpg",
+   "sources": [
+    "https://cncolor.art/",
+    "https://baike.baidu.com/"
+   ],
+   "related": [
+    {
+     "id": "qinhan",
+     "score": 85,
+     "reason": "历朝形制一脉相承。"
+    },
+    {
+     "id": "wuxia",
+     "score": 80,
+     "reason": "仙侠气质承接魏晋风度。"
+    },
+    {
+     "id": "shuimo",
+     "score": 75,
+     "reason": "飘逸意境与水墨同源。"
+    }
+   ],
+   "history": "3-6 世纪，魏晋名士以褒衣博带回应时代动荡，衣袂飘飘成为东方浪漫主义的美学原型。",
+   "definition_detail": "魏晋仙气风将‘清谈’的精神自由外化为衣物的流动感：宽袖与披帛制造风动意象，素色与纱质营造虚灵气质。",
+   "visual_features": {
+    "color_system": "缟素、月白、黛蓝为主，藕荷点缀，低饱和高通透。",
+    "elements": [
+     "宽衣大袖",
+     "交领右衽",
+     "披帛飘带",
+     "高冠束发"
+    ],
+    "materials": [
+     "薄纱",
+     "素绢",
+     "葛麻",
+     "玉饰"
+    ]
+   },
+   "representatives": [
+    "竹林七贤",
+    "《洛神赋图》衣带",
+    "北朝壁画飞天"
+   ],
+   "applications": [
+    "服饰：汉服复原与仙侠影视造型",
+    "设计：水墨留白与书法排版",
+    "摄影：古风人像与纱幔布景"
+   ],
+   "related_terms": [
+    "魏晋风度",
+    "褒衣博带",
+    "名士风流"
+   ],
+   "radar_scores": {
+    "color_intensity": 35,
+    "tech": 10,
+    "nature": 65,
+    "darkness": 30,
+    "retro": 92,
+    "refinement": 80
+   },
+   "category": "fashion",
+   "parent": "chinoiserie",
+   "year": 265
+  },
+  {
+   "id": "suitang",
+   "name_cn": "隋唐华贵风",
+   "name_en": "Sui-Tang Opulence",
+   "family": "china",
+   "definition": "色彩浓烈绚丽的隋唐服饰美学，以齐胸襦裙、圆领袍、诃子裙为代表，展现雍容大气与盛世丰盈。",
+   "origin": "隋唐盛世开放包容，丝绸之路带来异域色彩，宫廷与市井共同塑造浓丽华贵的服饰气象。",
+   "colors": [
+    "#C3272B",
+    "#C9A86A",
+    "#A8516E",
+    "#177CB0",
+    "#9D2933"
+   ],
+   "elements": [
+    "齐胸襦裙",
+    "圆领袍",
+    "诃子裙",
+    "高髻花钿"
+   ],
+   "materials": [
+    "锦缎",
+    "纱罗",
+    "金线",
+    "珍珠"
+   ],
+   "iconography": [
+    "《簪花仕女图》",
+    "唐代壁画乐舞伎",
+    "唐三彩仕女俑"
+   ],
+   "image": "assets/aesthetic-suitang.jpg",
+   "sources": [
+    "https://cncolor.art/",
+    "https://baike.baidu.com/"
+   ],
+   "related": [
+    {
+     "id": "gongting",
+     "score": 82,
+     "reason": "宫廷华贵一脉相承。"
+    },
+    {
+     "id": "dunhuang",
+     "score": 78,
+     "reason": "敦煌乐舞与盛唐华彩同源。"
+    }
+   ],
+   "history": "6-10 世纪，隋唐将胡风与中原融合，服饰以丰腴为美，开创中国古代服饰最绚丽的篇章。",
+   "definition_detail": "隋唐华贵风以饱和色对撞与华贵面料堆叠见长：朱红配金、宝蓝衬胭脂，齐胸襦裙的高腰设计放大盛世体量感。",
+   "visual_features": {
+    "color_system": "朱红、鎏金、宝蓝与胭脂高饱和对撞，浓烈张扬。",
+    "elements": [
+     "齐胸襦裙",
+     "圆领袍",
+     "诃子裙",
+     "高髻花钿"
+    ],
+    "materials": [
+     "锦缎",
+     "纱罗",
+     "金线",
+     "珍珠"
+    ]
+   },
+   "representatives": [
+    "《簪花仕女图》",
+    "敦煌乐舞壁画",
+    "法门寺金银器"
+   ],
+   "applications": [
+    "服饰：齐胸襦裙与汉服大袖衫",
+    "设计：唐代纹样与宝相花应用",
+    "影视：《妖猫传》式盛唐造型"
+   ],
+   "related_terms": [
+    "盛唐气象",
+    "霓裳羽衣",
+    "宝相花"
+   ],
+   "radar_scores": {
+    "color_intensity": 92,
+    "tech": 20,
+    "nature": 25,
+    "darkness": 25,
+    "retro": 88,
+    "refinement": 85
+   },
+   "category": "fashion",
+   "parent": "chinoiserie",
+   "year": 581
+  },
+  {
+   "id": "songyun",
+   "name_cn": "宋韵极简风",
+   "name_en": "Song Minimalism",
+   "family": "china",
+   "definition": "配色素雅低饱和的宋代服饰美学，以褙子、抹胸、宋裤为主，强调文人清冽、委婉含蓄的极简审美。",
+   "origin": "宋代理学与士大夫文化兴盛，审美转向内敛克制，简约雅致的服饰成为文人日常。",
+   "colors": [
+    "#F2ECDE",
+    "#424C50",
+    "#6F998D",
+    "#E4C6D0",
+    "#75878A"
+   ],
+   "elements": [
+    "褙子",
+    "抹胸",
+    "宋裤",
+    "直裰"
+   ],
+   "materials": [
+    "素罗",
+    "苎麻",
+    "绢",
+    "竹节"
+   ],
+   "iconography": [
+    "《听琴图》",
+    "宋徽宗瘦金体",
+    "汝窑天青釉"
+   ],
+   "image": "assets/aesthetic-songyun.jpg",
+   "sources": [
+    "https://cncolor.art/",
+    "https://baike.baidu.com/"
+   ],
+   "related": [
+    {
+     "id": "shuimo",
+     "score": 85,
+     "reason": "水墨的留白哲学在宋代确立。"
+    },
+    {
+     "id": "new-chinese",
+     "score": 78,
+     "reason": "新中式承袭宋式克制美学。"
+    },
+    {
+     "id": "wabi-sabi",
+     "score": 72,
+     "reason": "与侘寂同属东方极简。"
+    }
+   ],
+   "history": "10-13 世纪，宋代以‘器以载道’塑造东方极简：从服饰到瓷器，克制与留白成为最高审美。",
+   "definition_detail": "宋韵极简风的精髓是‘藏’：低饱和的灰调色彩、修长的直线廓形、素面无纹的克制，把奢华隐于材质与剪裁。",
+   "visual_features": {
+    "color_system": "缟素、鸦青、天水碧为主，低饱和莫兰迪式灰调。",
+    "elements": [
+     "褙子",
+     "抹胸",
+     "宋裤",
+     "直裰"
+    ],
+    "materials": [
+     "素罗",
+     "苎麻",
+     "绢",
+     "竹节"
+    ]
+   },
+   "representatives": [
+    "《听琴图》",
+    "汝窑天青釉",
+    "南宋绢本山水"
+   ],
+   "applications": [
+    "服饰：褙子与宋制汉服",
+    "设计：天青配色与极简版面",
+    "家居：宋代美学空间与茶器"
+   ],
+   "related_terms": [
+    "宋式美学",
+    "天青色",
+    "格物致知"
+   ],
+   "radar_scores": {
+    "color_intensity": 25,
+    "tech": 15,
+    "nature": 55,
+    "darkness": 25,
+    "retro": 90,
+    "refinement": 92
+   },
+   "category": "fashion",
+   "parent": "chinoiserie",
+   "year": 960
+  },
+  {
+   "id": "mingzhi",
+   "name_cn": "明制典雅风",
+   "name_en": "Ming Elegance",
+   "family": "china",
+   "definition": "剪裁严谨端庄的明代服饰美学，以马面裙、立领袄裙、飞鱼服为代表，立裁感强且气场沉稳。",
+   "origin": "明代恢复汉制衣冠并发展出成熟的立领体系，织造工艺精良，服饰制度等级分明。",
+   "colors": [
+    "#C3272B",
+    "#425066",
+    "#C9A86A",
+    "#FFFBF0",
+    "#955539"
+   ],
+   "elements": [
+    "马面裙",
+    "立领袄裙",
+    "飞鱼服",
+    "比甲"
+   ],
+   "materials": [
+    "织金缎",
+    "妆花缎",
+    "潞绸",
+    "玉带"
+   ],
+   "iconography": [
+    "明代容像",
+    "《出警入跸图》",
+    "定陵出土衮服"
+   ],
+   "image": "assets/aesthetic-mingzhi.jpg",
+   "sources": [
+    "https://cncolor.art/",
+    "https://baike.baidu.com/"
+   ],
+   "related": [
+    {
+     "id": "songyun",
+     "score": 80,
+     "reason": "宋明衣冠一脉相承。"
+    },
+    {
+     "id": "gongting",
+     "score": 82,
+     "reason": "宫廷礼服承明制之端。"
+    }
+   ],
+   "history": "14-17 世纪，明代织造工艺达到高峰，马面裙的褶裥结构与立领裁片成为东方服装结构学的代表。",
+   "definition_detail": "明制典雅风以‘端方’立身：立领挺括、马面裙褶裥规整、织金提花克制闪亮，端庄中自有贵气。",
+   "visual_features": {
+    "color_system": "朱红、黛蓝、织金与牙白，庄重典雅。",
+    "elements": [
+     "马面裙",
+     "立领袄裙",
+     "飞鱼服",
+     "比甲"
+    ],
+    "materials": [
+     "织金缎",
+     "妆花缎",
+     "潞绸",
+     "玉带"
+    ]
+   },
+   "representatives": [
+    "定陵出土服饰",
+    "《出警入跸图》仪仗",
+    "明制马面裙复原"
+   ],
+   "applications": [
+    "服饰：明制汉服与马面裙日常化",
+    "设计：明代纹样与织金工艺",
+    "礼仪：汉服婚礼与成人礼"
+   ],
+   "related_terms": [
+    "马面裙",
+    "飞鱼服",
+    "妆花工艺"
+   ],
+   "radar_scores": {
+    "color_intensity": 65,
+    "tech": 20,
+    "nature": 30,
+    "darkness": 40,
+    "retro": 93,
+    "refinement": 90
+   },
+   "category": "fashion",
+   "parent": "chinoiserie",
+   "year": 1368
+  },
+  {
+   "id": "shuimo",
+   "name_cn": "水墨泼墨风",
+   "name_en": "Ink Wash",
+   "family": "china",
+   "definition": "以黑白灰为基调、融合留白与墨痕扩散的水墨艺术美学，极具诗意与写意感，是中国画的灵魂。",
+   "origin": "唐代王维倡导水墨为上，五代宋元文人画将其推向高峰，泼墨、破墨技法成熟。",
+   "colors": [
+    "#2B2B2B",
+    "#F2ECDE",
+    "#FFFBF0",
+    "#75878A",
+    "#424C50"
+   ],
+   "elements": [
+    "泼墨晕染",
+    "计白当黑",
+    "山水留白",
+    "枯笔飞白"
+   ],
+   "materials": [
+    "宣纸",
+    "徽墨",
+    "湖笔",
+    "端砚"
+   ],
+   "iconography": [
+    "《泼墨仙人图》",
+    "徐渭大写意",
+    "八大山人残荷"
+   ],
+   "image": "assets/aesthetic-shuimo.jpg",
+   "sources": [
+    "https://cncolor.art/",
+    "https://baike.baidu.com/"
+   ],
+   "related": [
+    {
+     "id": "chinoiserie",
+     "score": 88,
+     "reason": "水墨是中国风核心母题。"
+    },
+    {
+     "id": "wuxia",
+     "score": 70,
+     "reason": "武侠意境大量取用水墨语言。"
+    },
+    {
+     "id": "dark-china",
+     "score": 68,
+     "reason": "残墨暗黑一脉源自水墨。"
+    }
+   ],
+   "history": "8-20 世纪，水墨从宫廷走向文人案头，成为东亚艺术最具辨识度的视觉语言。",
+   "definition_detail": "水墨泼墨风的张力在‘虚实’：浓淡干湿的墨阶变化替代色彩，留白不是空无而是气韵的呼吸。",
+   "visual_features": {
+    "color_system": "黑白灰单色体系，以墨分五色，留白为核心构图手段。",
+    "elements": [
+     "泼墨晕染",
+     "计白当黑",
+     "山水留白",
+     "枯笔飞白"
+    ],
+    "materials": [
+     "宣纸",
+     "徽墨",
+     "湖笔",
+     "端砚"
+    ]
+   },
+   "representatives": [
+    "《泼墨仙人图》",
+    "八大山人",
+    "黄宾虹积墨山水"
+   ],
+   "applications": [
+    "设计：水墨海报与品牌东方调性",
+    "摄影：黑白山水意境人像",
+    "空间：水墨屏风与留白展陈"
+   ],
+   "related_terms": [
+    "墨分五色",
+    "计白当黑",
+    "大写意"
+   ],
+   "radar_scores": {
+    "color_intensity": 15,
+    "tech": 5,
+    "nature": 70,
+    "darkness": 55,
+    "retro": 88,
+    "refinement": 85
+   },
+   "category": "design",
+   "parent": "chinoiserie",
+   "year": 700
+  },
+  {
+   "id": "wuxia",
+   "name_cn": "武侠仙侠风",
+   "name_en": "Wuxia & Xianxia",
+   "family": "china",
+   "definition": "结合竹林、斗笠、飞剑与流苏的武侠仙侠视觉美学，强调江湖侠气与修真玄幻的动态美感。",
+   "origin": "20 世纪新派武侠小说兴起，80-90 年代武侠电影确立视觉范式，仙侠网文与影视推动其奇幻化。",
+   "colors": [
+    "#424C50",
+    "#2B2B2B",
+    "#D6ECF0",
+    "#6F998D",
+    "#C3272B"
+   ],
+   "elements": [
+    "斗笠蓑衣",
+    "竹林打斗",
+    "飞剑御空",
+    "流苏剑穗"
+   ],
+   "materials": [
+    "粗布",
+    "皮革",
+    "玄铁",
+    "竹"
+   ],
+   "iconography": [
+    "《卧虎藏龙》竹海",
+    "《东邪西毒》大漠",
+    "仙剑奇侠传世界观"
+   ],
+   "image": "assets/aesthetic-wuxia.jpg",
+   "sources": [
+    "https://cncolor.art/",
+    "https://baike.baidu.com/"
+   ],
+   "related": [
+    {
+     "id": "shuimo",
+     "score": 70,
+     "reason": "武侠影像大量取用水墨意境。"
+    },
+    {
+     "id": "weijin",
+     "score": 80,
+     "reason": "魏晋风度为侠客气质原型。"
+    },
+    {
+     "id": "cyber-china",
+     "score": 65,
+     "reason": "仙侠与赛博国风构成科幻两端。"
+    }
+   ],
+   "history": "1960 年代金庸古龙小说开启武侠美学，2000 年《卧虎藏龙》将东方武侠带向世界，仙侠题材持续重构其玄幻版图。",
+   "definition_detail": "武侠仙侠风把‘轻功’的失重感视觉化：衣袂、斗笠、流苏与竹林的线条共同制造飘移动态，是东方动作美学与奇幻想象的交汇。",
+   "visual_features": {
+    "color_system": "鸦青、玄黑、月白与天水碧，冷峻清冽，少量朱红点睛。",
+    "elements": [
+     "斗笠蓑衣",
+     "竹林打斗",
+     "飞剑御空",
+     "流苏剑穗"
+    ],
+    "materials": [
+     "粗布",
+     "皮革",
+     "玄铁",
+     "竹"
+    ]
+   },
+   "representatives": [
+    "《卧虎藏龙》",
+    "《英雄》色彩叙事",
+    "仙剑奇侠传"
+   ],
+   "applications": [
+    "影视：武侠与仙侠剧美术",
+    "游戏：国风武侠游戏原画",
+    "摄影：江湖意境人像大片"
+   ],
+   "related_terms": [
+    "江湖气",
+    "轻功",
+    "御剑飞行"
+   ],
+   "radar_scores": {
+    "color_intensity": 45,
+    "tech": 25,
+    "nature": 75,
+    "darkness": 60,
+    "retro": 75,
+    "refinement": 78
+   },
+   "category": "media",
+   "parent": "chinoiserie",
+   "year": 1960
+  },
+  {
+   "id": "dunhuang",
+   "name_cn": "敦煌飞天风",
+   "name_en": "Dunhuang Apsara",
+   "family": "china",
+   "definition": "汲取敦煌壁画灵感的艺术美学，采用青绿、朱红等高饱和矿物色彩，搭配飘带与金色佩饰，异域感浓郁。",
+   "origin": "366 年莫高窟开凿，历经十六国至元代营造，壁画中的飞天、藻井与乐舞成为东方重彩艺术的巅峰。",
+   "colors": [
+    "#177CB0",
+    "#C3272B",
+    "#C9A86A",
+    "#789262",
+    "#9D2933"
+   ],
+   "elements": [
+    "飞天飘带",
+    "藻井图案",
+    "九色鹿",
+    "反弹琵琶"
+   ],
+   "materials": [
+    "矿物颜料",
+    "泥金",
+    "土红",
+    "青金石"
+   ],
+   "iconography": [
+    "莫高窟飞天",
+    "反弹琵琶乐伎",
+    "九色鹿本生"
+   ],
+   "image": "assets/aesthetic-dunhuang.jpg",
+   "sources": [
+    "https://cncolor.art/",
+    "https://baike.baidu.com/"
+   ],
+   "related": [
+    {
+     "id": "chinoiserie",
+     "score": 84,
+     "reason": "敦煌重彩是中国传统美学重要分支。"
+    },
+    {
+     "id": "suitang",
+     "score": 78,
+     "reason": "盛唐华彩与敦煌乐舞同源。"
+    },
+    {
+     "id": "gongting",
+     "score": 75,
+     "reason": "宫廷金碧与敦煌泥金同源。"
+    }
+   ],
+   "history": "4-14 世纪，敦煌汇聚东西文明，青金石蓝与朱砂红在壁画上千年不褪，构成最绚丽的东方色彩档案。",
+   "definition_detail": "敦煌飞天风以矿物色的‘浓’与飘带的‘动’著称：青金蓝、石绿、朱砂、泥金层层叠染，飞天衣带如乐音流动。",
+   "visual_features": {
+    "color_system": "青金蓝、石绿、朱砂红与泥金高饱和矿物色，华丽浓郁。",
+    "elements": [
+     "飞天飘带",
+     "藻井图案",
+     "九色鹿",
+     "反弹琵琶"
+    ],
+    "materials": [
+     "矿物颜料",
+     "泥金",
+     "土红",
+     "青金石"
+    ]
+   },
+   "representatives": [
+    "莫高窟第 257 窟九色鹿",
+    "第 112 窟反弹琵琶",
+    "张大千敦煌临摹"
+   ],
+   "applications": [
+    "设计：敦煌色板与纹样再设计",
+    "服饰：国风秀场飞天造型",
+    "文创：敦煌 IP 与数字藏品"
+   ],
+   "related_terms": [
+    "飞天",
+    "藻井",
+    "矿物颜料"
+   ],
+   "radar_scores": {
+    "color_intensity": 95,
+    "tech": 10,
+    "nature": 50,
+    "darkness": 20,
+    "retro": 90,
+    "refinement": 82
+   },
+   "category": "design",
+   "parent": "chinoiserie",
+   "year": 366
+  },
+  {
+   "id": "gongting",
+   "name_cn": "宫廷帝王风",
+   "name_en": "Imperial Court",
+   "family": "china",
+   "definition": "以朱红与帝王金为主色调的宫廷美学，注重精致刺绣与皇家纹样，营造威严肃穆的视觉体验。",
+   "origin": "历代宫殿建筑与宫廷礼仪共同塑造帝王审美，明清紫禁城将其推向制度化巅峰。",
+   "colors": [
+    "#C3272B",
+    "#C9A86A",
+    "#2B2B2B",
+    "#425066",
+    "#FFFBF0"
+   ],
+   "elements": [
+    "朱红宫墙",
+    "鎏金脊兽",
+    "五爪龙纹",
+    "藻井斗拱"
+   ],
+   "materials": [
+    "金丝楠木",
+    "琉璃",
+    "鎏金",
+    "织锦"
+   ],
+   "iconography": [
+    "紫禁城三大殿",
+    "九龙壁",
+    "龙袍十二章纹"
+   ],
+   "image": "assets/aesthetic-gongting.jpg",
+   "sources": [
+    "https://cncolor.art/",
+    "https://baike.baidu.com/"
+   ],
+   "related": [
+    {
+     "id": "suitang",
+     "score": 82,
+     "reason": "宫廷华贵承唐之盛。"
+    },
+    {
+     "id": "mingzhi",
+     "score": 82,
+     "reason": "明制礼服为宫廷服制核心。"
+    },
+    {
+     "id": "dunhuang",
+     "score": 75,
+     "reason": "泥金重彩传统同源。"
+    }
+   ],
+   "history": "14-20 世纪，明清两代以严整的礼制体系将宫廷美学制度化，红墙金瓦成为东方权力美学的符号。",
+   "definition_detail": "宫廷帝王风的威严来自‘对称与层级’：朱红为底、鎏金压顶，龙纹与斗拱的重复母题制造秩序感与压迫感。",
+   "visual_features": {
+    "color_system": "朱红宫墙、鎏金与玄黑构成主色，青绿彩绘点缀。",
+    "elements": [
+     "朱红宫墙",
+     "鎏金脊兽",
+     "五爪龙纹",
+     "藻井斗拱"
+    ],
+    "materials": [
+     "金丝楠木",
+     "琉璃",
+     "鎏金",
+     "织锦"
+    ]
+   },
+   "representatives": [
+    "紫禁城",
+    "九龙壁",
+    "清代龙袍"
+   ],
+   "applications": [
+    "建筑：中式宫殿与府邸门头",
+    "设计：国风礼盒与高端品牌",
+    "影视：宫斗剧与历史剧美术"
+   ],
+   "related_terms": [
+    "红墙金瓦",
+    "十二章纹",
+    "九五之尊"
+   ],
+   "radar_scores": {
+    "color_intensity": 90,
+    "tech": 20,
+    "nature": 15,
+    "darkness": 45,
+    "retro": 92,
+    "refinement": 88
+   },
+   "category": "design",
+   "parent": "chinoiserie",
+   "year": 1368
+  },
+  {
+   "id": "cyber-china",
+   "name_cn": "赛博朋克国风",
+   "name_en": "Cyberpunk Guofeng",
+   "family": "china",
+   "definition": "将霓虹灯光、科技机械与传统飞檐斗拱、牌坊及汉服结合，打造东方科幻美学的未来想象。",
+   "origin": "2010 年代中国赛博朋克题材影视与游戏兴起，上海、重庆等城市夜景成为东方赛博视觉的原型。",
+   "colors": [
+    "#A8516E",
+    "#177CB0",
+    "#2B2B2B",
+    "#C9A86A",
+    "#6F998D"
+   ],
+   "elements": [
+    "霓虹招牌",
+    "飞檐斗拱",
+    "全息灯笼",
+    "机械汉服"
+   ],
+   "materials": [
+    "霓虹灯管",
+    "金属",
+    "LED屏",
+    "丝绸"
+   ],
+   "iconography": [
+    "重庆洪崖洞夜景",
+    "《攻壳机动队》上海街景",
+    "国风赛博插画"
+   ],
+   "image": "assets/aesthetic-cyber-china.jpg",
+   "sources": [
+    "https://cncolor.art/",
+    "https://baike.baidu.com/"
+   ],
+   "related": [
+    {
+     "id": "wuxia",
+     "score": 65,
+     "reason": "仙侠与赛博构成国风科幻两端。"
+    },
+    {
+     "id": "dark-china",
+     "score": 70,
+     "reason": "暗黑国风同属未来想象支流。"
+    },
+    {
+     "id": "cyberpunk",
+     "score": 78,
+     "reason": "共享赛博朋克核心气质。"
+    }
+   ],
+   "history": "2019 年前后‘赛博国风’随国潮与科幻浪潮兴起，将千年古建符号置入霓虹未来，成为最具辨识度的东方科幻流派。",
+   "definition_detail": "赛博朋克国风的关键是‘古今同框’：朱红宫墙亮起霓虹、飞檐之下漂浮全息灯笼，传统文化符号被科技重新点亮。",
+   "visual_features": {
+    "color_system": "品红、电蓝霓虹与玄黑为主，鎏金与天水碧点缀东方质感。",
+    "elements": [
+     "霓虹招牌",
+     "飞檐斗拱",
+     "全息灯笼",
+     "机械汉服"
+    ],
+    "materials": [
+     "霓虹灯管",
+     "金属",
+     "LED屏",
+     "丝绸"
+    ]
+   },
+   "representatives": [
+    "重庆洪崖洞",
+    "《赛博朋克 2077》中国城设定",
+    "国风赛博数字艺术"
+   ],
+   "applications": [
+    "设计：东方科幻海报与游戏美术",
+    "摄影：霓虹古建夜景大片",
+    "数字艺术：AI 国风赛博创作"
+   ],
+   "related_terms": [
+    "东方赛博",
+    "霓虹古建",
+    "机械汉服"
+   ],
+   "radar_scores": {
+    "color_intensity": 90,
+    "tech": 95,
+    "nature": 10,
+    "darkness": 75,
+    "retro": 45,
+    "refinement": 70
+   },
+   "category": "digital",
+   "parent": "chinoiserie",
+   "year": 2019
+  },
+  {
+   "id": "dark-china",
+   "name_cn": "暗黑残墨国风",
+   "name_en": "Dark Ink Guofeng",
+   "family": "china",
+   "definition": "结合哥特元素与黑白残卷墨迹的暗黑国风，视觉上冷峻神秘，充满独特的张力。",
+   "origin": "2010 年代暗黑系国风在插画、游戏与服饰圈层兴起，以残破墨迹与哥特结构重构东方暗面。",
+   "colors": [
+    "#2B2B2B",
+    "#424C50",
+    "#75878A",
+    "#C3272B",
+    "#F2ECDE"
+   ],
+   "elements": [
+    "残卷墨迹",
+    "墨鸦枯枝",
+    "哥特立领",
+    "银饰符咒"
+   ],
+   "materials": [
+    "暗纹织锦",
+    "哑光金属",
+    "皮",
+    "古纸"
+   ],
+   "iconography": [
+    "水墨乌鸦",
+    "残破山水卷轴",
+    "暗黑汉服设计"
+   ],
+   "image": "assets/aesthetic-dark-china.jpg",
+   "sources": [
+    "https://cncolor.art/",
+    "https://baike.baidu.com/"
+   ],
+   "related": [
+    {
+     "id": "shuimo",
+     "score": 68,
+     "reason": "残墨一脉源自水墨写意。"
+    },
+    {
+     "id": "cyber-china",
+     "score": 70,
+     "reason": "同属国风未来想象。"
+    },
+    {
+     "id": "gothic",
+     "score": 75,
+     "reason": "共享哥特暗黑内核。"
+    }
+   ],
+   "history": "2015 年前后暗黑国风伴随国风插画与暗黑系服饰兴起，以‘墨的暴烈与克制’再造东方神秘主义。",
+   "definition_detail": "暗黑残墨国风把水墨的‘留白’翻转为‘吞噬’：泼墨如裂、枯枝如骨，哥特廓形与银饰增加冷峻锋芒。",
+   "visual_features": {
+    "color_system": "玄黑、鸦青、苍色为主，残墨飞白与少量朱红点睛。",
+    "elements": [
+     "残卷墨迹",
+     "墨鸦枯枝",
+     "哥特立领",
+     "银饰符咒"
+    ],
+    "materials": [
+     "暗纹织锦",
+     "哑光金属",
+     "皮",
+     "古纸"
+    ]
+   },
+   "representatives": [
+    "暗黑系国风插画",
+    "哥特汉服设计",
+    "《黑神话》式暗黑东方"
+   ],
+   "applications": [
+    "设计：暗黑国风游戏与专辑视觉",
+    "服饰：暗黑系汉服与机能国风",
+    "摄影：残墨人像与烟熏氛围"
+   ],
+   "related_terms": [
+    "残墨",
+    "东方哥特",
+    "墨鸦"
+   ],
+   "radar_scores": {
+    "color_intensity": 60,
+    "tech": 30,
+    "nature": 35,
+    "darkness": 95,
+    "retro": 65,
+    "refinement": 75
+   },
+   "category": "design",
+   "parent": "chinoiserie",
+   "year": 2015
+  },
+  {
+   "id": "new-chinese",
+   "name_cn": "新中式",
+   "name_en": "New Chinese Style",
+   "family": "china",
+   "definition": "提取盘扣、斜襟、立领、宋锦等东方元素，结合西装、衬衫等现代版型的日常穿搭美学，百搭而克制。",
+   "origin": "2010 年代新中式服饰在都市人群中兴起，2021 年前后成为消费市场主流风格，东方元素进入日常衣橱。",
+   "colors": [
+    "#F2ECDE",
+    "#425066",
+    "#955539",
+    "#A8845C",
+    "#C3272B"
+   ],
+   "elements": [
+    "盘扣",
+    "斜襟",
+    "立领",
+    "宋锦提花"
+   ],
+   "materials": [
+    "真丝",
+    "宋锦",
+    "香云纱",
+    "羊毛"
+   ],
+   "iconography": [
+    "新中式女装套装",
+    "中式立领衬衫",
+    "云纹提花西装"
+   ],
+   "image": "assets/aesthetic-new-chinese.jpg",
+   "sources": [
+    "https://cncolor.art/",
+    "https://baike.baidu.com/"
+   ],
+   "related": [
+    {
+     "id": "chinoiserie",
+     "score": 85,
+     "reason": "新中式是中国风现代延伸。"
+    },
+    {
+     "id": "songyun",
+     "score": 78,
+     "reason": "承袭宋式克制美学。"
+    },
+    {
+     "id": "guochao",
+     "score": 70,
+     "reason": "同属国风日常化支流。"
+    }
+   ],
+   "history": "2014 年起新中式从设计师品牌走向大众市场，2021-2024 年爆发式增长，成为国风日常化的代表。",
+   "definition_detail": "新中式的智慧在‘留余地’：只取盘扣、立领、斜襟一两个东方符号置入现代版型，克制比堆叠更有辨识度。",
+   "visual_features": {
+    "color_system": "缟素、黛蓝、赭石、驼色等低饱和大地色为主，少量朱红点睛。",
+    "elements": [
+     "盘扣",
+     "斜襟",
+     "立领",
+     "宋锦提花"
+    ],
+    "materials": [
+     "真丝",
+     "宋锦",
+     "香云纱",
+     "羊毛"
+    ]
+   },
+   "representatives": [
+    "新中式套装设计",
+    "中式立领衬衫",
+    "宋锦云纹提花面料"
+   ],
+   "applications": [
+    "穿搭：新中式通勤与日常着装",
+    "设计：东方极简品牌视觉",
+    "家居：新中式空间与软装"
+   ],
+   "related_terms": [
+    "新中式",
+    "盘扣",
+    "香云纱"
+   ],
+   "radar_scores": {
+    "color_intensity": 40,
+    "tech": 20,
+    "nature": 40,
+    "darkness": 20,
+    "retro": 70,
+    "refinement": 88
+   },
+   "category": "fashion",
+   "parent": "chinoiserie",
+   "year": 2014
+  },
+  {
+   "id": "guochao",
+   "name_cn": "国潮街头风",
+   "name_en": "Guochao Streetwear",
+   "family": "china",
+   "definition": "将龙凤、祥云、书法等中国元素印制于卫衣、球鞋与潮牌时装上的街头美学，兼具潮流感与文化认同。",
+   "origin": "2018 年李宁‘悟道’系列点燃国潮运动，本土品牌以东方符号重构街头潮流，形成现象级文化浪潮。",
+   "colors": [
+    "#C3272B",
+    "#2B2B2B",
+    "#C9A86A",
+    "#425066",
+    "#FFFBF0"
+   ],
+   "elements": [
+    "祥云纹",
+    "书法字",
+    "龙凤图案",
+    "印章元素"
+   ],
+   "materials": [
+    "重磅棉",
+    "刺绣",
+    "反光涂层",
+    "帆布"
+   ],
+   "iconography": [
+    "国潮卫衣",
+    "中国李宁运动鞋",
+    "故宫联名系列"
+   ],
+   "image": "assets/aesthetic-guochao.jpg",
+   "sources": [
+    "https://cncolor.art/",
+    "https://baike.baidu.com/"
+   ],
+   "related": [
+    {
+     "id": "new-chinese",
+     "score": 70,
+     "reason": "同属国风日常化支流。"
+    },
+    {
+     "id": "chinoiserie",
+     "score": 75,
+     "reason": "国潮以中国符号为根。"
+    },
+    {
+     "id": "streetwear",
+     "score": 80,
+     "reason": "共享街头潮流内核。"
+    }
+   ],
+   "history": "2018 年国潮元年，本土品牌与博物馆 IP 联动，东方符号进入青年潮流语汇，并反向输出海外。",
+   "definition_detail": "国潮街头风的张力在‘混搭’：把庙堂之上的龙凤祥云搬到街头卫衣与球鞋，用解构、撞色与 oversize 重新编码东方符号。",
+   "visual_features": {
+    "color_system": "朱红、玄黑、鎏金与牙白强对比，大字书法是核心视觉。",
+    "elements": [
+     "祥云纹",
+     "书法字",
+     "龙凤图案",
+     "印章元素"
+    ],
+    "materials": [
+     "重磅棉",
+     "刺绣",
+     "反光涂层",
+     "帆布"
+    ]
+   },
+   "representatives": [
+    "中国李宁悟道系列",
+    "故宫淘宝联名",
+    "国潮街头插画"
+   ],
+   "applications": [
+    "穿搭：国潮卫衣球鞋日常造型",
+    "设计：国潮品牌视觉与包装",
+    "营销：博物馆联名与快闪"
+   ],
+   "related_terms": [
+    "国潮",
+    "中国李宁",
+    "博物馆联名"
+   ],
+   "radar_scores": {
+    "color_intensity": 85,
+    "tech": 30,
+    "nature": 15,
+    "darkness": 35,
+    "retro": 60,
+    "refinement": 60
+   },
+   "category": "fashion",
+   "parent": "chinoiserie",
+   "year": 2018
+  },
+  {
+   "id": "erciyuan-china",
+   "name_cn": "二次元国风",
+   "name_en": "Anime Guofeng",
+   "family": "china",
+   "definition": "融合国风网游与动漫角色造型的二次元美学，线条夸张、色彩明丽，具有强烈的视觉冲击。",
+   "origin": "2010 年代国风网游与动漫崛起，《剑网 3》等作品确立角色造型范式，同人创作推动其扩散。",
+   "colors": [
+    "#C3272B",
+    "#177CB0",
+    "#E4C6D0",
+    "#C9A86A",
+    "#D6ECF0"
+   ],
+   "elements": [
+    "高马尾发饰",
+    "流苏佩剑",
+    "广袖襦裙",
+    "特效光晕"
+   ],
+   "materials": [
+    "赛璐璐上色",
+    "亮片",
+    "珍珠",
+    "金属配饰"
+   ],
+   "iconography": [
+    "《剑网 3》门派套装",
+    "国风动漫角色",
+    "同人插画"
+   ],
+   "image": "assets/aesthetic-erciyuan-china.jpg",
+   "sources": [
+    "https://cncolor.art/",
+    "https://baike.baidu.com/"
+   ],
+   "related": [
+    {
+     "id": "wuxia",
+     "score": 70,
+     "reason": "武侠世界观是国风游戏底色。"
+    },
+    {
+     "id": "chinoiserie",
+     "score": 72,
+     "reason": "以中国符号为角色根基。"
+    },
+    {
+     "id": "kawaii",
+     "score": 65,
+     "reason": "二次元造型语汇相通。"
+    }
+   ],
+   "history": "2010 年起国风网游与国漫相互成就，二次元国风成为 Z 世代理解传统美学的第一入口。",
+   "definition_detail": "二次元国风以‘提纯’见长：把戏曲头面、广袖襦裙提纯为高识别度的角色符号，再用明快赛璐璐色彩放大情绪。",
+   "visual_features": {
+    "color_system": "朱红、宝蓝、藕荷与鎏金明快高饱和，配合赛璐璐光影。",
+    "elements": [
+     "高马尾发饰",
+     "流苏佩剑",
+     "广袖襦裙",
+     "特效光晕"
+    ],
+    "materials": [
+     "赛璐璐上色",
+     "亮片",
+     "珍珠",
+     "金属配饰"
+    ]
+   },
+   "representatives": [
+    "《剑网 3》门派造型",
+    "国风动漫番剧",
+    "国风虚拟偶像"
+   ],
+   "applications": [
+    "游戏：国风角色原画与皮肤",
+    "动漫：国风番剧美术设定",
+    "插画：同人创作与谷子周边"
+   ],
+   "related_terms": [
+    "国风游戏",
+    "赛璐璐",
+    "虚拟偶像"
+   ],
+   "radar_scores": {
+    "color_intensity": 90,
+    "tech": 60,
+    "nature": 20,
+    "darkness": 20,
+    "retro": 55,
+    "refinement": 72
+   },
+   "category": "media",
+   "parent": "chinoiserie",
    "year": 2010
   }
  ]
