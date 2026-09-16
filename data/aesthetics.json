@@ -3,7 +3,7 @@
   "name": "棂感",
   "description": "美学科普与风格搭配数据库",
   "count": 204,
-  "last_updated": "2026-09-14"
+  "last_updated": "2026-09-16"
  },
  "categories": [
   {
@@ -17168,13 +17168,13 @@
     "retro": 90,
     "refinement": 35
    },
-   "id": "americana",
+   "id": "heartland-core",
    "name_cn": "美国心脏地带核",
    "name_en": "Americana/Heartland Core",
    "family": "retro",
    "parent": null,
    "category": "lifestyle",
-   "image": "assets/aesthetic-americana.jpg",
+   "image": "assets/aesthetic-heartland-core.jpg",
    "sources": [
     "https://aesthetics.fandom.com/"
    ],
@@ -21461,9 +21461,9 @@
      "reason": "国潮以中国符号为根。"
     },
     {
-     "id": "streetwear",
-     "score": 80,
-     "reason": "共享街头潮流内核。"
+     "id": "skatercore",
+     "score": 78,
+     "reason": "共享街头潮流与球鞋文化内核。"
     }
    ],
    "history": "2018 年国潮元年，本土品牌与博物馆 IP 联动，东方符号进入青年潮流语汇，并反向输出海外。",

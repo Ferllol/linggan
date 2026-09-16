@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>棂感 · 美学风格科普与搭配平台</title>
-<meta name="description" content="棂感——189 种美学风格科普数据库与风格搭配实验室。探索主义、核类、波类、网络数字、暗黑系、清新浪漫、复古学院、萌系日系八大风格家族，支持设计、穿搭、建筑等领域分类浏览。">
+<meta name="description" content="棂感——204 种美学风格科普数据库与风格搭配实验室。探索主义、核类、波类、网络数字、暗黑系、清新浪漫、复古学院、萌系日系、国风九大风格家族，支持设计、穿搭、建筑等领域分类浏览。">
 <link rel="preconnect" href="https://miaoda.feishu.cn">
 <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Serif+SC:wght@400;600;700;900&display=swap">
 <script src="echarts.min.js"></script>
@@ -129,6 +129,8 @@ body.side-collapsed .rail-item .side-count{position:absolute;top:3px;right:2px;m
 body.side-collapsed .rail-divider{display:none}
 .side-sec-head{font-size:11px;letter-spacing:.22em;color:var(--faint);padding:15px 10px 6px}
 body.side-collapsed .side-sec-head{display:none}
+.side-badge{flex:none;padding:2px 8px;border-radius:99px;background:rgba(255,212,121,.1);color:#ffd479;border:1px solid rgba(255,212,121,.3);font-size:10.5px;letter-spacing:.08em;white-space:nowrap;line-height:1.5}
+body.side-collapsed .rail-item .side-badge{position:absolute;top:4px;right:4px;width:8px;height:8px;min-width:0;padding:0;font-size:0;border:none;border-radius:99px;background:#ffd479;box-shadow:0 0 8px rgba(255,212,121,.8)}
 
 /* 抽屉遮罩 + 移动端顶栏 + FAB */
 #side-scrim{position:fixed;inset:0;z-index:28;background:rgba(5,5,10,.62);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:opacity .35s}
@@ -652,6 +654,17 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
 .help-note{margin-top:16px;padding:13px 16px;border-radius:12px;background:rgba(255,212,121,.06);border:1px solid rgba(255,212,121,.25);font-size:12.5px;line-height:1.7;color:#e8d9b5}
 @media (max-width:1100px){.help-btn{top:16px;right:0}}
 @media (max-width:640px){.help-sub{display:none}}
+/* ===== 更新日志 ===== */
+.changelog{display:grid;gap:12px}
+.cl-item{display:flex;gap:18px;padding:16px 18px;border-radius:14px;background:var(--panel);border:1px solid var(--line);transition:border-color .25s}
+.cl-item:hover{border-color:rgba(123,107,255,.4)}
+.cl-ver{flex:none;width:78px;display:flex;flex-direction:column;gap:5px}
+.cl-ver b{font-family:var(--serif);font-size:16px;color:#9bd8ff;letter-spacing:.04em;line-height:1.2}
+.cl-ver span{font-size:11px;color:var(--faint);font-variant-numeric:tabular-nums}
+.cl-body h4{margin:0 0 5px;font-size:14px;color:#fff}
+.cl-body p{margin:0;font-size:12.5px;line-height:1.7;color:var(--muted)}
+.cl-body .hl{color:#ffd479}
+@media (max-width:640px){.cl-item{flex-direction:column;gap:6px}.cl-ver{width:auto;flex-direction:row;align-items:baseline;gap:10px}}
 
 /* ============ 动效克制 ============ */
 @media (prefers-reduced-motion:reduce){
@@ -719,6 +732,15 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
     <button class="rail-item" data-route="#/favorites" type="button">
       <svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 3.1 1-5.8L3.5 9.7l5.9-.9z"/></svg>
       <span class="rb">我的收藏</span>
+    </button>
+
+    <div class="rail-divider" aria-hidden="true"></div>
+    <div class="side-sec-head">工具</div>
+
+    <button class="rail-item" data-route="#/toolbox" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      <span class="rb">工具箱</span>
+      <span class="side-badge">待开发</span>
     </button>
   </div>
 </aside>
@@ -905,11 +927,22 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
     <div class="help-sec">
       <div class="help-sec-head"><span class="help-no">04</span><h3>关于棂感</h3><span class="help-sub">版本与创作者</span></div>
       <div class="help-about">
-        <div class="help-about-row"><span class="k">版本</span><span class="v">棂感 v2.1 · 2026-09-14</span></div>
+        <div class="help-about-row"><span class="k">版本</span><span class="v">棂感 v2.3 · 2026-09-16</span></div>
         <div class="help-about-row"><span class="k">数据规模</span><span class="v">204 种美学风格 · 9 大风格家族 · 7 大分类 · 762 组关联关系</span></div>
         <div class="help-about-row"><span class="k">创作者</span><span class="v">汐棂月</span></div>
         <div class="help-about-row"><span class="k">创作主页</span><span class="v"><a href="https://www.douyin.com/user/MS4wLjABAAAAtZOif8mDPwoLElnE57tan1TlzRJoa-wiXphzKntoSnM?from_tab_name=main" target="_blank" rel="noopener">抖音 · 汐棂月 创作主页 ↗</a></span></div>
         <div class="help-about-row"><span class="k">技术</span><span class="v">单文件 HTML + 数据驱动（data/aesthetics.js）· 深色科技风 · 支持本地打开与 GitHub Pages</span></div>
+      </div>
+    </div>
+
+    <div class="help-sec">
+      <div class="help-sec-head"><span class="help-no">05</span><h3>更新日志</h3><span class="help-sub">棂感在长大</span></div>
+      <div class="changelog">
+        <div class="cl-item"><div class="cl-ver"><b>v2.3</b><span>2026-09-16</span></div><div class="cl-body"><h4>工具箱入口 · 更新日志</h4><p>侧边栏新增<span class="hl">「工具箱」</span>板块（标记待开发，实用小工具后续陆续上线）；帮助中心新增「更新日志」。</p></div></div>
+        <div class="cl-item"><div class="cl-ver"><b>v2.2</b><span>2026-09-16</span></div><div class="cl-body"><h4>数据修复</h4><p>修复「美式复古」与「美国心脏地带核」ID 撞车导致的详情页异常与关联跳错，修复一处失效风格关联，补出独立预览图，页面版本描述同步更新。</p></div></div>
+        <div class="cl-item"><div class="cl-ver"><b>v2.1</b><span>2026-09-14</span></div><div class="cl-body"><h4>国风家族 · 架构优化</h4><p>新增 Chinoiserie 中国风主风格与 14 个子风格（风格库 189 → 204，家族 8 → 9）；帮助中心上线；数据外置、卡片分批渲染、图表本地化等架构优化。</p></div></div>
+        <div class="cl-item"><div class="cl-ver"><b>v2.0</b><span>2026-09-14</span></div><div class="cl-body"><h4>大版本升级</h4><p>风格库扩充至 189 种；棂能测试、风格时间轴、我的收藏与本地账号上线；网站正式发布到 GitHub Pages。</p></div></div>
+        <div class="cl-item"><div class="cl-ver"><b>v1.0</b><span>2026-09-10</span></div><div class="cl-body"><h4>棂感诞生</h4><p>首批约 79 种美学风格，支持网格浏览、详情、搜索与家族筛选。</p></div></div>
       </div>
     </div>
   </section>
@@ -1064,12 +1097,14 @@ var ROUTES = {
   '#/test':     'view-test',
   '#/timeline': 'view-timeline',
   '#/help':     'view-help',
-  '#/favorites':'view-favorites'
+  '#/favorites':'view-favorites',
+  '#/toolbox':  'view-soon'
 };
 var SOON_TITLES = {
   '#/test':     {title:'风格体质测试', desc:'回答 12 个问题，棂感会从你的偏好里解读出你天生亲近的美学基因。即将上线。'},
   '#/timeline': {title:'风格时间轴', desc:'沿时间之河看美学风格如何诞生、流行与复兴——从 1925 年的巴黎到今天的赛博空间。即将上线。'},
-  '#/favorites':{title:'我的收藏', desc:'收藏你心动的风格，建立自己的灵感私人馆。本地浏览器存储，不上传云端。即将上线。'}
+  '#/favorites':{title:'我的收藏', desc:'收藏你心动的风格，建立自己的灵感私人馆。本地浏览器存储，不上传云端。即将上线。'},
+  '#/toolbox':  {title:'工具箱 · 待开发', desc:'实用创作小工具正在筹备中：智能配色提取、AI 提示词生成、色板导出等，后续会在这里陆续上线。'}
 };
 function currentRoute(){ var h = location.hash || '#/'; return ROUTES[h] ? h : '#/'; }
 function navigate(){
