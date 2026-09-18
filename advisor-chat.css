@@ -1,0 +1,165 @@
+/* =========================================================================
+   棂感 · 风格搭配师 · 对话球样式
+   沿用站点深色科技风变量；本文件独立，便于维护与回滚。
+   ========================================================================= */
+
+/* ---------- 常驻对话球 ---------- */
+.lg-fab{
+  position:fixed; right:22px; bottom:22px; z-index:40;
+  display:inline-flex; align-items:center; gap:9px;
+  padding:13px 20px 13px 16px; border-radius:999px;
+  background:var(--grad,#00e5ff);
+  color:#06121a; font-size:13.5px; font-weight:700; font-family:inherit;
+  border:none; cursor:pointer;
+  box-shadow:0 14px 38px -10px rgba(123,107,255,.85), 0 0 0 1px rgba(255,255,255,.16) inset;
+  transition:transform .28s var(--ease,cubic-bezier(.22,1,.36,1)), filter .22s, opacity .25s;
+}
+.lg-fab:hover{ transform:translateY(-3px) scale(1.02); filter:brightness(1.07); }
+.lg-fab:active{ transform:translateY(-1px) scale(.985); }
+.lg-fab.hide{ opacity:0; pointer-events:none; transform:translateY(14px) scale(.9); }
+.lg-fab-ic{ display:inline-flex; }
+.lg-fab-ic svg{ width:19px; height:19px; fill:none; stroke:currentColor; stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round; }
+.lg-fab::before{
+  content:""; position:absolute; inset:-6px; border-radius:999px;
+  background:radial-gradient(circle, rgba(0,229,255,.35), transparent 70%);
+  opacity:0; transition:opacity .3s; pointer-events:none;
+}
+.lg-fab:hover::before{ opacity:1; animation:lgPulse 2.4s ease-in-out infinite; }
+@keyframes lgPulse{ 0%,100%{ transform:scale(.94); opacity:.35 } 50%{ transform:scale(1.06); opacity:.7 } }
+
+/* ---------- 面板 ---------- */
+.lg-panel{
+  position:fixed; right:22px; bottom:22px; z-index:41;
+  width:min(412px, calc(100vw - 28px));
+  height:min(620px, calc(100vh - 44px));
+  display:flex; flex-direction:column;
+  background:rgba(13,13,21,.93);
+  backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+  border:1px solid var(--line,rgba(255,255,255,.09));
+  border-radius:20px;
+  box-shadow:0 30px 80px -24px rgba(0,0,0,.85), 0 0 0 1px rgba(0,229,255,.08), 0 0 90px -50px rgba(123,107,255,.9);
+  opacity:0; visibility:hidden; transform:translateY(18px) scale(.97);
+  transition:opacity .3s var(--ease,cubic-bezier(.22,1,.36,1)), transform .34s var(--ease,cubic-bezier(.22,1,.36,1)), visibility .3s;
+  overflow:hidden;
+}
+.lg-panel.open{ opacity:1; visibility:visible; transform:none; }
+
+.lg-head{
+  flex:none; display:flex; align-items:center; gap:11px;
+  padding:14px 15px; border-bottom:1px solid var(--line,rgba(255,255,255,.09));
+  background:linear-gradient(180deg, rgba(0,229,255,.07), transparent);
+}
+.lg-orb{
+  flex:none; width:32px; height:32px; border-radius:50%;
+  background:var(--grad,#00e5ff);
+  box-shadow:0 0 18px -2px rgba(0,229,255,.75);
+  position:relative;
+}
+.lg-orb::after{
+  content:""; position:absolute; inset:5px; border-radius:50%;
+  background:rgba(10,10,15,.75);
+}
+.lg-head-tx{ flex:1; min-width:0; display:flex; flex-direction:column; }
+.lg-head-tx b{ font-family:var(--serif,"Noto Serif SC",serif); font-size:14.5px; color:#fff; letter-spacing:.04em; }
+.lg-head-tx small{ font-size:11px; color:var(--faint,#6d6a80); letter-spacing:.04em; }
+.lg-close{
+  flex:none; width:30px; height:30px; border-radius:9px; display:grid; place-items:center;
+  background:transparent; border:1px solid var(--line,rgba(255,255,255,.09));
+  color:var(--muted,#9895a8); cursor:pointer; transition:all .2s;
+}
+.lg-close:hover{ color:#fff; border-color:var(--line-strong,rgba(255,255,255,.16)); }
+.lg-close svg{ width:14px; height:14px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; }
+
+/* ---------- 消息列表 ---------- */
+.lg-list{
+  flex:1; min-height:0; overflow-y:auto; overflow-x:hidden;
+  padding:16px 15px 8px; display:flex; flex-direction:column; gap:12px;
+  scroll-behavior:smooth;
+}
+.lg-list::-webkit-scrollbar{ width:7px; }
+.lg-list::-webkit-scrollbar-thumb{ background:#26263a; border-radius:99px; }
+
+.lg-msg{ display:flex; }
+.lg-msg.user{ justify-content:flex-end; }
+.lg-msg.assistant{ justify-content:flex-start; }
+.lg-bubble{
+  max-width:88%; padding:11px 14px; border-radius:14px;
+  font-size:13.5px; line-height:1.78; word-break:break-word;
+}
+.lg-msg.assistant .lg-bubble{
+  background:rgba(255,255,255,.05);
+  border:1px solid var(--line,rgba(255,255,255,.09));
+  color:#dcdae6;
+}
+.lg-msg.user .lg-bubble{
+  background:rgba(0,229,255,.13);
+  border:1px solid rgba(0,229,255,.3);
+  color:#eae8f2;
+}
+.lg-err{ color:#ff8fa3; }
+
+/* 思考中动画 */
+.lg-dots{ display:inline-flex; gap:4px; align-items:center; height:14px; }
+.lg-dots i{
+  width:6px; height:6px; border-radius:50%; background:var(--cyan,#00e5ff); opacity:.4;
+  animation:lgDot 1.15s ease-in-out infinite;
+}
+.lg-dots i:nth-child(2){ animation-delay:.16s }
+.lg-dots i:nth-child(3){ animation-delay:.32s }
+@keyframes lgDot{ 0%,100%{ opacity:.28; transform:translateY(0) } 50%{ opacity:1; transform:translateY(-3px) } }
+
+/* 推荐风格卡 */
+.lg-chips{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+.lg-chip{
+  display:inline-flex; align-items:center; gap:7px;
+  padding:4px 11px 4px 4px; border-radius:999px;
+  background:rgba(255,255,255,.055); border:1px solid var(--line,rgba(255,255,255,.09));
+  color:#e3e1ec; font-size:12px; font-family:inherit; cursor:pointer;
+  transition:all .22s;
+}
+.lg-chip:hover{ border-color:rgba(0,229,255,.5); background:rgba(0,229,255,.1); transform:translateY(-1px); }
+.lg-chip img{ width:22px; height:22px; border-radius:50%; object-fit:cover; flex:none; }
+
+/* ---------- 输入区 ---------- */
+.lg-tip{
+  flex:none; padding:6px 15px 0; font-size:10.5px; color:var(--faint,#6d6a80);
+  letter-spacing:.02em; line-height:1.5;
+}
+.lg-inrow{
+  flex:none; display:flex; gap:8px; align-items:center;
+  padding:10px 13px 13px;
+}
+.lg-input{
+  flex:1; min-width:0; background:rgba(255,255,255,.05);
+  border:1px solid var(--line,rgba(255,255,255,.09)); border-radius:12px;
+  padding:11px 14px; color:var(--text,#eae8f2); font:inherit; font-size:13.5px; outline:none;
+  transition:border-color .22s, box-shadow .22s;
+}
+.lg-input:focus{ border-color:rgba(0,229,255,.5); box-shadow:0 0 0 3px rgba(0,229,255,.1); }
+.lg-input::placeholder{ color:var(--faint,#6d6a80); }
+.lg-send{
+  flex:none; width:42px; height:42px; border-radius:12px; display:grid; place-items:center;
+  background:var(--grad,#00e5ff); color:#06121a; border:none; cursor:pointer;
+  transition:transform .2s, filter .2s, opacity .2s;
+}
+.lg-send:hover{ filter:brightness(1.08); transform:translateY(-1px); }
+.lg-send:disabled{ opacity:.45; cursor:default; transform:none; }
+.lg-send svg{ width:17px; height:17px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+
+/* ---------- 窄屏：面板铺满 ---------- */
+@media (max-width:520px){
+  .lg-fab{ right:14px; bottom:14px; padding:12px 16px 12px 13px; font-size:13px; }
+  .lg-panel{
+    right:0; bottom:0; left:0; top:0;
+    width:100%; height:100%; border-radius:0; border-left:none; border-right:none;
+  }
+}
+@media (max-width:520px){ .lg-fab .lg-fab-tx{ display:none } .lg-fab{ padding:14px; } }
+
+/* ---------- 减少动效 ---------- */
+@media (prefers-reduced-motion:reduce){
+  .lg-fab, .lg-panel, .lg-chip, .lg-send, .lg-close{ transition:none !important; }
+  .lg-fab::before{ display:none; }
+  .lg-dots i{ animation:none; opacity:.7; }
+  .lg-list{ scroll-behavior:auto; }
+}

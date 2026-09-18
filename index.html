@@ -5,9 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>棂感 · 美学风格科普与搭配平台</title>
 <meta name="description" content="棂感——204 种美学风格科普数据库与风格搭配实验室。探索主义、核类、波类、网络数字、暗黑系、清新浪漫、复古学院、萌系日系、国风九大风格家族，支持设计、穿搭、建筑等领域分类浏览。">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
 <link rel="preconnect" href="https://miaoda.feishu.cn">
 <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Serif+SC:wght@400;600;700;900&display=swap">
 <script src="echarts.min.js"></script>
+<link rel="stylesheet" href="advisor-chat.css">
 <style>
 /* ============ 基础与变量 ============ */
 :root{
@@ -340,6 +343,27 @@ body.drawer-open #side-scrim{opacity:1;visibility:visible}
 .inspire-btn:hover svg{transform:rotate(180deg)}
 
 /* ============ 雷达视图 ============ */
+/* 选择器：可从 204 个风格里检索 / 按家族折叠，避免一屏铺满无法下手 */
+.rd-tools{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-bottom:13px}
+.rd-search{flex:1;min-width:190px;display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 12px;transition:border-color .22s,box-shadow .22s}
+.rd-search:focus-within{border-color:rgba(0,229,255,.5);box-shadow:0 0 0 3px rgba(0,229,255,.1)}
+.rd-search svg{flex:none;width:15px;height:15px;stroke:#8b88a0;fill:none;stroke-width:2;stroke-linecap:round}
+.rd-search input{flex:1;min-width:0;background:none;border:none;outline:none;color:var(--text);font:inherit;font-size:13px}
+.rd-search input::placeholder{color:var(--faint)}
+.rd-fams{display:flex;flex-wrap:wrap;gap:6px}
+.rd-fam{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--muted);font-size:11.5px;cursor:pointer;transition:all .2s}
+.rd-fam .dot{width:6px;height:6px;border-radius:50%;background:var(--fc,#999)}
+.rd-fam:hover{color:#fff;border-color:var(--line-strong)}
+.rd-fam.on{color:#fff;background:rgba(0,229,255,.1);border-color:rgba(0,229,255,.5)}
+.rd-group{margin-bottom:13px}
+.rd-group-h{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--faint);letter-spacing:.1em;margin:0 0 9px}
+.rd-group-h i{width:7px;height:7px;border-radius:50%;background:var(--fc,#999);flex:none}
+.rd-group-h em{font-style:normal;color:var(--muted)}
+.rd-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:4px}
+.rd-tip{font-size:11.5px;color:var(--faint);letter-spacing:.04em}
+.rd-more,.rd-clear{padding:7px 14px;font-size:12.5px;color:#cfccda;border:1px solid var(--line-strong);background:rgba(255,255,255,.04);border-radius:999px;cursor:pointer;transition:all .22s}
+.rd-more:hover,.rd-clear:hover{color:#fff;border-color:var(--cyan)}
+.rd-none{padding:26px 4px;text-align:center;color:var(--muted);font-size:13px}
 .radar-pick{display:flex;flex-wrap:wrap;gap:9px;align-items:center}
 .pick-chip{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--panel);font-size:13px;color:var(--muted);transition:all .2s}
 .pick-chip:hover{color:#fff;border-color:var(--line-strong)}
@@ -653,6 +677,9 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
 .help-about-row .v a{color:#7b6bff;text-decoration:none}
 .help-note{margin-top:16px;padding:13px 16px;border-radius:12px;background:rgba(255,212,121,.06);border:1px solid rgba(255,212,121,.25);font-size:12.5px;line-height:1.7;color:#e8d9b5}
 @media (max-width:1100px){.help-btn{top:16px;right:0}}
+/* 帮助中心返回键：与 .back-btn 同源样式，此处只做位置与间距 */
+.help-back{margin-bottom:16px}
+@media (max-width:640px){.help-back{margin-bottom:12px;padding:7px 14px;font-size:12.5px}}
 @media (max-width:640px){.help-sub{display:none}}
 /* ===== 更新日志 ===== */
 .changelog{display:grid;gap:12px}
@@ -666,6 +693,14 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
 .cl-body .hl{color:#ffd479}
 @media (max-width:640px){.cl-item{flex-direction:column;gap:6px}.cl-ver{width:auto;flex-direction:row;align-items:baseline;gap:10px}}
 
+/* ============ 小棂 · 快捷建议芯片 ============ */
+.lg-quickrow{flex:none;display:flex;gap:7px;overflow-x:auto;padding:10px 13px 2px;scrollbar-width:none}
+.lg-quickrow::-webkit-scrollbar{display:none}
+.lg-quick{flex:none;white-space:nowrap;padding:6px 12px;border-radius:999px;font-size:11.5px;
+  color:#cfccda;background:rgba(255,255,255,.05);border:1px solid var(--line);cursor:pointer;
+  font-family:inherit;transition:all .2s}
+.lg-quick:hover{color:#fff;border-color:rgba(0,229,255,.5);background:rgba(0,229,255,.1);transform:translateY(-1px)}
+
 /* ============ 动效克制 ============ */
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -676,6 +711,92 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
   .blob{animation:none}
   .cursor-dot,.cursor-ring{display:none !important}
   body.has-cursor,body.has-cursor a,body.has-cursor button,body.has-cursor .card{cursor:auto}
+}
+/* ===== v2.4 视觉优化模块 ===== */
+/* 卡片：错落进场（消费 cardHTML 已写入但此前未被使用的 --d 变量） */
+.card.in{transition-delay:var(--d,0ms)}
+
+/* 卡片：缩略图光扫 */
+.card .thumb::after{z-index:2;overflow:hidden}
+.card .thumb::before{content:"";position:absolute;top:-20%;bottom:-20%;left:0;width:52%;z-index:3;pointer-events:none;
+  background:linear-gradient(105deg,transparent,rgba(255,255,255,.13) 45%,rgba(255,255,255,.04) 60%,transparent);
+  transform:translateX(-190%) skewX(-14deg);opacity:0}
+.card:hover .thumb::before,.card:focus-visible .thumb::before{animation:v24Shine .95s var(--ease) forwards}
+@keyframes v24Shine{from{transform:translateX(-190%) skewX(-14deg);opacity:1}to{transform:translateX(330%) skewX(-14deg);opacity:0}}
+
+/* 卡片：家族色氛围光（原为统一青色，现改为家族色，强化家族体系） */
+.card.in:hover,.card.in:focus-visible{transform:translateY(-7px);border-color:color-mix(in srgb,var(--fc,#00e5ff) 60%,transparent);
+  box-shadow:0 22px 54px -16px rgba(0,0,0,.6),0 0 0 1px color-mix(in srgb,var(--fc,#00e5ff) 30%,transparent),0 0 42px -12px color-mix(in srgb,var(--fc,#00e5ff) 55%,transparent)}
+
+/* 卡片：微光描边与底部家族色细线 */
+.card::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;pointer-events:none;
+  background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--fc,#00e5ff) 60%,transparent),transparent);
+  opacity:0;transition:opacity .35s ease}
+.card.in:hover::after,.card.in:focus-visible::after{opacity:1}
+
+/* 卡片：骨架屏（图片未解码完成时的微光占位）
+   原则：图片**默认可见**，只有 JS 确认「图片确实还没加载完」时才进入骨架态。
+   之前用「先隐藏、加载后加 .loaded 显示」的写法，任何漏写 onload 的渲染路径
+   都会让图片永远停在 opacity:0（收藏夹就踩了这个坑）。现在改为显式标记 .lg-loading。 */
+.card .thumb img{transition:opacity .5s ease,transform .5s var(--ease)}
+.card .thumb img.lg-loading{opacity:0}
+.card .thumb:has(img.lg-loading){background-image:linear-gradient(100deg,transparent 20%,rgba(255,255,255,.055) 50%,transparent 80%);
+  background-size:220% 100%;background-repeat:no-repeat;animation:v24Skel 1.5s linear infinite}
+@keyframes v24Skel{from{background-position:140% 0}to{background-position:-140% 0}}
+
+/* 详情页：配色条流光 */
+@property --v24flow{syntax:"<percentage>";inherits:false;initial-value:200%}
+.palette .sw{position:relative}
+.palette .sw:not(.copied) i::after{content:"";position:absolute;left:0;right:0;top:0;height:4px;border-radius:10px 10px 0 0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);background-size:55% 100%;background-repeat:no-repeat;
+  background-position:var(--v24flow) 0;opacity:0;pointer-events:none;
+  animation:v24Flow 3.4s linear infinite}
+.palette .sw:nth-child(1) i::after{animation-delay:0s}
+.palette .sw:nth-child(2) i::after{animation-delay:.17s}
+.palette .sw:nth-child(3) i::after{animation-delay:.34s}
+.palette .sw:nth-child(4) i::after{animation-delay:.51s}
+.palette .sw:nth-child(5) i::after{animation-delay:.68s}
+.palette .sw:nth-child(6) i::after{animation-delay:.85s}
+.palette:hover .sw:not(.copied) i::after{opacity:1}
+@keyframes v24Flow{0%{--v24flow:200%}100%{--v24flow:-160%}}
+.palette .sw:hover{border-color:color-mix(in srgb,var(--fc,#00e5ff) 65%,transparent);box-shadow:0 8px 22px -10px color-mix(in srgb,var(--fc,#00e5ff) 70%,transparent)}
+
+/* 详情页：关联推荐卡——左侧家族色细线 + 悬浮家族色光 */
+.rel-card{position:relative;overflow:hidden}
+.rel-card::before{content:"";position:absolute;left:0;top:12%;bottom:12%;width:2px;border-radius:2px;
+  background:color-mix(in srgb,var(--fc,#00e5ff) 75%,transparent);opacity:.35;transition:opacity .3s ease}
+.rel-card:hover::before{opacity:1}
+.rel-card:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--fc,#00e5ff) 50%,transparent);
+  box-shadow:0 14px 34px -12px rgba(0,0,0,.6),0 0 26px -10px color-mix(in srgb,var(--fc,#00e5ff) 55%,transparent)}
+
+/* 侧边栏：品牌水墨线 + 激活项家族色（青→紫）光晕 */
+.side-brand{position:relative;padding-bottom:9px}
+.side-brand::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:1.5px;border-radius:2px;
+  background:linear-gradient(90deg,var(--cyan),rgba(123,107,255,.5),transparent)}
+.rail-item.active{box-shadow:inset 0 0 0 1px rgba(0,229,255,.14),0 6px 20px -12px rgba(0,229,255,.7)}
+.rail-item svg{transition:transform .3s var(--ease)}
+.rail-item:hover svg{transform:scale(1.08)}
+
+/* 交互反馈：按钮按压感 + 悬停上浮 */
+.btn-primary:active,.btn-ghost:active,.add-btn:active,.chip:active,.auth-btn:active,.auth-submit:active{transform:translateY(0) scale(.975)}
+.chip:hover{box-shadow:0 6px 18px -10px color-mix(in srgb,var(--fc,#00e5ff) 70%,transparent)}
+.btn-ghost:hover,.back-btn:hover{transform:translateY(-1px)}
+
+/* 信息质感：中文正文行高、数字对齐、标题层级 */
+.blk p{line-height:2.05}
+.card-elements{line-height:1.65}
+.hero-stat b,.marquee-track span,.report-num,.counts{font-variant-numeric:tabular-nums}
+.result-count,.fav-count,.side-count,.cl-ver span{font-variant-numeric:tabular-nums}
+.view-head h2,.refs-head h2{letter-spacing:.01em}
+.modal-card{box-shadow:var(--shadow),0 0 0 1px rgba(0,229,255,.09),0 0 90px -50px rgba(123,107,255,.9)}
+.ref-card:hover{border-color:color-mix(in srgb,var(--cyan) 40%,transparent);box-shadow:0 18px 40px -18px rgba(0,0,0,.6)}
+
+/* 减少动效：关闭本模块新增动画，仅保留静态层次 */
+@media (prefers-reduced-motion:reduce){
+  .card.in{transition-delay:0ms}
+  .card .thumb::before{display:none}
+  .card .thumb:has(img:not(.loaded)){animation:none}
+  .palette .sw i::after{animation:none;opacity:0}
 }
 </style>
 </head>
@@ -886,12 +1007,15 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
   <!-- ===== 视图：帮助中心 ===== -->
   <section class="view" id="view-help">
     <div class="view-head">
+      <button class="back-btn help-back" type="button" onclick="location.hash='#/'">
+        <svg viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>返回主页
+      </button>
       <h2>帮助中心</h2>
       <p>从快速上手到用棂感辅助 AI 创作——这里有你需要的全部说明。</p>
     </div>
 
     <div class="help-sec">
-      <div class="help-sec-head"><span class="help-no">01</span><h3>快速上手</h3><span class="help-sub">七个模块，各司其职</span></div>
+      <div class="help-sec-head"><span class="help-no">01</span><h3>快速上手</h3><span class="help-sub">八个模块，各司其职</span></div>
       <div class="help-grid">
         <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></span><b>风格一览</b><p>主页即风格库：204 种美学风格按 9 大家族、7 大分类陈列。可用家族/分类标签筛选，或用搜索框按名称、元素、材质、关键词检索。点卡片进入详情。</p></div>
         <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 5h16M4 12h10M4 19h13"/></svg></span><b>搭配台</b><p>在卡片右下角「加入搭配」，选择 2–6 个风格。棂感会计算两两适配度，生成搭配报告、关系网络与一段混搭灵感文案。</p></div>
@@ -900,6 +1024,7 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
         <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 5h18M3 12h18M3 19h12"/></svg></span><b>风格时间轴</b><p>沿时间之河看美学风格如何诞生、流行与复兴——从 17 世纪的中国风到 2020 年代的赛博空间，可按年代与家族筛选。</p></div>
         <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-9.5-9A5.4 5.4 0 0 1 12 6.3 5.4 5.4 0 0 1 21.5 12c-2 4.4-9.5 9-9.5 9z"/></svg></span><b>我的收藏</b><p>登录后，点卡片右上角心形即可收藏。收藏会保存到你的账号下，在「我的收藏」集中查看与管理，可一键清空。</p></div>
         <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span><b>登录 / 注册</b><p>账号与收藏保存在本浏览器本地（localStorage），不上传云端；同一浏览器内登录即可取回收藏。换设备或清除浏览器数据会丢失账号，请注意备份。</p></div>
+        <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12a8 8 0 0 1-8 8H7l-4 3 1.2-4.2A8 8 0 1 1 21 12z"/></svg></span><b>小棂 · 风格搭配助手</b><p>右下角的常驻小助手。在搭配台或对比雷达里选好风格，它会结合你的选择给出搭配建议与灵感文案；回答只引用库内真实风格，点卡片可直接跳转详情。它只聊风格搭配，其他话题会礼貌回绝。</p></div>
       </div>
     </div>
 
@@ -927,7 +1052,7 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
     <div class="help-sec">
       <div class="help-sec-head"><span class="help-no">04</span><h3>关于棂感</h3><span class="help-sub">版本与创作者</span></div>
       <div class="help-about">
-        <div class="help-about-row"><span class="k">版本</span><span class="v">棂感 v2.3 · 2026-09-16</span></div>
+        <div class="help-about-row"><span class="k">版本</span><span class="v">棂感 v2.5 · 2026-09-18</span></div>
         <div class="help-about-row"><span class="k">数据规模</span><span class="v">204 种美学风格 · 9 大风格家族 · 7 大分类 · 762 组关联关系</span></div>
         <div class="help-about-row"><span class="k">创作者</span><span class="v">汐棂月</span></div>
         <div class="help-about-row"><span class="k">创作主页</span><span class="v"><a href="https://www.douyin.com/user/MS4wLjABAAAAtZOif8mDPwoLElnE57tan1TlzRJoa-wiXphzKntoSnM?from_tab_name=main" target="_blank" rel="noopener">抖音 · 汐棂月 创作主页 ↗</a></span></div>
@@ -938,6 +1063,14 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
     <div class="help-sec">
       <div class="help-sec-head"><span class="help-no">05</span><h3>更新日志</h3><span class="help-sub">棂感在长大</span></div>
       <div class="changelog">
+        <div class="cl-item"><div class="cl-ver"><b>v2.5</b><span>2026-09-18</span></div><div class="cl-body"><h4>小棂上线 · 视觉精修 · 多项修复</h4><p>
+新增常驻风格搭配助手<span class="hl">「小棂」</span>：在搭配台 / 对比雷达里选好风格后，它会结合你的选择给出搭配建议与灵感文案，回答只引用库内真实风格并可点击跳转。
+修复<span class="hl">收藏夹预览图不显示</span>（图片可见性统一兜底，任何渲染路径都不再漏图）；
+修复对比雷达风格选择点击无响应，并新增<span class="hl">搜索 + 按家族折叠 + 展示上限</span>，从一屏 204 个变为可检索、可下手；
+新增站点图标 favicon；帮助中心新增「返回主页」；
+视觉精修：卡片错落进场、缩略图光扫、家族色氛围光、详情页配色条流光、图片骨架屏。
+</p></div></div>
+        <div class="cl-item"><div class="cl-ver"><b>v2.4</b><span>2026-09-18</span></div><div class="cl-body"><h4>视觉优化</h4><p>卡片错落进场、家族色氛围光、悬停光扫、图片骨架屏、配色条流光；数字对齐与中文排版节奏优化；全部动效尊重系统「减少动效」设置。</p></div></div>
         <div class="cl-item"><div class="cl-ver"><b>v2.3</b><span>2026-09-16</span></div><div class="cl-body"><h4>工具箱入口 · 更新日志</h4><p>侧边栏新增<span class="hl">「工具箱」</span>板块（标记待开发，实用小工具后续陆续上线）；帮助中心新增「更新日志」。</p></div></div>
         <div class="cl-item"><div class="cl-ver"><b>v2.2</b><span>2026-09-16</span></div><div class="cl-body"><h4>数据修复</h4><p>修复「美式复古」与「美国心脏地带核」ID 撞车导致的详情页异常与关联跳错，修复一处失效风格关联，补出独立预览图，页面版本描述同步更新。</p></div></div>
         <div class="cl-item"><div class="cl-ver"><b>v2.1</b><span>2026-09-14</span></div><div class="cl-body"><h4>国风家族 · 架构优化</h4><p>新增 Chinoiserie 中国风主风格与 14 个子风格（风格库 189 → 204，家族 8 → 9）；帮助中心上线；数据外置、卡片分批渲染、图表本地化等架构优化。</p></div></div>
@@ -983,6 +1116,8 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
 <div class="toast" id="toast" role="status"></div>
 
 <script src="data/aesthetics.js"></script>
+<script src="advisor-engine.js"></script>
+<script src="advisor-chat.js"></script>
 <script>
 /* ===================== 棂感 · 应用逻辑 ===================== */
 /* 数据兜底：由 data/aesthetics.js 提供（file:// 兼容）；数据缺失时给出提示 */
@@ -1107,6 +1242,13 @@ var SOON_TITLES = {
   '#/toolbox':  {title:'工具箱 · 待开发', desc:'实用创作小工具正在筹备中：智能配色提取、AI 提示词生成、色板导出等，后续会在这里陆续上线。'}
 };
 function currentRoute(){ var h = location.hash || '#/'; return ROUTES[h] ? h : '#/'; }
+/* 把小棂需要知道的站内状态同步出去（它读 window.__LINGGAN_STATE 判断当前选了什么） */
+function syncAdvisorState(){
+  try {
+    window.__LINGGAN_STATE = { selected: state.selected, radar: state.radar };
+    if (window.StyleAdvisorChat && window.StyleAdvisorChat.refresh) window.StyleAdvisorChat.refresh();
+  } catch (e) {}
+}
 function navigate(){
   var route = currentRoute();
   var viewId = ROUTES[route];
@@ -1132,6 +1274,7 @@ function navigate(){
   if (viewId === 'view-favorites'){ renderFavorites(); }
   if (isNarrow()) closeDrawer();
   window.scrollTo({top:0, behavior:'auto'});
+  syncAdvisorState();   /* 切换视图后刷新小棂的快捷建议 */
   /* 图表在视图激活后 resize */
   if (graphChart){ setTimeout(function(){ graphChart.resize(); }, 60); }
   if (radarChart){ setTimeout(function(){ radarChart.resize(); }, 60); }
@@ -1239,7 +1382,7 @@ function renderGridBatch(){
   if (!slice.length) return;
   var frag = document.createDocumentFragment();
   var tmp = document.createElement('div');
-  tmp.innerHTML = slice.map(function(a, j){ return cardHTML(a, _gridRendered + j, _gridRendered === 0); }).join('');
+  tmp.innerHTML = slice.map(function(a, j){ return cardHTML(a, j, true); }).join('');
   while (tmp.firstChild) frag.appendChild(tmp.firstChild);
   grid.appendChild(frag);
   _gridRendered += slice.length;
@@ -1288,6 +1431,7 @@ function syncAddButtons(){
   }
 }
 function updateIndicators(){
+  syncAdvisorState();
   var n = state.selected.length;
   $('side-count').textContent = n;
   $('fab-num').textContent = n;
@@ -1608,16 +1752,10 @@ function renderGraph(){
 function renderRadar(){
   var root = $('radar-root');
   var sel = state.radar.slice();
-  var pickables = AESTHETICS.slice(0).sort(function(x,y){ return x.name_cn.localeCompare(y.name_cn, 'zh'); });
-  var optionsHtml = pickables.map(function(a){
-    var on = sel.indexOf(a.id) > -1;
-    return '<button class="pick-chip' + (on ? ' on' : '') + '" data-pick="' + a.id + '" type="button">' +
-      '<span class="dot" style="--fc:' + famColor(a.family) + '"></span>' + esc(a.name_cn) + '</button>';
-  }).join('');
   if (!sel.length){
     root.innerHTML =
       '<div class="panel"><div class="ph">选择对比风格（已选 0 / 3）</div>' +
-      '<div class="radar-pick" id="radar-pick">' + optionsHtml + '</div></div>' +
+      rdPickerShell() + '</div>' +
       '<div class="panel" style="text-align:center;padding:50px 20px"><b style="font-family:var(--serif);font-size:18px;color:#cfccda">请选择 2–3 个风格开始对比</b></div>';
     renderRadarPicker();
     return;
@@ -1628,7 +1766,9 @@ function renderRadar(){
   }).join('');
   root.innerHTML =
     '<div class="panel"><div class="ph">已选 ' + sel.length + ' / 3</div>' +
-      '<div class="radar-pick" id="radar-pick">' + optionsHtml + '</div></div>' +
+      '<div class="radar-pick" style="margin-bottom:14px">' + chips + '</div>' +
+      '<div class="ph">再选一个加入对比</div>' +
+      rdPickerShell() + '</div>' +
     '<div class="panel"><div class="ph">六维雷达</div>' +
       '<div id="radar"></div>' +
       '<div class="radar-read" id="radar-read"></div>' +
@@ -1691,10 +1831,85 @@ function renderRadar(){
     $('radar').innerHTML = '<div class="graph-fallback"><b>雷达图渲染失败</b>' + esc((err && err.message) || '') + '</div>';
   }
 }
+var radarUI = { q:'', fam:'all', showAll:false };
+var RD_LIMIT = 36;                       // 默认每个家族最多展示多少个，避免一屏 204 个
+
+function rdPickHtml(){
+  var q = radarUI.q.trim().toLowerCase();
+  var fams = radarUI.fam === 'all' ? FAMILIES : FAMILIES.filter(function(f){ return f.id === radarUI.fam; });
+  var groups = [], total = 0;
+  fams.forEach(function(f){
+    var items = AESTHETICS.filter(function(a){
+      if (a.family !== f.id) return false;
+      if (!q) return true;
+      var hay = (a.name_cn + ' ' + (a.name_en || '') + ' ' + (a.elements || []).join(' ') + ' ' +
+                 (a.materials || []).join(' ') + ' ' + (a.related_terms || []).join(' ')).toLowerCase();
+      return hay.indexOf(q) > -1;
+    });
+    if (!items.length) return;
+    items.sort(function(x,y){ return x.name_cn.localeCompare(y.name_cn, 'zh'); });
+    total += items.length;
+    var capped = (radarUI.showAll || q) ? items : items.slice(0, RD_LIMIT);
+    groups.push({ fam:f, items:capped, more: items.length - capped.length, all: items.length });
+  });
+  if (!groups.length) return { html:'<div class="rd-none">没有匹配的风格，换个关键词试试</div>', total:0, hidden:0 };
+
+  var html = groups.map(function(g){
+    var chips = g.items.map(function(a){
+      var on = state.radar.indexOf(a.id) > -1;
+      return '<button class="pick-chip' + (on ? ' on' : '') + '" data-pick="' + a.id + '" type="button">' +
+        '<span class="dot" style="--fc:' + famColor(a.family) + '"></span>' + esc(a.name_cn) + '</button>';
+    }).join('');
+    var moreTxt = g.more > 0
+      ? '<button class="rd-more" data-showall="1" type="button">展开该家族其余 ' + g.more + ' 个</button>'
+      : '';
+    return '<div class="rd-group"><div class="rd-group-h"><i style="--fc:' + (g.fam.color||'#999') + '"></i>' +
+      esc(g.fam.name) + ' <em>' + g.items.length + (g.more > 0 ? ' / ' + g.all : '') + '</em></div>' +
+      '<div class="radar-pick">' + chips + '</div>' + moreTxt + '</div>';
+  }).join('');
+
+  var hidden = groups.reduce(function(n,g){ return n + (g.more > 0 ? g.more : 0); }, 0);
+  return { html:html, total:total, hidden:hidden };
+}
+
+function rdPickerShell(){
+  var p = rdPickHtml();
+  var famChips = '<button class="rd-fam' + (radarUI.fam === 'all' ? ' on' : '') + '" data-fam="all" type="button">全部</button>' +
+    FAMILIES.map(function(f){
+      return '<button class="rd-fam' + (radarUI.fam === f.id ? ' on' : '') + '" data-fam="' + f.id + '" type="button">' +
+        '<span class="dot" style="--fc:' + (f.color||'#999') + '"></span>' + esc(f.name) + '</button>';
+    }).join('');
+  var actions = (p.hidden > 0 || radarUI.showAll || radarUI.q || radarUI.fam !== 'all')
+    ? '<div class="rd-actions">' +
+        (p.hidden > 0 ? '<button class="rd-more" data-showall="1" type="button">显示全部家族（还有 ' + p.hidden + ' 个）</button>' : '') +
+        '<button class="rd-clear" data-clear="1" type="button">重置筛选</button>' +
+        '<span class="rd-tip">共 ' + p.total + ' 个风格</span>' +
+      '</div>'
+    : '<div class="rd-actions"><span class="rd-tip">共 ' + p.total + ' 个风格，可按家族折叠或搜索</span></div>';
+  return '<div class="rd-tools">' +
+      '<label class="rd-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>' +
+      '<input id="rd-q" type="text" placeholder="搜索风格名 / 元素 / 材质…" value="' + esc(radarUI.q) + '"></label>' +
+    '</div>' +
+    '<div class="rd-fams">' + famChips + '</div>' +
+    '<div style="margin-top:13px">' + p.html + '</div>' + actions;
+}
+
 function renderRadarPicker(){
-  var root = $('radar-pick');
-  if (!root) return;
-  root.addEventListener('click', function(e){
+  /* 监听挂在 #radar-root 上（它由 HTML 固定存在、不会被重建）。
+     之前挂在 #radar-pick 上，而该元素每次 renderRadar 都会被 innerHTML 重建，
+     监听器随之失效 —— 导致点击完全无反应。 */
+  var host = $('radar-root');
+  if (!host || host.dataset.bound === '1') return;
+  host.dataset.bound = '1';
+  host.addEventListener('click', function(e){
+    var fm = e.target.closest('[data-fam]');
+    if (fm){
+      // 点家族时清掉搜索词：两者叠加会让人误以为筛不出东西
+      if (radarUI.q){ radarUI.q = ''; }
+      radarUI.fam = fm.dataset.fam; radarUI.showAll = false; renderRadar(); return;
+    }
+    if (e.target.closest('[data-showall]')){ radarUI.showAll = true; renderRadar(); return; }
+    if (e.target.closest('[data-clear]')){ radarUI = { q:'', fam:'all', showAll:false }; renderRadar(); return; }
     var p = e.target.closest('[data-pick]');
     if (p){
       var id = p.dataset.pick;
@@ -1712,6 +1927,20 @@ function renderRadarPicker(){
       var j = state.radar.indexOf(rm.dataset.rm);
       if (j > -1) state.radar.splice(j, 1);
       renderRadar();
+    }
+  });
+  /* 搜索：DOM 会被整体重建，故先记录光标位置，重建后恢复焦点与光标 */
+  host.addEventListener('input', function(e){
+    if (e.target && e.target.id === 'rd-q'){
+      radarUI.q = e.target.value;
+      radarUI.showAll = false;
+      var caret = e.target.selectionStart;
+      renderRadar();
+      var el = $('rd-q');
+      if (el){
+        el.focus();
+        try { el.setSelectionRange(caret, caret); } catch(err){}
+      }
     }
   });
 }
@@ -1743,7 +1972,7 @@ function fallbackCopy(text){
 /* ---------- 详情模态 ---------- */
 function relCard(rel){
   var b = BY_ID[rel.id]; if (!b) return '';
-  return '<button class="rel-card" type="button" data-nav="' + b.id + '">' +
+  return '<button class="rel-card" type="button" data-nav="' + b.id + '" style="--fc:' + famColor(b.family) + '">' +
     '<div class="rel-thumb" style="background:linear-gradient(135deg,' + swatch(b,0) + ',' + swatch(b,1) + ')">' +
       '<img src="' + b.image + '" alt="' + esc(b.name_cn) + '" loading="lazy" onerror="this.style.display=\'none\'"></div>' +
     '<div class="rel-info">' +
@@ -1757,7 +1986,7 @@ function openDetail(id){
   var a = BY_ID[id]; if (!a) return;
   var fam = FAM_MAP[a.family];
   var palette = (a.colors || []).map(function(c){
-    return '<div class="sw" data-copy="' + c + '" title="点击复制 ' + c + '"><i style="background:' + c + '"></i><span>' + c.toUpperCase() + '</span></div>';
+    return '<div class="sw" data-copy="' + c + '" style="--fc:' + (fam ? fam.color : '#00e5ff') + '" title="点击复制 ' + c + '"><i style="background:' + c + '"></i><span>' + c.toUpperCase() + '</span></div>';
   }).join('');
   function tags(arr){ return (arr || []).map(function(t){ return '<span>' + esc(t) + '</span>'; }).join(''); }
   var vf = a.visual_features || {};
@@ -1879,9 +2108,7 @@ function observeReveals(){
   /* 卡片入场 */
   var cards = document.querySelectorAll('#grid .card:not(.in)');
   if (!io){ for (var j=0;j<cards.length;j++) cards[j].classList.add('in'); return; }
-  cards.forEach(function(card, idx){
-    setTimeout(function(){ io.observe(card); }, Math.min(idx*20, 600));
-  });
+  for (var m = 0; m < cards.length; m++) io.observe(cards[m]);
 }
 
 /* ---------- 自定义光标 + 磁性按钮 ---------- */
@@ -2431,7 +2658,7 @@ if (currentRoute() === '#/favorites') renderFavorites();
 
 /* ---------- 初始化 ---------- */
 function init(){
-  if (document.documentElement.classList) document.documentElement.classList.add('io');
+  if (document.documentElement.classList) document.documentElement.classList.add('io', 'js');
   try {
     var saved = localStorage.getItem('linggan.side');
     if (saved === 'collapsed') document.body.classList.add('side-collapsed');
@@ -2449,15 +2676,54 @@ function init(){
   renderMarquee();
   renderMatch();
   renderRadar();
+  renderRadarPicker();   /* #radar-root 在 HTML 里固定存在，此处挂一次委托监听即可 */
   updateIndicators();
   navigate();
   initCanvas();
   observeReveals();
   initCursor();
   initMagnetic();
+  initImgGuard();
   window.setTimeout(function(){
     if (typeof window.echarts === 'undefined') loadEcharts();
   }, 4000);
+}
+
+/* ---------- 图片骨架屏兜底 ----------
+   图片默认可见；只把「JS 确认尚未加载完」的图标记为 .lg-loading 进入骨架态。
+   任何渲染路径（网格 / 收藏夹 / 关联卡 / 今日风格…）都无需再写 onload。 */
+function initImgGuard(){
+  function mark(img){
+    if (!img || img.tagName !== 'IMG') return;
+    if (img.style.display === 'none') { img.classList.remove('lg-loading'); return; }
+    if (img.complete && img.naturalWidth > 0) img.classList.remove('lg-loading');
+    else img.classList.add('lg-loading');
+  }
+  document.addEventListener('load', function(e){
+    if (e.target && e.target.tagName === 'IMG'){
+      e.target.classList.remove('lg-loading');
+    }
+  }, true);
+  document.addEventListener('error', function(e){
+    if (e.target && e.target.tagName === 'IMG') e.target.classList.remove('lg-loading');
+  }, true);
+  function sweep(node){
+    var scope = (node && node.querySelectorAll) ? node : document;
+    var imgs;
+    if (node && node.tagName === 'IMG'){ mark(node); return; }
+    imgs = scope.querySelectorAll('img');
+    for (var i = 0; i < imgs.length; i++) mark(imgs[i]);
+  }
+  if (window.MutationObserver){
+    new MutationObserver(function(muts){
+      for (var i = 0; i < muts.length; i++){
+        var added = muts[i].addedNodes;
+        for (var j = 0; j < added.length; j++){ if (added[j].nodeType === 1) sweep(added[j]); }
+      }
+    }).observe(document.body, { childList:true, subtree:true });
+  }
+  window.addEventListener('load', function(){ sweep(document); });
+  sweep(document);
 }
 
 if (document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', init); }
