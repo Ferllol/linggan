@@ -8,14 +8,16 @@
 
   /* ---------- 配置 ---------- */
   var CFG = window.LINGGAN_ADVISOR || {};
-  var API = CFG.api || 'https://linggan-advisor.YOUR-SUBDOMAIN.workers.dev/chat';
+  // 代理层部署在 Netlify Functions（*.netlify.app 在中国大陆实测可达；
+  // *.workers.dev 与 *.vercel.app 均被墙，故不用）。密钥只存在 Netlify 服务端。
+  var API = CFG.api || 'https://glowing-nasturtium-e13f61.netlify.app/.netlify/functions/chat';
   try {
     var override = localStorage.getItem('linggan_advisor_api');
     if (override) API = override;
   } catch (e) {}
 
-  // 代理层还没配好时，不要假装在联网：直接给出明确提示，避免访客看到「网络不通」而困惑
-  var CONFIGURED = !/YOUR-SUBDOMAIN/.test(API);
+  // 地址仍是占位符时不要假装联网：直接给明确提示，避免访客看到「网络不通」而困惑
+  var CONFIGURED = !/YOUR-SUBDOMAIN|YOUR-SITE/.test(API);
 
   var LS_HISTORY = 'linggan_advisor_history';
   var MAX_TURNS = 6;          // 送往 Worker 的历史轮数上限
@@ -300,7 +302,8 @@
     var thinking = bubble('assistant', '<span class="lg-dots"><i></i><i></i><i></i></span>');
 
     var ctrl = ('AbortController' in window) ? new AbortController() : null;
-    var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 30000);
+    // 首次请求可能触发云端函数冷启动（实测可达数十秒），故超时给足 90s
+    var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 90000);
 
     fetch(API, {
       method: 'POST',
@@ -326,8 +329,8 @@
         clearTimeout(timer);
         busy = false; sendBtn.disabled = false;
         var m = (e && e.name === 'AbortError')
-          ? '等太久了，模型没响应。再试一次？'
-          : '网络不通，小棂没收到消息（若你在中国大陆，请确认 Worker 已部署）。';
+          ? '等太久了，模型没有响应。可能刚好在冷启动，再试一次通常就快了。'
+          : '没能连上小棂的服务（网络受限或代理未部署）。';
         thinking.innerHTML = '<span class="lg-err">' + esc(m) + '</span>';
       });
   }
