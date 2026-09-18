@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>棂感 · 美学风格科普与搭配平台</title>
-<meta name="description" content="棂感——204 种美学风格科普数据库与风格搭配实验室。探索主义、核类、波类、网络数字、暗黑系、清新浪漫、复古学院、萌系日系、国风九大风格家族，支持设计、穿搭、建筑等领域分类浏览。">
+<meta name="description" content="棂感：204 种美学风格科普数据库与风格搭配实验室。探索主义、核类、波类、网络数字、暗黑系、清新浪漫、复古学院、萌系日系、国风九大风格家族，支持设计、穿搭、建筑等领域分类浏览。">
 <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
 <link rel="apple-touch-icon" href="favicon.svg?v=2">
 <link rel="preconnect" href="https://miaoda.feishu.cn">
@@ -176,12 +176,9 @@ body.drawer-open #side-scrim{opacity:1;visibility:visible}
 .hero-ch:hover{transform:translateY(-4px) rotate(-2deg)}
 @keyframes chIn{to{opacity:1;transform:none}}
 .hero-sub{margin-top:18px;font-size:clamp(15px,1.8vw,18px);color:#c3c0d2;letter-spacing:.28em}
-.hero-desc{margin:16px auto 0;max-width:560px;font-size:13.5px;color:var(--muted);font-weight:300}
 .hero-stats{display:flex;justify-content:center;gap:clamp(18px,5vw,60px);margin-top:40px}
 .hero-stat b{display:block;font-family:var(--serif);font-size:clamp(26px,3.4vw,36px);font-weight:900;line-height:1.2;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .hero-stat span{font-size:12px;color:var(--faint);letter-spacing:.2em}
-.scroll-hint{margin-top:42px;font-size:12px;color:var(--faint);letter-spacing:.3em;animation:hint 2.6s ease-in-out infinite}
-@keyframes hint{0%,100%{opacity:.35;transform:translateY(0)}50%{opacity:1;transform:translateY(5px)}}
 
 /* ============ 每日风格 / 漂流瓶 ============ */
 .daily{
@@ -707,7 +704,6 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
   *,*::before,*::after{animation:none !important;transition:none !important}
   .card{opacity:1 !important;transform:none !important}
   .hero-ch{opacity:1 !important;transform:none !important}
-  .scroll-hint{animation:none}
   .blob{animation:none}
   .cursor-dot,.cursor-ring{display:none !important}
   body.has-cursor,body.has-cursor a,body.has-cursor button,body.has-cursor .card{cursor:auto}
@@ -799,9 +795,22 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
   .palette .sw i::after{animation:none;opacity:0}
 }
 </style>
+<meta name="theme-color" content="#0a0a0f">
+<link rel="canonical" href="https://ferllol.github.io/linggan/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="棂感 LINGGAN">
+<meta property="og:url" content="https://ferllol.github.io/linggan/">
+<meta property="og:title" content="棂感 · 美学风格科普与搭配平台">
+<meta property="og:description" content="204 种美学风格科普数据库与风格搭配实验室：九大风格家族、762 组关联关系，支持家族与领域筛选、关键词检索、六维对比雷达与混搭搭配。">
+<meta property="og:image" content="https://ferllol.github.io/linggan/assets/aesthetic-chinoiserie.jpg">
+<meta property="og:image:alt" content="棂感 · 204 种美学风格科普与搭配平台">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="style-taste.css?v=3">
 </head>
 
 <body class="side-expanded">
+<a class="skip-link" href="#main" onclick="event.preventDefault();var m=document.getElementById('main');m.focus();m.scrollIntoView();">跳到主要内容</a>
 <div class="bg-layer" aria-hidden="true">
   <div class="blob blob-a"></div>
   <div class="blob blob-b"></div>
@@ -875,28 +884,30 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
   <span class="mb-brand">棂感</span>
 </header>
 
-<div class="main">
+<main class="main" id="main" tabindex="-1">
 <div class="main-inner">
 
   <!-- ===== 视图：首页一览 ===== -->
   <section class="view" id="view-home">
+    <button class="help-btn" id="help-open" type="button" title="帮助中心" aria-label="帮助中心" onclick="location.hash='#/help'">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.2 9a2.8 2.8 0 0 1 5.5.8c0 1.9-2.6 2.3-2.6 4M12 17.4v.1"/></svg>
+      <span>帮助</span>
+    </button>
     <div class="hero">
-      <button class="help-btn" id="help-open" type="button" title="帮助中心" aria-label="帮助中心" onclick="location.hash='#/help'">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.2 9a2.8 2.8 0 0 1 5.5.8c0 1.9-2.6 2.3-2.6 4M12 17.4v.1"/></svg>
-  <span>帮助</span>
-</button>
-      <div class="hero-eyebrow">美学风格科普 · 风格搭配实验室</div>
+            <div class="hero-eyebrow">美学风格科普 · 风格搭配实验室</div>
       <h1 class="hero-title">
         <span class="hero-ch" style="animation-delay:.05s">棂</span><span class="hero-ch glow" style="animation-delay:.2s">感</span>
       </h1>
       <p class="hero-sub">以格物之棂，感知万种风格</p>
-      <p class="hero-desc">204 种美学风格，9 大风格家族，762 组关联关系。从装饰艺术的几何光芒到核类的生活方式哲学，再到 Chinoiserie 的东方气韵，探索每一套审美语言的气质、材料与意象，再亲手搭配属于你的风格组合。</p>
+      <div class="hero-cta">
+        <button class="btn-primary" type="button" onclick="document.getElementById('catalog').scrollIntoView({behavior:'smooth',block:'start'})">浏览风格谱</button>
+        <button class="btn-ghost" type="button" onclick="location.hash='#/match'">进入搭配台</button>
+      </div>
       <div class="hero-stats">
         <div class="hero-stat"><b>204</b><span>风格</span></div>
         <div class="hero-stat"><b>9</b><span>家族</span></div>
-        <div class="hero-stat"><b id="stat-c">—</b><span>关联关系</span></div>
+        <div class="hero-stat"><b id="stat-c">762</b><span>关联关系</span></div>
       </div>
-      <div class="scroll-hint">向下探索</div>
       <a class="dy-link" href="https://www.douyin.com/user/MS4wLjABAAAAtZOif8mDPwoLElnE57tan1TlzRJoa-wiXphzKntoSnM?from_tab_name=main" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 8.4A4.7 4.7 0 0 1 15.6 6V3.9h-3.2v9.8a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V7.6a6.2 6.2 0 0 0-.9-.1 6.1 6.1 0 1 0 6.1 6.1V9.3a7.8 7.8 0 0 0 4 1.2V7.3a4.7 4.7 0 0 1-2 .1z"/></svg>
         抖音 · 汐棂月 创作主页
@@ -909,6 +920,11 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
     <!-- 跑马灯 -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track" id="marquee-track"></div>
+    </div>
+
+    <div class="catalog-head" id="catalog">
+      <h2>风格谱</h2>
+      <p class="catalog-intro">从装饰艺术的几何光芒，到核类的生活方式哲学，再到 Chinoiserie 的东方气韵。逐条查阅每套审美语言的气质、材料与意象，或按家族与领域筛选、直接搜索关键词。</p>
     </div>
 
     <div class="filterbar">
@@ -929,8 +945,9 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
     <!-- 卡片由 renderGrid() 动态渲染 -->
     </div>
     <div class="empty" id="empty">
-      <b>未找到匹配的风格</b>
-      试试其他关键词，或清空筛选条件。
+      <b>没有匹配的风格</b>
+      <p>换个关键词试试，或清空当前的家族与领域筛选。</p>
+      <button class="btn-ghost" type="button" onclick="document.querySelector('#fam-row .chip').click();document.querySelector('#cat-row .chip').click();document.getElementById('clear-search').click();">清空筛选条件</button>
     </div>
 
     <!-- 参考资料 -->
@@ -960,9 +977,15 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
 
     <!-- 页脚 -->
     <footer class="footer reveal">
-      <div class="f-brand">棂感</div>
-      <div class="f-line">美学科普与风格搭配平台<span class="sep">·</span>棂感 © 2026</div>
-      <div class="f-creator">创作者：<b>汐棂月</b></div>
+      <div class="f-main">
+        <div class="f-brand">棂感</div>
+        <div class="f-line">美学科普与风格搭配平台<span class="sep">·</span>棂感 © 2026</div>
+      </div>
+      <div class="f-side">
+        <div class="f-creator">创作者：<b>汐棂月</b></div>
+        <button class="f-link" type="button" onclick="location.hash='#/help'">帮助中心</button>
+        <p class="f-note">收藏、搭配与账号只保存在你的浏览器本地，不上传服务器。</p>
+      </div>
     </footer>
   </section>
 
@@ -997,7 +1020,7 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
   <section class="view" id="view-timeline">
     <div class="view-head">
       <h2>风格时间轴</h2>
-      <p>沿时间之河看美学风格如何诞生、流行与复兴——从 1900 年代的现代主义到 2020 年代的赛博空间。</p>
+      <p>沿时间之河看美学风格如何诞生、流行与复兴，从 1900 年代的现代主义到 2020 年代的赛博空间。</p>
     </div>
     <div class="timeline-filters" id="tl-fam-filters"></div>
     <div id="timeline-root"></div>
@@ -1011,7 +1034,7 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
         <svg viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>返回主页
       </button>
       <h2>帮助中心</h2>
-      <p>从快速上手到用棂感辅助 AI 创作——这里有你需要的全部说明。</p>
+      <p>从快速上手到用棂感辅助 AI 创作，这里有你需要的全部说明。</p>
     </div>
 
     <div class="help-sec">
@@ -1021,7 +1044,7 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
         <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 5h16M4 12h10M4 19h13"/></svg></span><b>搭配台</b><p>在卡片右下角「加入搭配」，选择 2–6 个风格。棂感会计算两两适配度，生成搭配报告、关系网络与一段混搭灵感文案。</p></div>
         <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 9 9h-9z"/></svg></span><b>对比雷达</b><p>选择 2–3 个风格，从色彩浓度、科技感、自然感、暗黑度、复古度、精致度六个维度横向对比，直观看出差异。</p></div>
         <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20h16M6 20V9M11 20V4M16 20v-8"/></svg></span><b>棂能测试</b><p>回答 12 个审美偏好问题，棂感会解读出你天生亲近的风格体质，并推荐与你最契合的风格与搭配方向。</p></div>
-        <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 5h18M3 12h18M3 19h12"/></svg></span><b>风格时间轴</b><p>沿时间之河看美学风格如何诞生、流行与复兴——从 17 世纪的中国风到 2020 年代的赛博空间，可按年代与家族筛选。</p></div>
+        <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 5h18M3 12h18M3 19h12"/></svg></span><b>风格时间轴</b><p>沿时间之河看美学风格如何诞生、流行与复兴，从 17 世纪的中国风到 2020 年代的赛博空间，可按年代与家族筛选。</p></div>
         <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-9.5-9A5.4 5.4 0 0 1 12 6.3 5.4 5.4 0 0 1 21.5 12c-2 4.4-9.5 9-9.5 9z"/></svg></span><b>我的收藏</b><p>登录后，点卡片右上角心形即可收藏。收藏会保存到你的账号下，在「我的收藏」集中查看与管理，可一键清空。</p></div>
         <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span><b>登录 / 注册</b><p>账号与收藏保存在本浏览器本地（localStorage），不上传云端；同一浏览器内登录即可取回收藏。换设备或清除浏览器数据会丢失账号，请注意备份。</p></div>
         <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12a8 8 0 0 1-8 8H7l-4 3 1.2-4.2A8 8 0 1 1 21 12z"/></svg></span><b>小棂 · 风格搭配助手</b><p>右下角的常驻小助手。在搭配台或对比雷达里选好风格，它会结合你的选择给出搭配建议与灵感文案；回答只引用库内真实风格，点卡片可直接跳转详情。它只聊风格搭配，其他话题会礼貌回绝。</p></div>
@@ -1052,7 +1075,8 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
     <div class="help-sec">
       <div class="help-sec-head"><span class="help-no">04</span><h3>关于棂感</h3><span class="help-sub">版本与创作者</span></div>
       <div class="help-about">
-        <div class="help-about-row"><span class="k">版本</span><span class="v">棂感 v2.5 · 2026-09-18</span></div>
+        <div class="help-about-row"><span class="k">版本</span><span class="v">棂感 v2.4.0 · 2026-09-19</span></div>
+        <div class="help-about-row"><span class="k">版本规则</span><span class="v">主版本.次版本.修订号，如 2.4.0；里程碑功能 +0.1.0，每次小改动 / 修 bug +0.0.1</span></div>
         <div class="help-about-row"><span class="k">数据规模</span><span class="v">204 种美学风格 · 9 大风格家族 · 7 大分类 · 762 组关联关系</span></div>
         <div class="help-about-row"><span class="k">创作者</span><span class="v">汐棂月</span></div>
         <div class="help-about-row"><span class="k">创作主页</span><span class="v"><a href="https://www.douyin.com/user/MS4wLjABAAAAtZOif8mDPwoLElnE57tan1TlzRJoa-wiXphzKntoSnM?from_tab_name=main" target="_blank" rel="noopener">抖音 · 汐棂月 创作主页 ↗</a></span></div>
@@ -1063,19 +1087,32 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
     <div class="help-sec">
       <div class="help-sec-head"><span class="help-no">05</span><h3>更新日志</h3><span class="help-sub">棂感在长大</span></div>
       <div class="changelog">
-        <div class="cl-item"><div class="cl-ver"><b>v2.5</b><span>2026-09-18</span></div><div class="cl-body"><h4>小棂上线 · 视觉精修 · 多项修复</h4><p>
-新增常驻风格搭配助手<span class="hl">「小棂」</span>：在搭配台 / 对比雷达里选好风格后，它会结合你的选择给出搭配建议与灵感文案，回答只引用库内真实风格并可点击跳转。
-修复<span class="hl">收藏夹预览图不显示</span>（图片可见性统一兜底，任何渲染路径都不再漏图）；
-修复对比雷达风格选择点击无响应，并新增<span class="hl">搜索 + 按家族折叠 + 展示上限</span>，从一屏 204 个变为可检索、可下手；
-新增站点图标 favicon；帮助中心新增「返回主页」；
-视觉精修：卡片错落进场、缩略图光扫、家族色氛围光、详情页配色条流光、图片骨架屏。
+        <div class="cl-item"><div class="cl-ver"><b>v2.4.0</b><span>2026-09-19</span></div><div class="cl-body"><h4>界面排版精修</h4><p>首页 hero <span class="hl">收紧留白与字号节奏</span>，长段落与「向下探索」提示退场，新增「浏览风格谱 / 进入搭配台」入口，抖音创作主页入口保留在 hero；
+「<span class="hl">风格每日签</span>」由大块卡片改为紧凑横条，缩略图与文字层级重排；「<span class="hl">帮助</span>」入口归位到页面右上角；
+新增键盘「跳到主要内容」通路；空状态给出「清空筛选条件」；参考资料改目录清单、页脚收束为双栏。
+<br>细节小改动：卡片去掉毛玻璃（204 张卡片滚动更稳）；修复从首页选好风格后进入「搭配台」时关系网络图不渲染。
 </p></div></div>
-        <div class="cl-item"><div class="cl-ver"><b>v2.4</b><span>2026-09-18</span></div><div class="cl-body"><h4>视觉优化</h4><p>卡片错落进场、家族色氛围光、悬停光扫、图片骨架屏、配色条流光；数字对齐与中文排版节奏优化；全部动效尊重系统「减少动效」设置。</p></div></div>
-        <div class="cl-item"><div class="cl-ver"><b>v2.3</b><span>2026-09-16</span></div><div class="cl-body"><h4>工具箱入口 · 更新日志</h4><p>侧边栏新增<span class="hl">「工具箱」</span>板块（标记待开发，实用小工具后续陆续上线）；帮助中心新增「更新日志」。</p></div></div>
-        <div class="cl-item"><div class="cl-ver"><b>v2.2</b><span>2026-09-16</span></div><div class="cl-body"><h4>数据修复</h4><p>修复「美式复古」与「美国心脏地带核」ID 撞车导致的详情页异常与关联跳错，修复一处失效风格关联，补出独立预览图，页面版本描述同步更新。</p></div></div>
-        <div class="cl-item"><div class="cl-ver"><b>v2.1</b><span>2026-09-14</span></div><div class="cl-body"><h4>国风家族 · 架构优化</h4><p>新增 Chinoiserie 中国风主风格与 14 个子风格（风格库 189 → 204，家族 8 → 9）；帮助中心上线；数据外置、卡片分批渲染、图表本地化等架构优化。</p></div></div>
-        <div class="cl-item"><div class="cl-ver"><b>v2.0</b><span>2026-09-14</span></div><div class="cl-body"><h4>大版本升级</h4><p>风格库扩充至 189 种；棂能测试、风格时间轴、我的收藏与本地账号上线；网站正式发布到 GitHub Pages。</p></div></div>
-        <div class="cl-item"><div class="cl-ver"><b>v1.0</b><span>2026-09-10</span></div><div class="cl-body"><h4>棂感诞生</h4><p>首批约 79 种美学风格，支持网格浏览、详情、搜索与家族筛选。</p></div></div>
+        <div class="cl-item"><div class="cl-ver"><b>v2.3.2</b><span>2026-09-18</span></div><div class="cl-body"><h4>优化网站</h4><p>小棂接入 Netlify 代理层，中国大陆访问更稳定、回复更完整。
+</p></div></div>
+        <div class="cl-item"><div class="cl-ver"><b>v2.3.1</b><span>2026-09-18</span></div><div class="cl-body"><h4>小改动</h4><p>修复收藏夹预览图不显示；修复对比雷达风格选择点击无响应；站点图标缓存更新。
+</p></div></div>
+        <div class="cl-item"><div class="cl-ver"><b>v2.3.0</b><span>2026-09-18</span></div><div class="cl-body"><h4>小棂 · 风格搭配助手上线</h4><p>右下角常驻助手：结合你在搭配台 / 对比雷达里选好的风格，给出搭配建议与灵感文案，回答只引用库内真实风格、可点击跳转；
+对比雷达新增搜索、按家族折叠与展示上限，从一屏 204 个变为可检索、可下手。
+</p></div></div>
+        <div class="cl-item"><div class="cl-ver"><b>v2.2.1</b><span>2026-09-18</span></div><div class="cl-body"><h4>优化网站</h4><p>卡片错落进场、缩略图光扫、家族色氛围光、详情页配色条流光、图片骨架屏；数字对齐与中文排版节奏优化，动效尊重系统设置。
+</p></div></div>
+        <div class="cl-item"><div class="cl-ver"><b>v2.2.0</b><span>2026-09-16</span></div><div class="cl-body"><h4>工具箱入口 · 更新日志</h4><p>侧边栏新增「工具」分区与「<span class="hl">工具箱</span>」入口（标记待开发，实用小工具后续上线）；帮助中心新增更新日志板块。
+</p></div></div>
+        <div class="cl-item"><div class="cl-ver"><b>v2.1.1</b><span>2026-09-16</span></div><div class="cl-body"><h4>优化网站</h4><p>修复「美式复古」重名 id 与一处失效关联，补齐独立预览图，同步更新页面描述。
+</p></div></div>
+        <div class="cl-item"><div class="cl-ver"><b>v2.1.0</b><span>2026-09-14</span></div><div class="cl-body"><h4>国风家族 · 架构优化</h4><p>新增 Chinoiserie 中国风主风格与 14 个子风格（风格库 189 → 204，家族 8 → 9）；
+帮助中心上线；数据外置、卡片分批渲染、图表本地化等架构优化。
+</p></div></div>
+        <div class="cl-item"><div class="cl-ver"><b>v2.0.0</b><span>2026-09-14</span></div><div class="cl-body"><h4>大版本升级</h4><p>风格库扩充至 189 种；棂能测试、风格时间轴、我的收藏与本地账号上线；95 张风格预览图批量生成；主页新增抖音创作主页入口；
+网站正式发布到 GitHub Pages。
+</p></div></div>
+        <div class="cl-item"><div class="cl-ver"><b>v1.0.0</b><span>2026-09-10</span></div><div class="cl-body"><h4>棂感诞生</h4><p>首批约 79 种美学风格，支持网格浏览、详情、搜索与家族筛选。
+</p></div></div>
       </div>
     </div>
   </section>
@@ -1103,7 +1140,7 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
   </section>
 
 </div>
-</div>
+</main>
 
 <!-- ===== 详情模态 ===== -->
   <div class="modal" id="detail-modal" aria-hidden="true">
@@ -1237,7 +1274,7 @@ var ROUTES = {
 };
 var SOON_TITLES = {
   '#/test':     {title:'风格体质测试', desc:'回答 12 个问题，棂感会从你的偏好里解读出你天生亲近的美学基因。即将上线。'},
-  '#/timeline': {title:'风格时间轴', desc:'沿时间之河看美学风格如何诞生、流行与复兴——从 1925 年的巴黎到今天的赛博空间。即将上线。'},
+  '#/timeline': {title:'风格时间轴', desc:'沿时间之河看美学风格如何诞生、流行与复兴，从 1925 年的巴黎到今天的赛博空间。即将上线。'},
   '#/favorites':{title:'我的收藏', desc:'收藏你心动的风格，建立自己的灵感私人馆。本地浏览器存储，不上传云端。即将上线。'},
   '#/toolbox':  {title:'工具箱 · 待开发', desc:'实用创作小工具正在筹备中：智能配色提取、AI 提示词生成、色板导出等，后续会在这里陆续上线。'}
 };
@@ -1269,6 +1306,7 @@ function navigate(){
     $('soon-desc').textContent = meta.desc;
   }
   /* 棂能测试 / 风格时间轴 视图渲染 */
+  if (viewId === 'view-match'){ renderMatch(); }
   if (viewId === 'view-test'){ renderTest(); }
   if (viewId === 'view-timeline'){ renderTimelineFilters(); renderTimeline(); }
   if (viewId === 'view-favorites'){ renderFavorites(); }
@@ -1461,14 +1499,14 @@ function renderDaily(){
       '<div class="daily-img" style="background:linear-gradient(135deg,' + swatch(a,0) + ',' + swatch(a,1) + ')">' +
         '<img src="' + a.image + '" alt="' + esc(a.name_cn) + '" loading="lazy" onerror="this.style.display=\'none\'"></div>' +
       '<div class="daily-info">' +
-        '<span class="daily-tag"><span class="dot"></span>今日风格 · ' + new Date().toLocaleDateString('zh-CN') + '</span>' +
-        '<div class="daily-name">' + esc(a.name_cn) + '</div>' +
+        '<span class="daily-tag"><span class="dot"></span>风格每日签 · ' + new Date().toLocaleDateString('zh-CN') + '</span>' +
+        '<h2 class="daily-name">' + esc(a.name_cn) + '</h2>' +
         '<div class="daily-en">' + esc(a.name_en) + '</div>' +
         '<span class="daily-fam" style="--fc:' + famColor(a.family) + '">' + esc(fam.name) + '</span>' +
         '<p class="daily-desc">' + esc(firstSentence) + '</p>' +
         '<div class="daily-actions">' +
           '<button class="btn-primary" id="daily-detail" type="button">查看详情</button>' +
-          '<button class="btn-ghost" id="daily-bottle" type="button">漂流瓶 · 随机一个</button>' +
+          '<button class="btn-ghost" id="daily-bottle" type="button">' + '<svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>' + '漂流瓶</button>' +
         '</div>' +
       '</div>' +
     '</div>';
@@ -1558,7 +1596,7 @@ var INSP_TEMPLATES = [
       quote: esc(a.name_cn) + ' <span class="x">×</span> ' + esc(b.name_cn) + ' = ' +
              '<em style="font-style:normal;color:#fff">' + esc(ka) + '与' + esc(kb) + '的' + mood + '</em>',
       sub: '当' + a.name_cn + '的' + (pick(kws[0]) || '气质') + '遇见' + b.name_cn + '的' + (pick(kws[1]) || '氛围') +
-           '，两种语言在同一个画面里低语——一种冷静，一种热烈，却意外地合拍。'
+           '，两种语言在同一个画面里低语：一种冷静，一种热烈，却意外地合拍。'
     };
   },
   function(ids, kws){
@@ -1580,7 +1618,7 @@ var INSP_TEMPLATES = [
       quote: '在' + esc(a.name_cn) + '与' + esc(b.name_cn) + '之间<span class="x">，</span>' +
              '<em style="font-style:normal;color:#fff">' + esc(ka) + '化作' + esc(kb) + '的' + mood + '</em>',
       sub: '想象一段没有台词的镜头：' + (pick(kws[0]) || '质感') + '慢慢浮出水面，' +
-           (pick(kws[1]) || '情绪') + '在角落里亮起来——这就是这组搭配想讲的故事。'
+           (pick(kws[1]) || '情绪') + '在角落里亮起来，这就是这组搭配想讲的故事。'
     };
   }
 ];
@@ -1673,7 +1711,7 @@ function renderMatch(){
       return '<div class="pair-row">' +
         '<div class="pair-name"><span class="f" style="--fc:' + famColor(A.family) + '"></span>' + esc(A.name_cn) +
         '<span class="vs">×</span><span class="f" style="--fc:' + famColor(B.family) + '"></span>' + esc(B.name_cn) + '</div>' +
-        '<div class="pair-score">' + (p.score == null ? '—' : p.score) + '</div>' +
+        '<div class="pair-score">' + (p.score == null ? '未评' : p.score) + '</div>' +
         '<div class="pair-mid"><div class="pair-bar"><i style="width:' + (p.score == null ? 0 : p.score) + '%"></i></div>' +
         '<div class="pair-reason">' + esc(p.reason) + '</div></div></div>';
     }).join('');
@@ -1897,7 +1935,7 @@ function rdPickerShell(){
 function renderRadarPicker(){
   /* 监听挂在 #radar-root 上（它由 HTML 固定存在、不会被重建）。
      之前挂在 #radar-pick 上，而该元素每次 renderRadar 都会被 innerHTML 重建，
-     监听器随之失效 —— 导致点击完全无反应。 */
+     监听器随之失效，导致点击完全无反应。 */
   var host = $('radar-root');
   if (!host || host.dataset.bound === '1') return;
   host.dataset.bound = '1';
@@ -2276,7 +2314,7 @@ function renderTestResult(){
       '<div class="test-result-num">' + Math.round(prof[topDim]) + '</div>' +
       '<div style="flex:1;min-width:220px">' +
         '<div class="test-result-title">你的核心气质：' + topMeta.cn + '</div>' +
-        '<div class="test-result-sub">' + topMeta.desc + ' 是你的风格体质主导维度。你的审美基因与「' + esc(top.name_cn) + '」最接近——它同样以' + topMeta.cn + '见长，气质与你一拍即合。</div>' +
+        '<div class="test-result-sub">' + topMeta.desc + ' 是你的风格体质主导维度。你的审美基因与「' + esc(top.name_cn) + '」最接近，它同样以' + topMeta.cn + '见长，气质与你一拍即合。</div>' +
       '</div>' +
     '</div>' +
     '<div id="test-radar" style="width:100%;height:330px;margin-top:16px"></div>' +
