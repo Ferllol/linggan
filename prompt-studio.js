@@ -225,7 +225,7 @@ function buildEn(styles, dir){
   bits.push('color palette ' + mergedColors(styles, 5).join(', '));
   bits.push(dir.lightEn);
   bits.push('highly detailed, sharp focus, professional art direction');
-  return bits.join(', ') + '.';
+  return bits.join(', ');
 }
 
 function negativeFor(dir, styles){
@@ -243,9 +243,13 @@ function build(styles, modelId, dirId){
   var text = '', negative = '';
 
   if (model.lang === 'en'){
-    text = buildEn(list, dir);
-    if (model.writes === 'params') text += ' --ar ' + dir.ratio.replace(':', ':') + ' --style raw --v 7';
-    if (model.writes === 'negative') negative = negativeFor(dir, list);
+    var en = buildEn(list, dir);
+    if (model.writes === 'params'){
+      text = en + ' --ar ' + dir.ratio + ' --style raw --v 7';
+    } else {
+      text = en + ', ' + dir.ratio + ' aspect ratio.';
+      negative = negativeFor(dir, list);
+    }
   } else if (model.writes === 'dense'){
     text = buildZhDense(list, dir);
   } else {
