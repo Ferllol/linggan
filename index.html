@@ -4,13 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>棂感 · 美学风格科普与搭配平台</title>
-<meta name="description" content="棂感：204 种美学风格科普数据库与风格搭配实验室。探索主义、核类、波类、网络数字、暗黑系、清新浪漫、复古学院、萌系日系、国风九大风格家族，支持设计、穿搭、建筑等领域分类浏览。">
+<meta name="description" content="棂感：204 种美学风格科普数据库与风格搭配实验室。探索主义、核类、波类、网络数字、暗黑系、清新浪漫、复古学院、萌系日系、国风九大风格家族，支持设计、穿搭、建筑等领域分类浏览；搭配台可按模型与用途生成可直接复制的 AI 生图提示词。">
+<script>
+/* 地址栏净化：外部粘贴带 #/ 的链接也能正常进入，分享出去的链接保持干净地址 */
+(function(){
+  try {
+    var h = location.hash;
+    if (h === '' || h === '#' || h === '#/' || h === '#/home') {
+      if (h) history.replaceState(null, '', location.pathname + location.search);
+    }
+  } catch (e) {}
+})();
+</script>
 <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
 <link rel="apple-touch-icon" href="favicon.svg?v=2">
 <link rel="preconnect" href="https://miaoda.feishu.cn">
 <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Serif+SC:wght@400;600;700;900&display=swap">
 <script src="echarts.min.js"></script>
 <link rel="stylesheet" href="advisor-chat.css">
+<link rel="stylesheet" href="prompt-studio.css?v=1">
 <style>
 /* ============ 基础与变量 ============ */
 :root{
@@ -642,9 +654,6 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
 .dy-link:hover{color:#ff2d55;letter-spacing:.2em}
 .dy-link svg{width:14px;height:14px;opacity:.85}
 /* ===== 帮助中心 ===== */
-.help-btn{position:absolute;top:34px;right:0;display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:999px;background:rgba(13,13,21,.6);border:1px solid var(--line);color:var(--muted);font-size:12.5px;letter-spacing:.08em;cursor:pointer;transition:all .25s;backdrop-filter:blur(6px);z-index:5}
-.help-btn svg{width:15px;height:15px}
-.help-btn:hover{color:#fff;border-color:rgba(123,107,255,.55);background:rgba(123,107,255,.14);transform:translateY(-1px)}
 .help-sec{margin:38px 0 8px}
 .help-sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:18px;border-bottom:1px solid var(--line);padding-bottom:12px}
 .help-no{font-family:var(--serif);font-size:15px;color:#7b6bff;letter-spacing:.1em}
@@ -673,7 +682,6 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
 .help-about-row .v{font-size:13px;color:#fff}
 .help-about-row .v a{color:#7b6bff;text-decoration:none}
 .help-note{margin-top:16px;padding:13px 16px;border-radius:12px;background:rgba(255,212,121,.06);border:1px solid rgba(255,212,121,.25);font-size:12.5px;line-height:1.7;color:#e8d9b5}
-@media (max-width:1100px){.help-btn{top:16px;right:0}}
 /* 帮助中心返回键：与 .back-btn 同源样式，此处只做位置与间距 */
 .help-back{margin-bottom:16px}
 @media (max-width:640px){.help-back{margin-bottom:12px;padding:7px 14px;font-size:12.5px}}
@@ -689,6 +697,87 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
 .cl-body p{margin:0;font-size:12.5px;line-height:1.7;color:var(--muted)}
 .cl-body .hl{color:#ffd479}
 @media (max-width:640px){.cl-item{flex-direction:column;gap:6px}.cl-ver{width:auto;flex-direction:row;align-items:baseline;gap:10px}}
+
+/* ===== 侧边栏：网站教程入口（v2.5） ===== */
+.rail-item.tour-entry{
+  padding:11px 12px;margin-bottom:6px;border-radius:13px;gap:10px;
+  background:linear-gradient(112deg,rgba(0,229,255,.12),rgba(255,47,214,.09));
+  border:1px solid rgba(0,229,255,.24);
+  transition:border-color .22s,background .22s,transform .22s;
+}
+.rail-item.tour-entry::before{display:none}
+.rail-item.tour-entry:hover{color:#fff;border-color:rgba(0,229,255,.55);background:linear-gradient(112deg,rgba(0,229,255,.19),rgba(255,47,214,.14));transform:translateY(-1px)}
+.tour-entry .te-ic{flex:none;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--grad);color:#06121a;box-shadow:0 6px 16px -8px rgba(123,107,255,.9)}
+.tour-entry .te-ic svg{width:16px;height:16px;stroke-width:2}
+.tour-entry .te-txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:1px;text-align:left}
+.tour-entry .te-txt b{font-size:13.5px;font-weight:700;color:#fff;letter-spacing:.02em;line-height:1.4}
+.tour-entry .te-txt em{font-style:normal;font-size:11px;color:#9fd8e6;line-height:1.4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tour-entry .te-arrow{flex:none;font-size:13px;color:rgba(255,255,255,.5);transition:transform .22s,color .22s}
+.rail-item.tour-entry:hover .te-arrow{transform:translateX(3px);color:#fff}
+body.side-collapsed .tour-entry{padding:5px;width:40px;margin:0 auto 6px}
+body.side-collapsed .tour-entry .te-ic{width:30px;height:30px}
+body.side-collapsed .tour-entry .te-txt,
+body.side-collapsed .tour-entry .te-arrow{display:none}
+
+/* ===== 新手教程：半透明玻璃浮层（v2.5） ===== */
+.tour{
+  position:fixed;inset:0;z-index:70;display:flex;align-items:center;justify-content:center;
+  padding:24px;background:rgba(6,6,12,.5);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  opacity:0;visibility:hidden;transition:opacity .32s var(--ease);
+}
+.tour.open{opacity:1;visibility:visible}
+.tour-card{
+  position:relative;width:100%;max-width:660px;max-height:88vh;overflow-y:auto;
+  padding:30px 30px 22px;border-radius:24px;
+  background:
+    radial-gradient(120% 78% at 86% -14%, rgba(255,47,214,.13), transparent 58%),
+    radial-gradient(110% 76% at -6% -6%, rgba(0,229,255,.12), transparent 58%),
+    linear-gradient(152deg, rgba(21,21,33,.90), rgba(10,10,16,.86));
+  border:1px solid rgba(255,255,255,.16);
+  backdrop-filter:blur(26px) saturate(1.15);-webkit-backdrop-filter:blur(26px) saturate(1.15);
+  box-shadow:0 34px 90px -34px rgba(0,0,0,.92),inset 0 1px 0 rgba(255,255,255,.16),inset 0 0 0 1px rgba(0,229,255,.06);
+  transform:translateY(20px) scale(.97);transition:transform .42s var(--ease);
+}
+.tour.open .tour-card{transform:none}
+.tour-x{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;color:var(--muted);border:1px solid rgba(255,255,255,.12);transition:all .2s;z-index:2}
+.tour-x:hover{color:#fff;border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.08)}
+.tour-x svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round}
+.tour-eyebrow{font-size:11px;letter-spacing:.32em;color:#8fd8e8}
+.tour-title{font-family:var(--serif);font-size:clamp(24px,3.4vw,32px);color:#fff;line-height:1.3;margin:10px 0 0}
+.tour-lede{margin-top:12px;font-size:13.5px;line-height:1.85;color:#c2bfd0;max-width:56ch}
+.tour-lede b{color:#fff;font-weight:700}
+.tour-steps{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0 18px}
+.tour-step{padding:14px 15px 15px;border-radius:14px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.09)}
+.tour-step .ts-no{font-size:10px;letter-spacing:.2em;color:var(--cyan);font-variant-numeric:tabular-nums}
+.tour-step b{display:block;font-family:var(--serif);font-size:15px;color:#fff;margin:6px 0 5px}
+.tour-step p{margin:0;font-size:12.5px;line-height:1.7;color:#b6b3c4}
+.tour-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.09);padding-top:16px}
+.tour-keep{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;color:var(--muted);cursor:pointer;user-select:none}
+.tour-keep input{
+  appearance:none;-webkit-appearance:none;flex:none;
+  width:15px;height:15px;border-radius:4px;position:relative;cursor:pointer;
+  border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.06);
+  transition:background .18s,border-color .18s;
+}
+.tour-keep input:hover{border-color:rgba(0,229,255,.6)}
+.tour-keep input:checked{background:var(--grad);border-color:transparent}
+.tour-keep input:checked::after{
+  content:"";position:absolute;left:4px;top:4.2px;width:7px;height:3.5px;
+  border-left:2px solid #06121a;border-bottom:2px solid #06121a;transform:rotate(-45deg);
+}
+.tour-actions{display:flex;gap:10px;flex-wrap:wrap}
+.tour-actions .btn-primary,.tour-actions .btn-ghost{padding:10px 20px;font-size:13px}
+@media (max-width:560px){
+  .tour{padding:14px}
+  .tour-card{padding:24px 18px 18px;border-radius:20px}
+  .tour-title{font-size:23px}
+  .tour-lede{font-size:13px}
+  .tour-steps{grid-template-columns:1fr;gap:8px;margin:16px 0 14px}
+  .tour-step{padding:12px 13px}
+  .tour-foot{flex-direction:column;align-items:stretch;gap:12px}
+  .tour-actions{justify-content:flex-end}
+}
 
 /* ============ 小棂 · 快捷建议芯片 ============ */
 .lg-quickrow{flex:none;display:flex;gap:7px;overflow-x:auto;padding:10px 13px 2px;scrollbar-width:none}
@@ -831,6 +920,12 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
       <div class="side-brand">棂感<small>LINGGAN</small></div>
     </div>
 
+    <button class="rail-item tour-entry" data-route="#/tour" type="button" id="tour-entry" aria-label="网站教程：第一次来，30 秒看懂棂感">
+      <span class="te-ic"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M9 7.5h6M9 11h4"/></svg></span>
+      <span class="te-txt"><b>网站教程</b><em>第一次来？30 秒看懂棂感</em></span>
+      <span class="te-arrow" aria-hidden="true">→</span>
+    </button>
+
     <div class="user-box" id="user-box"></div>
     <nav class="side-nav" aria-label="主导航">
       <button class="rail-item" data-route="#/" type="button">
@@ -889,10 +984,6 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
 
   <!-- ===== 视图：首页一览 ===== -->
   <section class="view" id="view-home">
-    <button class="help-btn" id="help-open" type="button" title="帮助中心" aria-label="帮助中心" onclick="location.hash='#/help'">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.2 9a2.8 2.8 0 0 1 5.5.8c0 1.9-2.6 2.3-2.6 4M12 17.4v.1"/></svg>
-      <span>帮助</span>
-    </button>
     <div class="hero">
             <div class="hero-eyebrow">美学风格科普 · 风格搭配实验室</div>
       <h1 class="hero-title">
@@ -983,7 +1074,7 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
       </div>
       <div class="f-side">
         <div class="f-creator">创作者：<b>汐棂月</b></div>
-        <button class="f-link" type="button" onclick="location.hash='#/help'">帮助中心</button>
+        <button class="f-link" type="button" onclick="location.hash='#/tour'">教程</button>
         <p class="f-note">收藏、搭配与账号只保存在你的浏览器本地，不上传服务器。</p>
       </div>
     </footer>
@@ -1027,21 +1118,22 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
   </section>
 
 
-  <!-- ===== 视图：帮助中心 ===== -->
+  <!-- ===== 视图：教程 ===== -->
   <section class="view" id="view-help">
     <div class="view-head">
       <button class="back-btn help-back" type="button" onclick="location.hash='#/'">
         <svg viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>返回主页
       </button>
-      <h2>帮助中心</h2>
-      <p>从快速上手到用棂感辅助 AI 创作，这里有你需要的全部说明。</p>
+      <h2>教程</h2>
+      <p>棂感是一座「美学风格图书馆 + 搭配实验室」：查 204 种风格的定义、配色、元素与材质，把风格搭在一起看适配度，再一键拿走能直接喂给 AI 生图工具的提示词。下面是完整用法。</p>
     </div>
 
     <div class="help-sec">
-      <div class="help-sec-head"><span class="help-no">01</span><h3>快速上手</h3><span class="help-sub">八个模块，各司其职</span></div>
+      <div class="help-sec-head"><span class="help-no">01</span><h3>快速上手</h3><span class="help-sub">九个模块，各司其职</span></div>
       <div class="help-grid">
         <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></span><b>风格一览</b><p>主页即风格库：204 种美学风格按 9 大家族、7 大分类陈列。可用家族/分类标签筛选，或用搜索框按名称、元素、材质、关键词检索。点卡片进入详情。</p></div>
         <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 5h16M4 12h10M4 19h13"/></svg></span><b>搭配台</b><p>在卡片右下角「加入搭配」，选择 2–6 个风格。棂感会计算两两适配度，生成搭配报告、关系网络与一段混搭灵感文案。</p></div>
+        <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h12M4 18h7"/><path d="M17 15l3 3-3 3"/></svg></span><b>AI 提示词 · 一键复制</b><p>详情页与搭配台都有「AI 提示词」面板：先选<strong>模型</strong>（豆包 Seedream、Midjourney、Flux / SD、通义万相）和<strong>方向</strong>（海报、产品图、人物写真、场景、插画、品牌视觉），提示词会按该模型的语言习惯自动拼好，点一下就能复制。</p></div>
         <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 9 9h-9z"/></svg></span><b>对比雷达</b><p>选择 2–3 个风格，从色彩浓度、科技感、自然感、暗黑度、复古度、精致度六个维度横向对比，直观看出差异。</p></div>
         <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20h16M6 20V9M11 20V4M16 20v-8"/></svg></span><b>棂能测试</b><p>回答 12 个审美偏好问题，棂感会解读出你天生亲近的风格体质，并推荐与你最契合的风格与搭配方向。</p></div>
         <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 5h18M3 12h18M3 19h12"/></svg></span><b>风格时间轴</b><p>沿时间之河看美学风格如何诞生、流行与复兴，从 17 世纪的中国风到 2020 年代的赛博空间，可按年代与家族筛选。</p></div>
@@ -1052,7 +1144,18 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
     </div>
 
     <div class="help-sec">
-      <div class="help-sec-head"><span class="help-no">02</span><h3>辅助 AI 创作指南</h3><span class="help-sub">生图 / 生视频提示词怎么来</span></div>
+      <div class="help-sec-head"><span class="help-no">02</span><h3>AI 提示词 · 一键复制</h3><span class="help-sub">选模型 → 选方向 → 复制</span></div>
+      <div class="help-steps">
+        <div class="help-step"><span class="hs-no">1</span><div><h4>在详情页或搭配台找到「AI 提示词」</h4><p>打开任意风格详情，或把风格加进搭配台（1 个也能生成，2 个以上会生成混搭提示词）。面板里已经把这套风格的定义、配色、元素、材质、意象整理成了可直接使用的描述。</p></div></div>
+        <div class="help-step"><span class="hs-no">2</span><div><h4>选模型：决定提示词的写法</h4><p><code>豆包 Seedream</code>（中文自然语言长句，适合即梦 / 豆包）、<code>Midjourney</code>（英文短语 + 画幅参数）、<code>Flux / Stable Diffusion</code>（英文短语 +「负面提示词」）、<code>通义万相</code>（中文关键词堆叠）。换模型会即时重写提示词。</p></div></div>
+        <div class="help-step"><span class="hs-no">3</span><div><h4>选方向：决定画面要产出什么</h4><p><code>海报</code>3:4、<code>产品图</code>1:1、<code>人物写真</code>2:3、<code>场景概念</code>16:9、<code>插画</code>4:5、<code>品牌视觉</code>1:1。方向会同时改写主体、构图、布光与画幅。</p></div></div>
+        <div class="help-step"><span class="hs-no">4</span><div><h4>一键复制，粘进生图工具</h4><p>点「一键复制」即可粘贴到豆包 / 即梦 / Midjourney / WebUI。想微调就复制后改几个词；需要固定画面时，把详情页色板里的色值一起带上。</p></div></div>
+      </div>
+      <div class="help-tpl"><b>提示词是怎么长出来的</b><p>方向（主体 + 构图 + 布光 + 画幅）<span class="hl">＋</span>风格（中英文名 + 一句话定义）<span class="hl">＋</span>配色体系（色值）<span class="hl">＋</span>核心元素 / 材质 / 意象<span class="hl">＋</span>模型专属后缀（如 Midjourney 的 <span class="hl">--ar 3:4 --style raw --v 7</span>）。混搭时会按「主风格 60%、其余均分」的比例融合，主角色的配色优先。</p></div>
+    </div>
+
+    <div class="help-sec">
+      <div class="help-sec-head"><span class="help-no">03</span><h3>自己拼装提示词</h3><span class="help-sub">想手写的话</span></div>
       <div class="help-steps">
         <div class="help-step"><span class="hs-no">1</span><div><h4>打开风格详情，收集「美学参数」</h4><p>点击任意风格卡片进入详情页，棂感已为你整理好一组可直接喂给 AI 的参数：<code>定义</code>（definition）、<code>配色</code>（colors 色板）、<code>元素</code>（elements）、<code>材质</code>（materials）、<code>意象</code>（iconography）、<code>视觉特征</code>（color_system 色彩体系）。</p></div></div>
         <div class="help-step"><span class="hs-no">2</span><div><h4>拼装生图提示词</h4><p>把参数转成自然语言：主体 + 元素 + 配色 + 材质 + 氛围。例：「舒适核」→ <code>针织毛衣 · 毛毯 · 壁炉火光 · 暖色低饱和 · 被包裹的安全感 · 冬日居家 · 电影感柔光</code>。详情页色板可直接复制给 AI 指定 palette。</p></div></div>
@@ -1062,7 +1165,7 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
     </div>
 
     <div class="help-sec">
-      <div class="help-sec-head"><span class="help-no">03</span><h3>美学知识引用</h3><span class="help-sub">数据从哪里来</span></div>
+      <div class="help-sec-head"><span class="help-no">04</span><h3>美学知识引用</h3><span class="help-sub">数据从哪里来</span></div>
       <div class="help-grid">
         <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h14v16H5z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></span><b>美学中文维基</b><p>风格定义与起源参考 Aesthetics Wiki 中文站与 List of Aesthetics 风格全目录。</p></div>
         <div class="help-card"><span class="help-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20V10M9 20V4M15 20v-9M21 20V7"/></svg></span><b>百度百科</b><p>中国风（Chinoiserie 美学）大类定义与大部分风格介绍参考百度百科词条。</p></div>
@@ -1073,9 +1176,9 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
     </div>
 
     <div class="help-sec">
-      <div class="help-sec-head"><span class="help-no">04</span><h3>关于棂感</h3><span class="help-sub">版本与创作者</span></div>
+      <div class="help-sec-head"><span class="help-no">05</span><h3>关于棂感</h3><span class="help-sub">版本与创作者</span></div>
       <div class="help-about">
-        <div class="help-about-row"><span class="k">版本</span><span class="v">棂感 v2.4.0 · 2026-09-19</span></div>
+        <div class="help-about-row"><span class="k">版本</span><span class="v">棂感 v2.5.0 · 2026-10-21</span></div>
         <div class="help-about-row"><span class="k">版本规则</span><span class="v">主版本.次版本.修订号，如 2.4.0；里程碑功能 +0.1.0，每次小改动 / 修 bug +0.0.1</span></div>
         <div class="help-about-row"><span class="k">数据规模</span><span class="v">204 种美学风格 · 9 大风格家族 · 7 大分类 · 762 组关联关系</span></div>
         <div class="help-about-row"><span class="k">创作者</span><span class="v">汐棂月</span></div>
@@ -1085,8 +1188,13 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
     </div>
 
     <div class="help-sec">
-      <div class="help-sec-head"><span class="help-no">05</span><h3>更新日志</h3><span class="help-sub">棂感在长大</span></div>
+      <div class="help-sec-head"><span class="help-no">06</span><h3>更新日志</h3><span class="help-sub">棂感在长大</span></div>
       <div class="changelog">
+        <div class="cl-item"><div class="cl-ver"><b>v2.5.0</b><span>2026-10-21</span></div><div class="cl-body"><h4>教程入口 · AI 提示词一键复制</h4><p>「帮助」更名为<span class="hl">「教程」</span>，入口从主页右上角移入左侧侧边栏顶部，第一次进来就能知道棂感是什么、怎么用；
+首次访问自动弹出一张<span class="hl">半透明玻璃</span>版简易教程，看完可勾选「不再自动显示」，随时从侧边栏重新打开；
+搭配台与风格详情页新增<span class="hl">「AI 提示词」面板</span>：先选模型（豆包 Seedream / Midjourney / Flux·SD / 通义万相），再选方向（海报 / 产品图 / 人物写真 / 场景概念 / 插画 / 品牌视觉），提示词按所选模型的写法即时重写，<span class="hl">一键复制</span>即可粘贴使用；单风格与 2–6 个混搭都能生成；
+修复带 <span class="hl">#/</span> 的分享链接打不开的问题：首页改用干净地址，粘贴带 #/ 的链接会自动纠正并正常进入。
+</p></div></div>
         <div class="cl-item"><div class="cl-ver"><b>v2.4.0</b><span>2026-09-19</span></div><div class="cl-body"><h4>界面排版精修</h4><p>首页 hero <span class="hl">收紧留白与字号节奏</span>，长段落与「向下探索」提示退场，新增「浏览风格谱 / 进入搭配台」入口，抖音创作主页入口保留在 hero；
 「<span class="hl">风格每日签</span>」由大块卡片改为紧凑横条，缩略图与文字层级重排；「<span class="hl">帮助</span>」入口归位到页面右上角；
 新增键盘「跳到主要内容」通路；空状态给出「清空筛选条件」；参考资料改目录清单、页脚收束为双栏。
@@ -1155,6 +1263,7 @@ body.side-collapsed .user-box .logout-btn::before{content:"";width:16px;height:1
 <script src="data/aesthetics.js"></script>
 <script src="advisor-engine.js"></script>
 <script src="advisor-chat.js"></script>
+<script src="prompt-studio.js?v=1"></script>
 <script>
 /* ===================== 棂感 · 应用逻辑 ===================== */
 /* 数据兜底：由 data/aesthetics.js 提供（file:// 兼容）；数据缺失时给出提示 */
@@ -1260,6 +1369,38 @@ function closeDrawer(){
 }
 function scheduleGraphRefresh(){ setTimeout(function(){ renderGraph(); renderRadar(); }, 420); }
 
+/* ---------- 新手教程浮层（v2.5） ---------- */
+var TOUR_KEY = 'linggan.tour.seen';
+function tourSeen(){
+  try { return localStorage.getItem(TOUR_KEY) === '1'; } catch(e){ return true; }
+}
+function markTourSeen(){
+  try { localStorage.setItem(TOUR_KEY, '1'); } catch(e){}
+}
+function openTour(){
+  var m = $('tour-modal'); if (!m) return;
+  var cb = $('tour-hide'); if (cb) cb.checked = false;
+  var card = m.querySelector('.tour-card'); if (card) card.scrollTop = 0;
+  m.classList.add('open');
+  m.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  /* preventScroll：窄屏下别让焦点把卡片滚到底部、跳过开头的说明 */
+  setTimeout(function(){
+    var b = $('tour-start');
+    if (b && b.focus){ try { b.focus({preventScroll:true}); } catch(e){ b.focus(); } }
+  }, 90);
+}
+function closeTour(){
+  var m = $('tour-modal'); if (!m) return;
+  var cb = $('tour-hide');
+  if (cb && cb.checked) markTourSeen();
+  m.classList.remove('open');
+  m.setAttribute('aria-hidden', 'true');
+  if (!document.body.classList.contains('drawer-open') &&
+      !($('detail-modal') && $('detail-modal').classList.contains('open')) &&
+      !($('auth-modal') && $('auth-modal').classList.contains('open'))) document.body.style.overflow = '';
+}
+
 /* ---------- Hash 路由 ---------- */
 var ROUTES = {
   '#/':        'view-home',
@@ -1268,6 +1409,7 @@ var ROUTES = {
   '#/radar':   'view-radar',
   '#/test':     'view-test',
   '#/timeline': 'view-timeline',
+  '#/tour':     'view-help',
   '#/help':     'view-help',
   '#/favorites':'view-favorites',
   '#/toolbox':  'view-soon'
@@ -1278,7 +1420,13 @@ var SOON_TITLES = {
   '#/favorites':{title:'我的收藏', desc:'收藏你心动的风格，建立自己的灵感私人馆。本地浏览器存储，不上传云端。即将上线。'},
   '#/toolbox':  {title:'工具箱 · 待开发', desc:'实用创作小工具正在筹备中：智能配色提取、AI 提示词生成、色板导出等，后续会在这里陆续上线。'}
 };
-function currentRoute(){ var h = location.hash || '#/'; return ROUTES[h] ? h : '#/'; }
+function currentRoute(){
+  var h = location.hash || '#/';
+  /* 容错：#/match/ 这类尾斜杠、旧链接、以及外部粘贴的 #/ 都归一化 */
+  while (h.length > 2 && h.charAt(h.length - 1) === '/') h = h.slice(0, -1);
+  if (h === '#/help') h = '#/tour';   /* 旧「帮助中心」链接继续可用 */
+  return ROUTES[h] ? h : '#/';
+}
 /* 把小棂需要知道的站内状态同步出去（它读 window.__LINGGAN_STATE 判断当前选了什么） */
 function syncAdvisorState(){
   try {
@@ -1289,6 +1437,10 @@ function syncAdvisorState(){
 function navigate(){
   var route = currentRoute();
   var viewId = ROUTES[route];
+  /* 首页统一使用干净地址（不带 #/）：外部粘贴带 #/ 的链接也能直接进入，分享出去的链接同样可用 */
+  if (route === '#/' && location.hash){
+    try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+  }
   var views = document.querySelectorAll('.view');
   for (var i = 0; i < views.length; i++) views[i].classList.remove('active');
   var el = $(viewId);
@@ -1310,6 +1462,11 @@ function navigate(){
   if (viewId === 'view-test'){ renderTest(); }
   if (viewId === 'view-timeline'){ renderTimelineFilters(); renderTimeline(); }
   if (viewId === 'view-favorites'){ renderFavorites(); }
+  if (route === '#/tour'){
+    /* 看过完整教程就不再自动弹新手引导；浮层若正开着，切到教程页时顺手收起 */
+    markTourSeen();
+    if ($('tour-modal') && $('tour-modal').classList.contains('open')) closeTour();
+  }
   if (isNarrow()) closeDrawer();
   window.scrollTo({top:0, behavior:'auto'});
   syncAdvisorState();   /* 切换视图后刷新小棂的快捷建议 */
@@ -1698,6 +1855,11 @@ function renderMatch(){
     (sel.length < MIN_SEL ? '（再选 ' + (MIN_SEL - sel.length) + ' 个开始分析）' : '') + '</div>' +
     '<div class="sel-list">' + chips + '</div></div>';
 
+  /* AI 提示词：1 个风格也能生成，2 个以上生成混搭提示词 */
+  html += '<div class="panel"><div class="ph">AI 提示词 · 一键复制</div>' +
+    '<p class="lgp-chips-note">选好要用的模型和方向，下面这段提示词会即时重写，复制后直接粘进生图工具。</p>' +
+    '<div id="match-prompt"></div></div>';
+
   if (sel.length >= MIN_SEL){
     var pairs = pairAll(sel);
     html += '<div class="panel inspire"><div class="ph">混搭灵感</div>' +
@@ -1728,6 +1890,9 @@ function renderMatch(){
   }
   root.innerHTML = html;
   updateIndicators();
+  if (window.LingganPrompt){
+    LingganPrompt.mount($('match-prompt'), sel.map(function(id){ return BY_ID[id]; }));
+  }
   if (sel.length >= MIN_SEL){
     renderInspire(sel);
     $('inspire-retry').addEventListener('click', function(){ renderInspire(sel); });
@@ -1740,7 +1905,7 @@ function renderGraph(){
   if (graphChart){ graphChart.dispose(); graphChart = null; }
   var el = $('graph');
   if (!el) return;
-  if (location.hash !== '#/match') return;
+  if (currentRoute() !== '#/match') return;
   if (typeof window.echarts === 'undefined'){
     el.innerHTML = '<div class="graph-fallback"><b>关系图暂不可用</b>' +
       'ECharts 库未能从 CDN 加载（可能处于离线环境），上方矩阵已完整展示适配关系。' +
@@ -2075,6 +2240,9 @@ function openDetail(id){
         '<div class="fr"><b>核心元素</b><div class="chip-tags">' + tags(vf.elements || a.elements) + '</div></div>' +
         '<div class="fr"><b>材质纹理</b><div class="chip-tags">' + tags(vf.materials || a.materials) + '</div></div>' +
       '</div></div>' +
+    '<div class="blk lgp-blk"><h4>AI 提示词 · 一键复制</h4>' +
+      '<p class="lgp-chips-note">把这套风格直接变成生图提示词：先选模型，再选方向，提示词会按该模型的写法即时重写，点「一键复制」即可。</p>' +
+      '<div id="detail-prompt"></div></div>' +
     '<div class="blk"><h4>代表作品 / 人物 / 场景</h4><div class="chip-tags">' + tags(a.representatives) + '</div></div>' +
     '<div class="blk"><h4>应用示例</h4><div class="chip-tags">' + tags(a.applications) + '</div></div>' +
     '<div class="blk"><h4>相关词条</h4><div class="chip-tags">' + tags(a.related_terms) + '</div></div>' +
@@ -2087,6 +2255,7 @@ function openDetail(id){
   modal.classList.add('open');
   modal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
+  if (window.LingganPrompt) LingganPrompt.mount($('detail-prompt'), [a]);
   syncAddButtons();
   modal.scrollTop = 0;
 }
@@ -2492,6 +2661,19 @@ function bindEvents(){
   });
   /* 折叠按钮 */
   $('side-toggle').addEventListener('click', toggleSideDesktop);
+
+  /* 新手教程浮层 */
+  var tourModal = $('tour-modal');
+  if (tourModal){
+    tourModal.addEventListener('click', function(e){ if (e.target === tourModal) closeTour(); });
+    $('tour-close').addEventListener('click', closeTour);
+    $('tour-start').addEventListener('click', closeTour);
+    $('tour-more').addEventListener('click', function(){
+      markTourSeen();            /* 看过完整教程，就不再自动弹出 */
+      closeTour();
+      location.hash = '#/tour';
+    });
+  }
   /* 抽屉与 FAB */
   $('side-scrim').addEventListener('click', closeDrawer);
   $('menu-btn').addEventListener('click', openDrawer);
@@ -2678,7 +2860,8 @@ if (currentRoute() === '#/favorites') renderFavorites();
   /* 键盘 */
   document.addEventListener('keydown', function(e){
     if (e.key === 'Escape'){
-      if ($('detail-modal').classList.contains('open')) closeDetail();
+      if ($('tour-modal') && $('tour-modal').classList.contains('open')) closeTour();
+      else if ($('detail-modal').classList.contains('open')) closeDetail();
       else if (document.body.classList.contains('drawer-open')) closeDrawer();
     }
   });
@@ -2722,6 +2905,10 @@ function init(){
   initCursor();
   initMagnetic();
   initImgGuard();
+  /* 第一次进入网站：弹出简易教程（读过或勾选「不再自动显示」后不再打扰） */
+  window.setTimeout(function(){
+    if (!tourSeen() && currentRoute() === '#/') openTour();
+  }, 1100);
   window.setTimeout(function(){
     if (typeof window.echarts === 'undefined') loadEcharts();
   }, 4000);
@@ -2770,6 +2957,31 @@ else { init(); }
 })();
 
 </script>
+  <!-- ===== 新手教程（首次进入自动弹出，可随时从侧边栏重新打开） ===== -->
+  <div class="tour" id="tour-modal" aria-hidden="true">
+    <div class="tour-card" role="dialog" aria-modal="true" aria-labelledby="tour-title">
+      <button class="tour-x" id="tour-close" type="button" aria-label="关闭教程">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="tour-eyebrow">新手引导 · 30 秒</div>
+      <h2 class="tour-title" id="tour-title">棂感是什么？先看这一屏</h2>
+      <p class="tour-lede">一座「美学风格图书馆 + 搭配实验室」：<b>204 种美学风格</b>的定义、配色、元素与材质都收在库里；把风格搭在一起能看到适配度，最后一步是——<b>把风格变成能直接喂给 AI 的提示词</b>，复制就能出图。</p>
+      <div class="tour-steps">
+        <div class="tour-step"><span class="ts-no">01</span><b>找风格</b><p>主页按家族 / 领域筛选，或直接搜「霓虹」「壁炉」。点卡片看详情：配色、元素、材质、意象都整理好了。</p></div>
+        <div class="tour-step"><span class="ts-no">02</span><b>配搭配</b><p>卡片右下角「加入搭配」，凑 2–6 个进搭配台：两两适配度、关系网络、混搭灵感一次看全。</p></div>
+        <div class="tour-step"><span class="ts-no">03</span><b>拿提示词</b><p>详情页或搭配台的「AI 提示词」面板：先选模型、再选方向，一键复制，直接粘进豆包 / 即梦 / MJ。</p></div>
+        <div class="tour-step"><span class="ts-no">04</span><b>顺手的功能</b><p>对比雷达横向比 6 个维度，棂能测试看审美体质，右下角小棂随时给搭配建议，收藏夹存下心动风格。</p></div>
+      </div>
+      <div class="tour-foot">
+        <label class="tour-keep"><input type="checkbox" id="tour-hide"> 不再自动显示</label>
+        <div class="tour-actions">
+          <button class="btn-ghost" id="tour-more" type="button">看完整教程</button>
+          <button class="btn-primary" id="tour-start" type="button">开始探索</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ===== 登录 / 注册弹窗 ===== -->
   <div class="modal" id="auth-modal" aria-hidden="true">
     <div class="modal-card" role="dialog" aria-modal="true" aria-label="登录或注册">
